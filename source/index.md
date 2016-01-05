@@ -9,7 +9,9 @@ language_tabs:
 toc_footers:
   
   - <a href='#'>Sign Up for a Developer Key</a>
+
   - <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API</a>
+
   - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
 
 includes:
