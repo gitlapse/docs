@@ -1,5 +1,5 @@
 ---
-title: GitLapse API Reference
+title: GitLapse API Reference updated
 
 language_tabs:
   - c: Git 
