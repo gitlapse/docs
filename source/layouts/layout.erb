@@ -48,8 +48,9 @@ under the License.
       </span>
     </a>
     <div class="tocify-wrapper">
-      <%= image_tag "logo.png" %>
-      <a herf="http://www.gitlapse.com"><img style= "height: 60px; width: auto;" src="img/logo.png"/>
+      <% link_to 'http://www.gitlapse.com' do %>
+	<%= image_tag  "logo.png", :height => '60px', :width => 'auto' %>
+    <% end %>
 
       <% if language_tabs %>
         <div class="lang-selector">
