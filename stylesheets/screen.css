@@ -5,6 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Jura:400,500,600,300);
 /* line 10, /home/zotherstupidguy/repocode/docs/source/stylesheets/_normalize.css */
 html {
   font-family: sans-serif;
@@ -414,7 +415,7 @@ under the License.
 */
 /* line 82, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, html, body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-family: "Jura", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 15px; }
 
 /* line 89, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
