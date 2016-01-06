@@ -642,7 +642,7 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 200px;
+  width: 100px;
   background-color: white;
   font-size: 13px;
   font-weight: bold; }
@@ -668,7 +668,7 @@ html, body {
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
       margin: 10px 15px;
-      width: 170px;
+      width: 70px;
       outline: none;
       color: black;
       border-radius: 0;
@@ -790,11 +790,11 @@ html, body {
     opacity: 1; }
   /* line 256, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   #nav-button.open {
-    left: 200px; }
+    left: 100px; }
 
 /* line 264, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
 .page-wrapper {
-  margin-left: 200px;
+  margin-left: 100px;
   position: relative;
   z-index: 10;
   background-color: white;
@@ -1014,7 +1014,7 @@ html, body {
 @media (max-width: 930px) {
   /* line 579, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper {
-    left: -200px; }
+    left: -100px; }
     /* line 582, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
     .tocify-wrapper.open {
       left: 0; }
@@ -1031,7 +1031,7 @@ html, body {
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em; } }
-@media (max-width: 730px) {
+@media (max-width: 830px) {
   /* line 602, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   .dark-box {
     display: none; }
