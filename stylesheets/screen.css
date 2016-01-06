@@ -413,22 +413,22 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-/* line 83, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 84, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, html, body {
   font-family: "Jura", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 12px; }
 
-/* line 90, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 91, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
   font-weight: bold; }
 
-/* line 95, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 96, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content code, .content pre {
   font-family: "Jura", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   font-size: 20px;
   line-height: 2; }
 
-/* line 119, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 120, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content code {
   word-break: break-all;
   /* Non standard for webkit */
@@ -620,7 +620,7 @@ html, body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #eaf2f6;
+  background-color: white;
   height: 100%;
   -webkit-text-size-adjust: none;
   /* Never autoresize text */ }
@@ -777,7 +777,7 @@ html, body {
   #nav-button span {
     display: block;
     padding: 6px 6px 6px;
-    background-color: rgba(234, 242, 246, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     transform-origin: 0 0;
     transform: rotate(-90deg) translate(-100%, 0);
     border-radius: 0 0 0 5px; }
@@ -797,13 +797,13 @@ html, body {
   margin-left: 200px;
   position: relative;
   z-index: 10;
-  background-color: #eaf2f6;
+  background-color: white;
   min-height: 100%;
   padding-bottom: 1px; }
   /* line 278, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   .page-wrapper .dark-box {
     width: 50%;
-    background-color: white;
+    background-color: black;
     position: absolute;
     right: 0;
     top: 0;
@@ -812,7 +812,7 @@ html, body {
   .page-wrapper .lang-selector {
     position: fixed;
     z-index: 50;
-    border-bottom: 5px solid white; }
+    border-bottom: 5px solid black; }
 
 /* line 294, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
 .lang-selector {
@@ -834,7 +834,7 @@ html, body {
       color: #fff; }
     /* line 312, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
     .lang-selector a.active {
-      background-color: white;
+      background-color: black;
       color: #fff; }
   /* line 318, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   .lang-selector:after {
@@ -902,8 +902,8 @@ html, body {
   /* line 408, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   .content hr {
     margin: 2em 0;
-    border-top: 2px solid white;
-    border-bottom: 2px solid #eaf2f6; }
+    border-top: 2px solid black;
+    border-bottom: 2px solid white; }
   /* line 414, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   .content table {
     margin-bottom: 1em;
@@ -926,10 +926,10 @@ html, body {
       border-bottom: 1px solid #ccc; }
     /* line 437, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
     .content table tr:nth-child(odd) > td {
-      background-color: #f9fbfc; }
+      background-color: white; }
     /* line 441, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
     .content table tr:nth-child(even) > td {
-      background-color: #f3f7fa; }
+      background-color: white; }
   /* line 446, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
   .content dt {
     font-weight: bold; }
