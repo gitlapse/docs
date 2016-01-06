@@ -413,22 +413,22 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-/* line 84, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 85, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, html, body {
   font-family: "Jura", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 12px; }
 
-/* line 91, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 92, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
   font-weight: bold; }
 
-/* line 96, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 97, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content code, .content pre {
   font-family: "Jura", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   font-size: 20px;
   line-height: 2; }
 
-/* line 120, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
+/* line 121, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content code {
   word-break: break-all;
   /* Non standard for webkit */
@@ -564,7 +564,7 @@ under the License.
 
 /* line 102, /home/zotherstupidguy/repocode/docs/source/stylesheets/_syntax.scss.erb */
 .highlight, .highlight .w {
-  background-color: #292929; }
+  background-color: black; }
 
 @font-face {
   font-family: 'slate';
@@ -985,7 +985,7 @@ html, body {
 
 /* line 531, /home/zotherstupidguy/repocode/docs/source/stylesheets/screen.css.scss */
 .content pre, .content blockquote {
-  background-color: #292929;
+  background-color: black;
   color: #fff;
   padding: 2em 28px;
   margin: 0;
