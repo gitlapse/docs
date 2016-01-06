@@ -10,7 +10,7 @@ toc_footers:
   
   - <a href='#'>Sign Up for a Developer Key</a>
 
-  - <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API</a>
+  - <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse Opensource API</a>
 
   - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
 
@@ -34,13 +34,13 @@ curl "https://api.gitlapse.com/v1/auth"
 gem install gitlapse
 ```
 
-The Gitlapse API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. 
+Gitlapse API is an opensource REST API for everyone who uses git, either on their own machines or via Git hosting services like Github & Bitbucket, you can always contribute to Gitlapse API on https://github.com/gitlapse/docs . Gitlapse API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. 
 
-We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. 
+Gitlapse API uses built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. 
 
-We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your secret API key in any public website`s client-side code). 
+Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application (though you should never expose your secret API key in any public website`s client-side code). 
 
-JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git, curl, or through our ruby SDK.
+JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself, cURL, or through Gitlapse`s Ruby SDK.
 
 
 <aside class="notice">...</aside>
