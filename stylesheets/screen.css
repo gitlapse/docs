@@ -424,9 +424,9 @@ under the License.
 
 /* line 94, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content code, .content pre {
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  font-size: 12px;
-  line-height: 1.5; }
+  font-family: "Jura", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-size: 20px;
+  line-height: 2; }
 
 /* line 118, /home/zotherstupidguy/repocode/docs/source/stylesheets/_variables.scss */
 .content code {
