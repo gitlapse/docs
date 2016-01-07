@@ -40,7 +40,7 @@ Gitlapse API uses built-in HTTP features, like HTTP authentication and HTTP verb
 
 Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application (though you should never expose your secret API key in any public website`s client-side code). 
 
-JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself, cURL, or through Gitlapse`s Ruby SDK.
+JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself (Gitlapse Git Extension), cURL(Standard Https), or through Gitlapse`s Ruby SDK (gem install gitlapse).
 
 
 <aside class="notice">...</aside>
