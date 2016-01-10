@@ -22,10 +22,10 @@ search: true
 
 # API Reference
 
-```c
-
-> first, run `gem install gitlapse`
+> first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
+
+```c
 
 git lapse path/to/your/git/file
 
