@@ -24,8 +24,8 @@ search: true
 
 ```c
 
-<aside class="notice"> first, run `gem install gitlapse`</aside>
-<aside class="notice"> if you are using rbenv, run rbenv rehash.</aside>
+> first, run `gem install gitlapse`
+> if you are using rbenv, run rbenv rehash
 
 git lapse path/to/your/git/file
 
