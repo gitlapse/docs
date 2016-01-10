@@ -49,16 +49,19 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id="api-reference">API Reference</h1>
-<pre class="highlight c"><code>
-<span class="o">&gt;</span> <span class="n">first</span><span class="p">,</span> <span class="n">run</span> <span class="err">`</span><span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span><span class="err">`</span>
-<span class="o">&gt;</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">using</span> <span class="n">rbenv</span><span class="p">,</span> <span class="n">run</span> <span class="n">rbenv</span> <span class="n">rehash</span>
 
+<blockquote>
+<p>first, run gem install gitlapse
+if you are using rbenv, run rbenv rehash</p>
+</blockquote>
+<pre class="highlight c"><code>
 <span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">file</span>
 
 </code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"https://api.gitlapse.com/v1/auth"</span>
--H <span class="s2">"Authorization: username"</span>
+<pre class="highlight shell"><code>
+<span class="c"># With shell, you can just pass the correct header with each request</span>
+curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X POST -d <span class="s1">'{:SHA =&gt; blob_sha_value, :content =&gt; blob_content_value}'</span> http://api.gitlapse.com/v1/git/full_lapse 
+
 </code></pre>
 <pre class="highlight ruby"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
 </code></pre>
