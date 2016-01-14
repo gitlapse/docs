@@ -49,6 +49,43 @@ Gitlapse API supports cross-origin resource sharing, allowing you to interact se
 JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself (Gitlapse Git Extension), cURL(Standard Https), or through Gitlapse`s Ruby SDK (gem install gitlapse).
 
 
+
+
+Gitlapse API resonate pragrammatic intuitive API Design principles by keeping consistency with 'The Good Parts' of Modern Web APIs, that a natural, functionally layred, least congitive use of the API, that We hope will insipre your confidence and freedom to explore and use. 
+
+
+Gitlapse API resonate pragrammatic API Design principles by remaining consistently natural, functionally layred, and more importantly least congitive,to insipre your confidence and freedom to explore and use.
+
+
+Simple enough, Gitlapses two base URLs are there, 1)collection /lapses/ 2)specific lapse /lapse/SHA  . with Eight HTTP verbs
+
+#Add a photo of the two base URLS & the Eight HTTP verbs
+
+More complex queries, say for Github or Bitbucket are avialable on their own sections, that also uses the same two base URLs
+
+Two base URLs: 
+Collection
+
+keeps the simple things simple, while the complex things possible.
+
+Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.
+
+Gitlapse API implements high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends.
+
+Functional Minimalism - things as simple as possible but not simpler
+least Cognitive load -
+Functional Layering: designed advantage was given focused towards the 80percent of the usecases, while keeping complex usecases at a close approach.
+
+
+and achieveing affordance by suggests how the API can be used 
+
+affordance can be achieved by:
+or other interface elements e.g. underlined links or default button styles.
+in the physical properties of an object should suggest how it can be used. 
+
+
+COPY/PASTE URL, HIT THE ENTER BUTTON IN THE BRWOWERS, AND SOMTHING MEANINGFULL HAPPEN
+
 <aside class="notice">...</aside>
 
 <aside class="success">...</aside>
