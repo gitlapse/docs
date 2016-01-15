@@ -106,16 +106,18 @@ repo is name of the git directory</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>null</td>
-<td>false</td>
-<td>returns a collection of lapses</td>
+<td>username</td>
+<td>anonymous</td>
+<td>Gitlapse username, anonymous is the default value.</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>repo</td>
+<td>public</td>
+<td>Gitlapse repo name, public is the default value.</td>
 </tr>
 </tbody></table>
+
+<p>Returns a collection of lapses</p>
 
 <p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
 
