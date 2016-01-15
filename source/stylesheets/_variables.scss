@@ -41,6 +41,7 @@ $lang-select-border: #000;
 $lang-select-bg: #222;
 $lang-select-active-bg: $examples-bg; // feel free to change this to blue or something
 $lang-select-pressed-bg: #111; // color of language tab bg when mouse is pressed
+//NOTE
 //$main-bg: #eaf2f6;
 $main-bg: white;
 $aside-notice-bg: #8fbcd4;
@@ -66,8 +67,8 @@ $lang-select-pressed-text: #fff; // color of language tab text when mouse is pre
 // SIZES
 ////////////////////
 //NOTE
-$nav-width: 150px; // width of the navbar
-//$nav-width: 300px; // width of the navbar
+//$nav-width: 150px; // width of the navbar
+$nav-width: 300px; // width of the navbar
 $examples-width: 50%; // portion of the screen taken up by code examples
 $logo-margin: 20px; // margin between nav items and logo, ignored if search is active
 $main-padding: 28px; // padding to left and right of content & examples
