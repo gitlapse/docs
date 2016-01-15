@@ -656,7 +656,7 @@ html, body {
   /* line 85, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper > img {
     display: block;
-    width: 200px; }
+    width: 400px; }
   /* line 91, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper > .search {
     position: relative; }
@@ -681,7 +681,7 @@ html, body {
       color: black; }
   /* line 116, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper img + .tocify {
-    margin-top: 20px; }
+    margin-top: 30px; }
   /* line 120, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper .search-results {
     margin-top: 0;
