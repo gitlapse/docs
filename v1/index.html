@@ -58,14 +58,6 @@
 
 <h3 id="installation">Installation</h3>
 
-<p><code class="prettyprint">gem install gitlapse</code></p>
-
-<h3 id="copy-paste-this-oneline-of-code-into-your-terminal">copy\paste this oneline of code into your terminal</h3>
-
-<p>curl &ldquo;http://api.gitlapse.com/v1/lapses/git/anonymous/:repo/&rdquo;
-anonymous is the shared username
-repo is name of the git directory</p>
-
 <blockquote>
 <p>first, run gem install gitlapse
 if you are using rbenv, run rbenv rehash</p>
@@ -81,6 +73,16 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </code></pre>
 <pre class="highlight ruby"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
 </code></pre>
+
+<p>You can install gitlapse on your system either from curl or gem.</p>
+
+<p><code class="prettyprint">gem install gitlapse</code></p>
+
+<h3 id="copy-paste-this-oneline-of-code-into-your-terminal">copy\paste this oneline of code into your terminal</h3>
+
+<p>curl &ldquo;http://api.gitlapse.com/v1/lapses/git/anonymous/:repo/&rdquo;
+anonymous is the shared username
+repo is name of the git directory</p>
 
 <h2 id="philosophy">Philosophy</h2>
 
@@ -173,19 +175,6 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>username</code> with your personal API key.
 </aside>
-
-<h1 id="github">Github</h1>
-<pre class="highlight c"><code><span class="cp"># inside your cloned github repo
-</span><span class="n">git</span> <span class="n">lapses</span> <span class="n">all</span> 
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.gitlapse.com/v1/github/:username/:reponame/lapses"</span>
-  -H <span class="s2">"Authorization: username"</span>
-</code></pre>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">api_key</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">github</span><span class="p">.</span><span class="nf">lapses</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="ss">:reponame</span><span class="p">)</span>
-</code></pre>
 
 <h1 id="lapses">Lapses</h1>
 
