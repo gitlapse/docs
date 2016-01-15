@@ -21,6 +21,9 @@ search: true
 ---
 
 # API Reference 
+nice intro
+## Philosophy 
+This is philo for all...
 
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
@@ -39,8 +42,6 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 ```ruby
 gem install gitlapse
 ```
-
-## Philosophy 
 
 
 ## Quickstart
