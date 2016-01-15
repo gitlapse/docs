@@ -163,7 +163,7 @@ You must replace <code>username</code> with your personal API key.
 
 # Lapses 
 
-## Get Lapses
+## GET /v1/lapses/:username/:repo
 
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo`
 ### Query Parameters
@@ -237,7 +237,7 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-## Get a Specific Lapse 
+## GET /v1/lapses/:username/:repo/:SHA 
 ```c
 ```
 
@@ -289,3 +289,7 @@ available | true | If set to false, the result will include kittens that have al
 Return Value | Description
 --------- |  -----------
 {lapse} | Returns a specific lapses
+
+
+
+## POST /v1/lapses/:username/:repo
