@@ -54,7 +54,7 @@ You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse
 Join the crowd #gitlapse @freenode. 
 
 ## Future
-As much as we would love to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are hearting this for our next versions of the API.
+As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are hearting this for our next versions of the API.
 
 
 # API Resources
