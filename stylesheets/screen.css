@@ -413,22 +413,22 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-/* line 86, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 88, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, html, body {
   font-family: "Jura", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 12px; }
 
-/* line 93, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 95, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
   font-weight: bold; }
 
-/* line 98, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 100, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content code, .content pre {
   font-family: "Jura", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  font-size: 20px;
+  font-size: 10px;
   line-height: 2; }
 
-/* line 122, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 124, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content code {
   word-break: break-all;
   /* Non standard for webkit */
@@ -802,7 +802,7 @@ html, body {
   padding-bottom: 1px; }
   /* line 278, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .page-wrapper .dark-box {
-    width: 50%;
+    width: 30%;
     background-color: black;
     position: absolute;
     right: 0;
@@ -853,7 +853,7 @@ html, body {
     clear: both; }
   /* line 341, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .content > h1, .content > h2, .content > h3, .content > h4, .content > h5, .content > h6, .content > p, .content > table, .content > ul, .content > ol, .content > aside, .content > dl {
-    margin-right: 50%;
+    margin-right: 30%;
     padding: 0 28px;
     box-sizing: border-box;
     display: block;
@@ -989,7 +989,7 @@ html, body {
   color: #fff;
   padding: 2em 28px;
   margin: 0;
-  width: 50%;
+  width: 30%;
   float: right;
   clear: right;
   box-sizing: border-box;
