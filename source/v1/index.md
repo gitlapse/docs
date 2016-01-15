@@ -22,8 +22,7 @@ search: true
 
 
 # API Reference 
-Welcome to Gitlapse API v1 Docs. 
-To read other versions ... 
+Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses. Gitlapse API v1 only supports opensource and public git lapses, thus no authentication required however fair-usage apply.
 
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
