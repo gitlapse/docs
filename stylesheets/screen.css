@@ -642,7 +642,7 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 500px;
+  width: 300px;
   background-color: white;
   font-size: 13px;
   font-weight: bold; }
@@ -667,7 +667,7 @@ html, body {
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
       margin: 10px 15px;
-      width: 470px;
+      width: 270px;
       outline: none;
       color: black;
       border-radius: 0;
@@ -789,11 +789,11 @@ html, body {
     opacity: 1; }
   /* line 254, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   #nav-button.open {
-    left: 500px; }
+    left: 300px; }
 
 /* line 262, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
 .page-wrapper {
-  margin-left: 500px;
+  margin-left: 300px;
   position: relative;
   z-index: 10;
   background-color: white;
@@ -1013,7 +1013,7 @@ html, body {
 @media (max-width: 930px) {
   /* line 577, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper {
-    left: -500px; }
+    left: -300px; }
     /* line 580, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
     .tocify-wrapper.open {
       left: 0; }
@@ -1030,7 +1030,7 @@ html, body {
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em; } }
-@media (max-width: 430px) {
+@media (max-width: 630px) {
   /* line 600, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .dark-box {
     display: none; }
