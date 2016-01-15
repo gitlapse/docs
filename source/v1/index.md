@@ -7,8 +7,7 @@ language_tabs:
   - shell: cURL 
 
 toc_footers:
-   - <a href='http://gitlapse.com/terms'> Terms </a>
-   - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
+   - <a href='http://gitlapse.com'> © gitlapse 2016 </a><a href='http://gitlapse.com/terms'> Terms </a>
   
 includes:
   - errors
