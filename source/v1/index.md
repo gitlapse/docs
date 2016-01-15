@@ -14,11 +14,12 @@ toc_footers:
 
   - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
 
-includes:
-  - errors
-
 search: true
 ---
+
+includes:
+- errors
+
 
 # API Reference 
 Welcome to Gitlapse API v1 Docs. 
