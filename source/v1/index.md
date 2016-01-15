@@ -26,14 +26,6 @@ Anonymous git lapses are automatically deleted within a max duration of 24hours 
 
 ## Quickstart
 ### Installation 
-
-`gem install gitlapse`
-### copy\paste this oneline of code into your terminal
-
-curl "http://api.gitlapse.com/v1/lapses/git/anonymous/:repo/"
-anonymous is the shared username
-repo is name of the git directory
-
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
 
@@ -51,6 +43,14 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 ```ruby
 gem install gitlapse
 ```
+You can install gitlapse on your system either from curl or gem.
+
+`gem install gitlapse`
+### copy\paste this oneline of code into your terminal
+
+curl "http://api.gitlapse.com/v1/lapses/git/anonymous/:repo/"
+anonymous is the shared username
+repo is name of the git directory
 
 
 
@@ -147,24 +147,6 @@ Gitlapse expects for the API key to be included in all API requests to the serve
 <aside class="notice">
 You must replace <code>username</code> with your personal API key.
 </aside>
-
-# Github 
-
-```c
-# inside your cloned github repo
-git lapses all 
-```
-
-```shell
-curl "http://api.gitlapse.com/v1/github/:username/:reponame/lapses"
-  -H "Authorization: username"
-```
-```ruby
-require 'gitlapse'
-
-api = Gitlapse.api_key('meowmeowmeow')
-api.github.lapses.get(:reponame)
-```
 
 
 # Lapses 
