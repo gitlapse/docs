@@ -92,14 +92,56 @@ repo is name of the git directory</p>
 
 <p>While posting, git consumers have the option to include a Software License title &amp; url with each lapse.</p>
 
-<p>To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base URLs per resource, for example: </p>
+<p>To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: </p>
 
 <ul>
 <li>/lapses/ 
-returns a collection of lapses</li>
-<li>lapse /lapse/SHA<br>
-returnes a specific lapse</li>
+returns a collection of lapses
+### Query Parameters</li>
 </ul>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>null</td>
+<td>false</td>
+<td>If set to true, the result will also include cats.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>lapse /lapse/SHA<br>
+### Query Parameters</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>null</td>
+<td>false</td>
+<td>If set to true, the result will also include cats.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody></table>
 
 <h2 id="data-policy">Data Policy</h2>
 
