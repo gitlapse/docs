@@ -28,12 +28,6 @@ Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses
 ### Installation 
 ### copy\paste this oneline of code into your terminal
 
-## Philosophy 
-This is philo for all...
-
-## IRC 
-Join the crowd #gitlapse @freenode. 
-
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
 
@@ -52,6 +46,13 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 gem install gitlapse
 ```
 
+
+
+## Philosophy 
+This is philo for all...
+
+## IRC 
+Join the crowd #gitlapse @freenode. 
 
 
 
