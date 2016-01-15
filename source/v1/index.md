@@ -17,7 +17,8 @@ search: true
 
 
 # API Reference 
-Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses. Gitlapse API v1 only supports opensource and public git lapses, thus no authentication required however fair-usage apply.
+Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses. Gitlapse API v1 only supports anonymous opensource and public git lapses, thus no authentication required yet fair-usage apply. 
+
 
 ## Quickstart
 ### Installation 
@@ -47,15 +48,12 @@ gem install gitlapse
 This is philo for all...
 
 ##Contribute 
-You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking.
+You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking!
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
 
-
-
 # API Resources
-
 like using legos to put together to build something great.
 
 
@@ -64,6 +62,8 @@ API must appeal to emotion.. you will love Gitlapse.
 
 API designed for laziness
 
+
+While posting, git consumers have the option to include a Software License title & url with each lapse.
 
 API designed for lazy
 
