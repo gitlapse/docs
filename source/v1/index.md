@@ -63,7 +63,6 @@ While posting, git consumers have the option to include a Software License title
 
 To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: 
 
-<aside class="notice">
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo`
 ### Query Parameters
 
@@ -75,7 +74,7 @@ repo 	 | public    | provide a Gitlapse repo name, public is the default value.
 Return Value | Description
 --------- |  -----------
 {collection} | Returns a collection of lapses
-</aside>
+
 
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
 ### Query Parameters
@@ -164,7 +163,25 @@ You must replace <code>username</code> with your personal API key.
 
 # Lapses 
 
-## Get All Lapses
+## Get Lapses
+
+`GET http://api.gitlapse.com/v1/lapses/:username/:repo`
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+username | anonymous | provide a Gitlapse username, anonymous is the default value.
+repo 	 | public    | provide a Gitlapse repo name, public is the default value.
+
+### Optional Query Parameters
+Parameter | Default | Description
+--------- | ------- | -----------
+SHA | false | returns a specific lapse via its SHA 
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+Return Value | Description
+--------- |  -----------
+{collection} | Returns a collection of lapses
 
 ```c
 git lapses all
@@ -255,14 +272,20 @@ This endpoint retrieves a specific kitten.
 <aside class="warning">If you are not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
 
 ### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
+`GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
 
 ### URL Parameters
+Parameter | Default | Description
+--------- | ------- | -----------
+SHA | false | returns a specific lapse via its SHA 
+available | true | If set to false, the result will include kittens that have already been adopted.
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+### Optional Query Parameters
+Parameter | Default | Description
+--------- | ------- | -----------
+SHA | false | returns a specific lapse via its SHA 
+available | true | If set to false, the result will include kittens that have already been adopted.
 
-
-
+Return Value | Description
+--------- |  -----------
+{lapse} | Returns a specific lapses
