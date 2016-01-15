@@ -642,7 +642,7 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 350px;
+  width: 500px;
   background-color: white;
   font-size: 13px;
   font-weight: bold; }
@@ -667,7 +667,7 @@ html, body {
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
       margin: 10px 15px;
-      width: 320px;
+      width: 470px;
       outline: none;
       color: black;
       border-radius: 0;
@@ -789,11 +789,11 @@ html, body {
     opacity: 1; }
   /* line 254, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   #nav-button.open {
-    left: 350px; }
+    left: 500px; }
 
 /* line 262, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
 .page-wrapper {
-  margin-left: 350px;
+  margin-left: 500px;
   position: relative;
   z-index: 10;
   background-color: white;
@@ -801,7 +801,7 @@ html, body {
   padding-bottom: 1px; }
   /* line 276, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .page-wrapper .dark-box {
-    width: 40%;
+    width: 30%;
     background-color: black;
     position: absolute;
     right: 0;
@@ -852,7 +852,7 @@ html, body {
     clear: both; }
   /* line 339, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .content > h1, .content > h2, .content > h3, .content > h4, .content > h5, .content > h6, .content > p, .content > table, .content > ul, .content > ol, .content > aside, .content > dl {
-    margin-right: 40%;
+    margin-right: 30%;
     padding: 0 28px;
     box-sizing: border-box;
     display: block;
@@ -988,7 +988,7 @@ html, body {
   color: #fff;
   padding: 2em 28px;
   margin: 0;
-  width: 40%;
+  width: 30%;
   float: right;
   clear: right;
   box-sizing: border-box;
@@ -1013,7 +1013,7 @@ html, body {
 @media (max-width: 930px) {
   /* line 577, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper {
-    left: -350px; }
+    left: -500px; }
     /* line 580, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
     .tocify-wrapper.open {
       left: 0; }
@@ -1030,7 +1030,7 @@ html, body {
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em; } }
-@media (max-width: 580px) {
+@media (max-width: 430px) {
   /* line 600, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .dark-box {
     display: none; }
