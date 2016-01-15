@@ -20,7 +20,7 @@ includes:
 search: true
 ---
 
-# API Reference
+# API Reference 
 
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
@@ -40,7 +40,33 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 gem install gitlapse
 ```
 
-Gitlapse API is an opensource REST API for everyone who uses git, either on their own machines or via Git hosting services like Github & Bitbucket, you can always contribute to Gitlapse API on https://github.com/gitlapse/docs . Gitlapse API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. 
+## Philosophy 
+
+
+## Quickstart
+### Installation 
+### copy\paste this oneline of code into your terminal
+
+# API Resources
+
+like using legos to put together to build something great.
+
+
+API must appeal to emotion.. you will love Gitlapse.
+
+
+API designed for laziness
+
+
+API designed for lazy
+
+intuitive well-documented oinionated
+
+
+
+Gitlapse API is an opensource REST API for everyone who uses git, either on their own machines or via Git hosting services like Github & Bitbucket, you can always contribute to Gitlapse API on https://github.com/gitlapse/docs . 
+
+Gitlapse API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. 
 
 Gitlapse API uses built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. 
 
