@@ -92,65 +92,10 @@ repo is name of the git directory</p>
 
 <p>While posting, git consumers have the option to include a Software License title &amp; url with each lapse.</p>
 
-<p>To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: </p>
+<p>To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example for the lapses Resource: </p>
 
-<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>username</td>
-<td>anonymous</td>
-<td>provide a Gitlapse username, anonymous is the default value.</td>
-</tr>
-<tr>
-<td>repo</td>
-<td>public</td>
-<td>provide a Gitlapse repo name, public is the default value.</td>
-</tr>
-</tbody></table>
-
-<table><thead>
-<tr>
-<th>Return Value</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>{collection}</td>
-<td>Returns a collection of lapses</td>
-</tr>
-</tbody></table>
-
-<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>SHA</td>
-<td>false</td>
-<td>returns a specific lapse via its SHA</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
+<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code>
+<code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
 
 <h2 id="data-policy">Data Policy</h2>
 
