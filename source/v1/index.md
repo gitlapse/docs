@@ -7,12 +7,7 @@ language_tabs:
   - shell: cURL 
 
 toc_footers:
-  
-  - <a href='#'>Sign Up for a Developer Key</a>
-
-  - <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse Opensource API</a>
-
-  - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
+   - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
   
 includes:
   - errors
@@ -50,6 +45,9 @@ gem install gitlapse
 
 ## Philosophy 
 This is philo for all...
+
+##Contribute 
+You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking.
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
@@ -280,4 +278,6 @@ This endpoint retrieves a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
+
+
 
