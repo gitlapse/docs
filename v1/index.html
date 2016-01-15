@@ -97,22 +97,6 @@ repo is name of the git directory</p>
 <p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code>
 <code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
 
-<h2 id="data-policy">Data Policy</h2>
-
-<p>Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you shared the lapse link with.</p>
-
-<h2 id="contribute">Contribute</h2>
-
-<p>You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more &amp; more to your liking!</p>
-
-<p>As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are currently hearting this for our next versions of the API.</p>
-
-<h2 id="irc">IRC</h2>
-
-<p>Join the crowd #gitlapse @freenode. </p>
-
-<h1 id="api-resources">API Resources</h1>
-
 <p>Add a photo of the two base URLS &amp; the Eight HTTP verbs</p>
 
 <p>Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.</p>
@@ -131,11 +115,19 @@ in the physical properties of an object should suggest how it can be used. </p>
 
 <p>COPY/PASTE URL, HIT THE ENTER BUTTON IN THE BRWOWERS, AND SOMTHING MEANINGFULL HAPPEN</p>
 
-<aside class="notice">&hellip;</aside>
+<h2 id="data-policy">Data Policy</h2>
 
-<aside class="success">&hellip;</aside>
+<p>Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you shared the lapse link with.</p>
 
-<aside class="warning">&hellip;</aside>
+<h2 id="contribute">Contribute</h2>
+
+<p>You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more &amp; more to your liking!</p>
+
+<p>As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are currently hearting this for our next versions of the API.</p>
+
+<h2 id="irc">IRC</h2>
+
+<p>Join the crowd #gitlapse @freenode. </p>
 
 <h3 id="start-using-gitlapse-api-via-running-gem-install-gitlapse-in-your-console">Start using GitLapse API via running <code class="prettyprint">gem install gitlapse</code> in your Console.</h3>
 
@@ -163,6 +155,10 @@ curl <span class="s2">"api_endpoint_here"</span>
 <p>Gitlapse expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <p><code class="prettyprint">Authorization: apikey</code></p>
+
+<aside class="notice">&hellip;</aside>
+
+<aside class="success">&hellip;</aside>
 
 <aside class="notice">
 You must replace <code>username</code> with your personal API key.
@@ -227,6 +223,10 @@ You must replace <code>username</code> with your personal API key.
 <td>Returns a collection of lapses</td>
 </tr>
 </tbody></table>
+
+<aside class="notice">
+Fair usage applies 
+</aside>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapses</span> <span class="n">all</span>
 </code></pre>
 <pre class="highlight shell"><code>curl <span class="s2">"http://api.gitlapse.com/v1/:username/:reponame/lapses"</span>
