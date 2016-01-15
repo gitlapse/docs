@@ -225,7 +225,7 @@ You must replace <code>username</code> with your personal API key.
 
 <h1 id="lapses">Lapses</h1>
 
-<h2 id="get-lapses">Get Lapses</h2>
+<h2 id="get-v1-lapses-username-repo">GET /v1/lapses/:username/:repo</h2>
 
 <p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code></p>
 
@@ -345,7 +345,7 @@ You must replace <code>username</code> with your personal API key.
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-<h2 id="get-a-specific-lapse">Get a Specific Lapse</h2>
+<h2 id="get-v1-lapses-username-repo-sha">GET /v1/lapses/:username/:repo/:SHA</h2>
 <pre class="highlight c"><code></code></pre>
 <pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
   -H <span class="s2">"Authorization: meowmeowmeow"</span>
@@ -431,6 +431,8 @@ Remember — a happy kitten is an authenticated kitten!
 <td>Returns a specific lapses</td>
 </tr>
 </tbody></table>
+
+<h2 id="post-v1-lapses-username-repo">POST /v1/lapses/:username/:repo</h2>
 
           <h1 id="errors">Errors</h1>
 
