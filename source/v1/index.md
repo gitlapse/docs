@@ -66,19 +66,6 @@ To keep the simple things simple, while the complex things possible, Gitlapses A
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo`
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
 
-
-## Data Policy
-Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you shared the lapse link with.
-
-##Contribute 
-You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking!
-
-As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are currently hearting this for our next versions of the API.
-
-## IRC 
-Join the crowd #gitlapse @freenode. 
-
-# API Resources
 Add a photo of the two base URLS & the Eight HTTP verbs
 
 
@@ -100,11 +87,19 @@ in the physical properties of an object should suggest how it can be used.
 
 COPY/PASTE URL, HIT THE ENTER BUTTON IN THE BRWOWERS, AND SOMTHING MEANINGFULL HAPPEN
 
-<aside class="notice">...</aside>
 
-<aside class="success">...</aside>
 
-<aside class="warning">...</aside>
+
+## Data Policy
+Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you shared the lapse link with.
+
+##Contribute 
+You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking!
+
+As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are currently hearting this for our next versions of the API.
+
+## IRC 
+Join the crowd #gitlapse @freenode. 
 
 ###Start using GitLapse API via running `gem install gitlapse` in your Console.
 
@@ -135,6 +130,11 @@ Gitlapse expects for the API key to be included in all API requests to the serve
 
 `Authorization: apikey`
 
+<aside class="notice">...</aside>
+
+<aside class="success">...</aside>
+
+
 <aside class="notice">
 You must replace <code>username</code> with your personal API key.
 </aside>
@@ -161,6 +161,10 @@ available | true | If set to false, the result will include kittens that have al
 Return Value | Description
 --------- |  -----------
 {collection} | Returns a collection of lapses
+
+<aside class="notice">
+Fair usage applies 
+</aside>
 
 ```c
 git lapses all
