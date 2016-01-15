@@ -68,9 +68,12 @@ To keep the simple things simple, while the complex things possible, Gitlapses A
 
 Parameter | Default | Description
 --------- | ------- | -----------
-username | anonymous | Gitlapse username, anonymous is the default value.
-repo 	 | public    | Gitlapse repo name, public is the default value.
-Returns a collection of lapses
+username | anonymous | provide a Gitlapse username, anonymous is the default value.
+repo 	 | public    | provide a Gitlapse repo name, public is the default value.
+
+Return Value | Description
+--------- |  -----------
+{collection} | Returns a collection of lapses
 
 
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
