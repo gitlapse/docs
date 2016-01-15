@@ -13,12 +13,13 @@ toc_footers:
   - <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse Opensource API</a>
 
   - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
+  
+  includes:
+  - errors
+
 
 search: true
 ---
-
-includes:
-- errors
 
 
 # API Reference 
