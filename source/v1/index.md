@@ -21,9 +21,8 @@ search: true
 ---
 
 # API Reference 
-nice intro
-## Philosophy 
-This is philo for all...
+Welcome to Gitlapse API v1 Docs. 
+To read other versions ... 
 
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
@@ -47,6 +46,10 @@ gem install gitlapse
 ## Quickstart
 ### Installation 
 ### copy\paste this oneline of code into your terminal
+
+## Philosophy 
+This is philo for all...
+
 
 # API Resources
 
