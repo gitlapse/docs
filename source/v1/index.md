@@ -21,7 +21,7 @@ Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses
 
 Gitlapse API v1 only supports anonymous opensource and public git lapses, thus no authentication required yet fair-usage apply. 
 
-Anonymous git lapses are automatically deleted within a max duration of 24hours from their upload, and only avialable through their SHA link, thus almost always they remain completely private to you and to those whom you share the lapse link with.
+Anonymous git lapses are automatically deleted within a max duration of 24hours from their upload, and only available through their SHA links, making them private to you and to those whom you share the lapse link with.
 
 ## Quickstart
 ### Installation 
