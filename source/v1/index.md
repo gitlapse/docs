@@ -63,7 +63,7 @@ While posting, git consumers have the option to include a Software License title
 
 To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: 
 
-- /lapses/ 
+`GET http://api.gitlapse.com/v1/lapses/:username/:repo`
 returns a collection of lapses
 ### Query Parameters
 
@@ -73,7 +73,7 @@ null | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
 
 
-- lapse /lapse/SHA  
+`GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
 ### Query Parameters
 
 Parameter | Default | Description
