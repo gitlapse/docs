@@ -7,6 +7,7 @@ language_tabs:
   - shell: cURL 
 
 toc_footers:
+   - <a href='http://gitlapse.com/terms'> Terms </a>
    - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
   
 includes:
@@ -99,8 +100,6 @@ As much as we are yearning to include more Git Vendors such as Github, Bitbucket
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
-
-###Start using GitLapse API via running `gem install gitlapse` in your Console.
 
 ## Authentication
 
