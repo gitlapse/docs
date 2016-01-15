@@ -94,40 +94,19 @@ repo is name of the git directory</p>
 
 <p>To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: </p>
 
-<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code></p>
+<aside class="notice">
+`GET http://api.gitlapse.com/v1/lapses/:username/:repo`
+### Query Parameters
 
-<h3 id="query-parameters">Query Parameters</h3>
+Parameter | Default | Description
+&mdash;&mdash;&mdash; | &mdash;&mdash;- | &mdash;&mdash;&mdash;&ndash;
+username | anonymous | provide a Gitlapse username, anonymous is the default value.
+repo     | public    | provide a Gitlapse repo name, public is the default value.
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>username</td>
-<td>anonymous</td>
-<td>provide a Gitlapse username, anonymous is the default value.</td>
-</tr>
-<tr>
-<td>repo</td>
-<td>public</td>
-<td>provide a Gitlapse repo name, public is the default value.</td>
-</tr>
-</tbody></table>
-
-<table><thead>
-<tr>
-<th>Return Value</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>{collection}</td>
-<td>Returns a collection of lapses</td>
-</tr>
-</tbody></table>
+Return Value | Description
+&mdash;&mdash;&mdash; |  &mdash;&mdash;&mdash;&ndash;
+{collection} | Returns a collection of lapses
+</aside>
 
 <p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
 
