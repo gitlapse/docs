@@ -94,19 +94,40 @@ repo is name of the git directory</p>
 
 <p>To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: </p>
 
-<aside class="notice">
-`GET http://api.gitlapse.com/v1/lapses/:username/:repo`
-### Query Parameters
+<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code></p>
 
-Parameter | Default | Description
-&mdash;&mdash;&mdash; | &mdash;&mdash;- | &mdash;&mdash;&mdash;&ndash;
-username | anonymous | provide a Gitlapse username, anonymous is the default value.
-repo     | public    | provide a Gitlapse repo name, public is the default value.
+<h3 id="query-parameters">Query Parameters</h3>
 
-Return Value | Description
-&mdash;&mdash;&mdash; |  &mdash;&mdash;&mdash;&ndash;
-{collection} | Returns a collection of lapses
-</aside>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>anonymous</td>
+<td>provide a Gitlapse username, anonymous is the default value.</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>public</td>
+<td>provide a Gitlapse repo name, public is the default value.</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Return Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{collection}</td>
+<td>Returns a collection of lapses</td>
+</tr>
+</tbody></table>
 
 <p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
 
@@ -204,7 +225,63 @@ You must replace <code>username</code> with your personal API key.
 
 <h1 id="lapses">Lapses</h1>
 
-<h2 id="get-all-lapses">Get All Lapses</h2>
+<h2 id="get-lapses">Get Lapses</h2>
+
+<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>anonymous</td>
+<td>provide a Gitlapse username, anonymous is the default value.</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>public</td>
+<td>provide a Gitlapse repo name, public is the default value.</td>
+</tr>
+</tbody></table>
+
+<h3 id="optional-query-parameters">Optional Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SHA</td>
+<td>false</td>
+<td>returns a specific lapse via its SHA</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Return Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{collection}</td>
+<td>Returns a collection of lapses</td>
+</tr>
+</tbody></table>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapses</span> <span class="n">all</span>
 </code></pre>
 <pre class="highlight shell"><code>curl <span class="s2">"http://api.gitlapse.com/v1/:username/:reponame/lapses"</span>
@@ -299,19 +376,59 @@ Remember — a happy kitten is an authenticated kitten!
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>SHA</td>
+<td>false</td>
+<td>returns a specific lapse via its SHA</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<h3 id="optional-query-parameters">Optional Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SHA</td>
+<td>false</td>
+<td>returns a specific lapse via its SHA</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Return Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{lapse}</td>
+<td>Returns a specific lapses</td>
 </tr>
 </tbody></table>
 
