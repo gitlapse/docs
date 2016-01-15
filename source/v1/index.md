@@ -14,9 +14,8 @@ toc_footers:
 
   - <a href='http://gitlapse.com'> © gitlapse 2016 </a>
   
-  includes:
+includes:
   - errors
-
 
 search: true
 ---
