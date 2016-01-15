@@ -63,6 +63,7 @@ While posting, git consumers have the option to include a Software License title
 
 To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: 
 
+<aside class="notice">
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo`
 ### Query Parameters
 
@@ -74,7 +75,7 @@ repo 	 | public    | provide a Gitlapse repo name, public is the default value.
 Return Value | Description
 --------- |  -----------
 {collection} | Returns a collection of lapses
-
+</aside>
 
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
 ### Query Parameters
