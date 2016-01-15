@@ -61,31 +61,10 @@ JSON is returned by all API responses, including errors, although our API librar
 
 While posting, git consumers have the option to include a Software License title & url with each lapse.
 
-To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: 
+To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example for the lapses Resource: 
 
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo`
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-username | anonymous | provide a Gitlapse username, anonymous is the default value.
-repo 	 | public    | provide a Gitlapse repo name, public is the default value.
-
-Return Value | Description
---------- |  -----------
-{collection} | Returns a collection of lapses
-
-
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-SHA | false | returns a specific lapse via its SHA 
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-
-
 
 
 ## Data Policy
