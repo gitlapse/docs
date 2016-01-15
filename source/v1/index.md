@@ -17,12 +17,21 @@ search: true
 
 
 # API Reference 
-Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses. Gitlapse API v1 only supports anonymous opensource and public git lapses, thus no authentication required yet fair-usage apply. 
+Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses. 
 
+Gitlapse API v1 only supports anonymous opensource and public git lapses, thus no authentication required yet fair-usage apply. 
+
+Anonymous git lapses are automatically deleted within a max duration of 24hours from their upload, and only avialable through their SHA link, thus almost always they remain completely private to you and to those whom you share the lapse link with.
 
 ## Quickstart
 ### Installation 
+
+`gem install gitlapse`
 ### copy\paste this oneline of code into your terminal
+
+curl "http://api.gitlapse.com/v1/lapses/git/anonymous/:repo/"
+anonymous is the shared username
+repo is name of the git directory
 
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
@@ -54,7 +63,7 @@ You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse
 Join the crowd #gitlapse @freenode. 
 
 ## Future
-As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are hearting this for our next versions of the API.
+As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are currently hearting this for our next versions of the API.
 
 
 # API Resources
