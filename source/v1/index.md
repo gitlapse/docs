@@ -63,11 +63,10 @@ While posting, git consumers have the option to include a Software License title
 
 To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example for the lapses Resource: 
 
-`GET http://api.gitlapse.com/v1/lapses/:username/:repo`
-`GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
+- `GET http://api.gitlapse.com/v1/lapses/:username/:repo`
+- `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
 
 Add a photo of the two base URLS & the Eight HTTP verbs
-
 
 Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.
 
