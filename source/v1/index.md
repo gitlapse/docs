@@ -68,8 +68,9 @@ To keep the simple things simple, while the complex things possible, Gitlapses A
 
 Parameter | Default | Description
 --------- | ------- | -----------
-null | false | returns a collection of lapses
-available | true | If set to false, the result will include kittens that have already been adopted.
+username | anonymous | Gitlapse username, anonymous is the default value.
+repo 	 | public    | Gitlapse repo name, public is the default value.
+Returns a collection of lapses
 
 
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
