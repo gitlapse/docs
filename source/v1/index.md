@@ -61,12 +61,29 @@ JSON is returned by all API responses, including errors, although our API librar
 
 While posting, git consumers have the option to include a Software License title & url with each lapse.
 
-To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base URLs per resource, for example: 
+To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: 
 
 - /lapses/ 
 returns a collection of lapses
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+null | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+
 - lapse /lapse/SHA  
-returnes a specific lapse
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+null | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+
+
+
 
 ## Data Policy
 Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you shared the lapse link with.
