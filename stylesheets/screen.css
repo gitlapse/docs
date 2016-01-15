@@ -413,22 +413,22 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-/* line 85, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 86, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, html, body {
   font-family: "Jura", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 12px; }
 
-/* line 92, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 93, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
   font-weight: bold; }
 
-/* line 97, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 98, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content code, .content pre {
   font-family: "Jura", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   font-size: 20px;
   line-height: 2; }
 
-/* line 121, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 122, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content code {
   word-break: break-all;
   /* Non standard for webkit */
@@ -642,7 +642,7 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 150px;
+  width: 300px;
   background-color: white;
   font-size: 13px;
   font-weight: bold; }
@@ -668,7 +668,7 @@ html, body {
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
       margin: 10px 15px;
-      width: 120px;
+      width: 270px;
       outline: none;
       color: black;
       border-radius: 0;
@@ -790,11 +790,11 @@ html, body {
     opacity: 1; }
   /* line 256, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   #nav-button.open {
-    left: 150px; }
+    left: 300px; }
 
 /* line 264, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
 .page-wrapper {
-  margin-left: 150px;
+  margin-left: 300px;
   position: relative;
   z-index: 10;
   background-color: white;
@@ -1014,7 +1014,7 @@ html, body {
 @media (max-width: 930px) {
   /* line 579, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .tocify-wrapper {
-    left: -150px; }
+    left: -300px; }
     /* line 582, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
     .tocify-wrapper.open {
       left: 0; }
@@ -1031,7 +1031,7 @@ html, body {
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em; } }
-@media (max-width: 780px) {
+@media (max-width: 630px) {
   /* line 602, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .dark-box {
     display: none; }
