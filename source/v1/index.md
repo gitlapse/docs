@@ -19,9 +19,6 @@ search: true
 # API Reference 
 Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses. API v1 only supports anonymous opensource and public git lapses, thus no custom authentication required yet fair-usage apply. 
 
-# Data policy
-Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you share the lapse link with.
-
 ## Quickstart
 add this quickstart section to the main homepage of the beta and remove launching soon
 ### Installation 
@@ -71,17 +68,16 @@ returns a collection of lapses
 - lapse /lapse/SHA  
 returnes a specific lapse
 
-
+## Data policy
+Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you share the lapse link with.
 
 ##Contribute 
 You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking!
 
-## IRC 
-Join the crowd #gitlapse @freenode. 
-
-## Future
 As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are currently hearting this for our next versions of the API.
 
+## IRC 
+Join the crowd #gitlapse @freenode. 
 
 # API Resources
 Add a photo of the two base URLS & the Eight HTTP verbs
