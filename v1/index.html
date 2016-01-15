@@ -94,11 +94,10 @@ repo is name of the git directory</p>
 
 <p>To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example: </p>
 
-<ul>
-<li>/lapses/ 
-returns a collection of lapses
-### Query Parameters</li>
-</ul>
+<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo</code>
+returns a collection of lapses</p>
+
+<h3 id="query-parameters">Query Parameters</h3>
 
 <table><thead>
 <tr>
@@ -119,10 +118,9 @@ returns a collection of lapses
 </tr>
 </tbody></table>
 
-<ul>
-<li>lapse /lapse/SHA<br>
-### Query Parameters</li>
-</ul>
+<p><code class="prettyprint">GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
 
 <table><thead>
 <tr>
