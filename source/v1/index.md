@@ -23,6 +23,7 @@ Gitlapse API v1 only supports anonymous opensource and public git lapses, thus n
 
 Anonymous git lapses are automatically deleted within a max duration of 24hours from their upload, and only available through their SHA links, making them private to you and to those whom you share the lapse link with.
 
+
 ## Quickstart
 ### Installation 
 
@@ -54,7 +55,21 @@ gem install gitlapse
 
 
 ## Philosophy 
-This is philo for all...
+We understand that it is important for APIs to appeal to developers emotion of laziness, to inspire ideas of putting together  somthing great
+intuitive well-documented oinionated
+Gitlapse API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. 
+
+Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application.
+
+Gitlapse API resonate pragrammatic API Design principles by remaining consistently natural, functionally layred, and more importantly least congitive,to insipre your confidence and freedom to explore and use.
+
+JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself (Gitlapse Git Extension), cURL(Standard Https), or through Gitlapse`s Ruby SDK (gem install gitlapse).
+
+While posting, git consumers have the option to include a Software License title & url with each lapse.
+
+Simple enough, Gitlapses two base URLs are there, 1)collection /lapses/ 2)specific lapse /lapse/SHA  . with Eight HTTP verbs
+
+
 
 ##Contribute 
 You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking!
@@ -67,45 +82,7 @@ As much as we are yearning to include more Git Vendors such as Github, Bitbucket
 
 
 # API Resources
-like using legos to put together to build something great.
-
-
-API must appeal to emotion.. you will love Gitlapse.
-
-
-API designed for laziness
-
-
-While posting, git consumers have the option to include a Software License title & url with each lapse.
-
-API designed for lazy
-
-intuitive well-documented oinionated
-
-
-
-Gitlapse API is an opensource REST API for everyone who uses git, either on their own machines or via Git hosting services like Github & Bitbucket, you can always contribute to Gitlapse API on https://github.com/gitlapse/docs . 
-
-Gitlapse API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. 
-
-Gitlapse API uses built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. 
-
-Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application (though you should never expose your secret API key in any public website`s client-side code). 
-
-JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself (Gitlapse Git Extension), cURL(Standard Https), or through Gitlapse`s Ruby SDK (gem install gitlapse).
-
-
-
-
-Gitlapse API resonate pragrammatic intuitive API Design principles by keeping consistency with 'The Good Parts' of Modern Web APIs, that a natural, functionally layred, least congitive use of the API, that We hope will insipre your confidence and freedom to explore and use. 
-
-
-Gitlapse API resonate pragrammatic API Design principles by remaining consistently natural, functionally layred, and more importantly least congitive,to insipre your confidence and freedom to explore and use.
-
-
-Simple enough, Gitlapses two base URLs are there, 1)collection /lapses/ 2)specific lapse /lapse/SHA  . with Eight HTTP verbs
-
-#Add a photo of the two base URLS & the Eight HTTP verbs
+Add a photo of the two base URLS & the Eight HTTP verbs
 
 More complex queries, say for Github or Bitbucket are avialable on their own sections, that also uses the same two base URLs
 
