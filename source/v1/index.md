@@ -25,6 +25,7 @@ Anonymous git lapses are automatically deleted within a max duration of 24hours 
 
 
 ## Quickstart
+add this quickstart section to the main homepage of the beta and remove launching soon
 ### Installation 
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
@@ -55,19 +56,22 @@ repo is name of the git directory
 
 
 ## Philosophy 
-We understand that it is important for APIs to appeal to developers emotion of laziness, to inspire ideas of putting together  somthing great
-intuitive well-documented oinionated
-Gitlapse API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. 
 
-Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application.
+Gitlapse API resonate pragrammatic API Design principles by remaining consistently natural, functionally layred, and more importantly least congitive,to insipre your confidence and freedom to explore and use. Gitlapse API design is based on the understanding of the necessity for APIs to appeal to developers` emotion of laziness.
 
-Gitlapse API resonate pragrammatic API Design principles by remaining consistently natural, functionally layred, and more importantly least congitive,to insipre your confidence and freedom to explore and use.
+Inorder to inspire ideas of putting together somthing great, Gitlapse API aims to be intuitive, well-documented, and pragrmatically oinionated. Thus as a Developer you can expect predictable, resource-oriented endpoints that uses HTTP response codes. Moreover Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application.
+
 
 JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself (Gitlapse Git Extension), cURL(Standard Https), or through Gitlapse`s Ruby SDK (gem install gitlapse).
 
 While posting, git consumers have the option to include a Software License title & url with each lapse.
 
-Simple enough, Gitlapses two base URLs are there, 1)collection /lapses/ 2)specific lapse /lapse/SHA  . with Eight HTTP verbs
+Simple enough, Gitlapses two base URLs: 
+
+- /lapses/ 
+returns a collection of lapses
+- lapse /lapse/SHA  
+returnes a specific lapse
 
 
 
