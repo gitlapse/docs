@@ -61,15 +61,15 @@ JSON is returned by all API responses, including errors, although our API librar
 
 While posting, git consumers have the option to include a Software License title & url with each lapse.
 
-Simple enough, Gitlapses two base URLs: 
+To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base URLs per resource, for example: 
 
 - /lapses/ 
 returns a collection of lapses
 - lapse /lapse/SHA  
 returnes a specific lapse
 
-## Data policy
-Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you share the lapse link with.
+## Data Policy
+Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you shared the lapse link with.
 
 ##Contribute 
 You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking!
@@ -82,12 +82,6 @@ Join the crowd #gitlapse @freenode.
 # API Resources
 Add a photo of the two base URLS & the Eight HTTP verbs
 
-More complex queries, say for Github or Bitbucket are avialable on their own sections, that also uses the same two base URLs
-
-Two base URLs: 
-Collection
-
-keeps the simple things simple, while the complex things possible.
 
 Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.
 
