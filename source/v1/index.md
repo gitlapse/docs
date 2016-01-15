@@ -51,6 +51,8 @@ gem install gitlapse
 ## Philosophy 
 This is philo for all...
 
+## IRC 
+Join the crowd #gitlapse @freenode. 
 
 # API Resources
 
