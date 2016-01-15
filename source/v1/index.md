@@ -53,6 +53,10 @@ You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse
 ## IRC 
 Join the crowd #gitlapse @freenode. 
 
+## Future
+As much as we would love to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are hearting this for our next versions of the API.
+
+
 # API Resources
 like using legos to put together to build something great.
 
