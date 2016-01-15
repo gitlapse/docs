@@ -4,18 +4,13 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>GitLapse API Reference</title>
+    <title>API Documentation</title>
 
     <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="javascripts/all.js" type="text/javascript"></script>
+      <script src="javascripts/all_nosearch.js" type="text/javascript"></script>
 
-      <script>
-        $(function() {
-          setupLanguages(["c","ruby","shell"]);
-        });
-      </script>
   </head>
 
   <body class="index">
@@ -28,311 +23,21 @@
     <div class="tocify-wrapper">
 <a href="http://www.gitlapse.com">	<img height="60px" width="auto" src="images/logo.png" />
 </a>
-        <div class="lang-selector">
-              <a href="#" data-language-name="c">Git</a>
-              <a href="#" data-language-name="ruby">Ruby</a>
-              <a href="#" data-language-name="shell">cURL</a>
-        </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <div id="toc">
       </div>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse Opensource API</a></li>
-            <li><a href='http://gitlapse.com'> © gitlapse 2016 </a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="api-reference">API Reference</h1>
-
-<blockquote>
-<p>first, run gem install gitlapse
-if you are using rbenv, run rbenv rehash</p>
-</blockquote>
-<pre class="highlight c"><code>
-<span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">file</span>
-
-</code></pre>
-<pre class="highlight shell"><code>
-<span class="c"># With shell, you can just pass the correct header with each request</span>
-curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X POST -d <span class="s1">'{:SHA =&gt; blob_sha_value, :content =&gt; blob_content_value}'</span> http://api.gitlapse.com/v1/git/full_lapse 
-
-</code></pre>
-<pre class="highlight ruby"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
-</code></pre>
-
-<p>Gitlapse API is an opensource REST API for everyone who uses git, either on their own machines or via Git hosting services like Github &amp; Bitbucket, you can always contribute to Gitlapse API on https://github.com/gitlapse/docs . Gitlapse API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. </p>
-
-<p>Gitlapse API uses built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. </p>
-
-<p>Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application (though you should never expose your secret API key in any public website`s client-side code). </p>
-
-<p>JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself (Gitlapse Git Extension), cURL(Standard Https), or through Gitlapse`s Ruby SDK (gem install gitlapse).</p>
-
-<p>Gitlapse API resonate pragrammatic intuitive API Design principles by keeping consistency with &lsquo;The Good Parts&rsquo; of Modern Web APIs, that a natural, functionally layred, least congitive use of the API, that We hope will insipre your confidence and freedom to explore and use. </p>
-
-<p>Gitlapse API resonate pragrammatic API Design principles by remaining consistently natural, functionally layred, and more importantly least congitive,to insipre your confidence and freedom to explore and use.</p>
-
-<p>Simple enough, Gitlapses two base URLs are there, 1)collection /lapses/ 2)specific lapse /lapse/SHA  . with Eight HTTP verbs</p>
-
-<h1 id="add-a-photo-of-the-two-base-urls-amp-the-eight-http-verbs">Add a photo of the two base URLS &amp; the Eight HTTP verbs</h1>
-
-<p>More complex queries, say for Github or Bitbucket are avialable on their own sections, that also uses the same two base URLs</p>
-
-<p>Two base URLs: 
-Collection</p>
-
-<p>keeps the simple things simple, while the complex things possible.</p>
-
-<p>Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.</p>
-
-<p>Gitlapse API implements high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends.</p>
-
-<p>Functional Minimalism - things as simple as possible but not simpler
-least Cognitive load -
-Functional Layering: designed advantage was given focused towards the 80percent of the usecases, while keeping complex usecases at a close approach.</p>
-
-<p>and achieveing affordance by suggests how the API can be used </p>
-
-<p>affordance can be achieved by:
-or other interface elements e.g. underlined links or default button styles.
-in the physical properties of an object should suggest how it can be used. </p>
-
-<p>COPY/PASTE URL, HIT THE ENTER BUTTON IN THE BRWOWERS, AND SOMTHING MEANINGFULL HAPPEN</p>
-
-<aside class="notice">&hellip;</aside>
-
-<aside class="success">&hellip;</aside>
-
-<aside class="warning">&hellip;</aside>
-
-<h3 id="start-using-gitlapse-api-via-running-gem-install-gitlapse-in-your-console">Start using GitLapse API via running <code class="prettyprint">gem install gitlapse</code> in your Console.</h3>
-
-<h2 id="authentication">Authentication</h2>
-
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight c"><code><span class="n">some</span> <span class="n">git</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"gitlapse"</span>
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"username"</span>
-</code></pre>
-
-<blockquote>
-<p>For beta, makeup a username of your choice and use it as API key for debugging purposes. Your choosen username will be used as part of the slug to host your repo on server, i.e. &ldquo;username/repo_name&rdquo;. Thus, please make sure to replace <code class="prettyprint">username</code> with your API key.</p>
-</blockquote>
-
-<p>Gitlapse uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://gitlapse.com/developers">developer portal</a>.</p>
-
-<p>Gitlapse expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: apikey</code></p>
-
-<aside class="notice">
-You must replace <code>username</code> with your personal API key.
-</aside>
-
-<h1 id="github">Github</h1>
-<pre class="highlight c"><code><span class="cp"># inside your cloned github repo
-</span><span class="n">git</span> <span class="n">lapses</span> <span class="n">all</span> 
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.gitlapse.com/v1/github/:username/:reponame/lapses"</span>
-  -H <span class="s2">"Authorization: username"</span>
-</code></pre>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">api_key</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">github</span><span class="p">.</span><span class="nf">lapses</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="ss">:reponame</span><span class="p">)</span>
-</code></pre>
-
-<h1 id="lapses">Lapses</h1>
-
-<h2 id="get-all-lapses">Get All Lapses</h2>
-<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapses</span> <span class="n">all</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.gitlapse.com/v1/:username/:reponame/lapses"</span>
-  -H <span class="s2">"Authorization: username"</span>
-</code></pre>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">api_key</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">lapses</span><span class="p">.</span><span class="nf">get</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all lapses.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://api.gitlapse.com/v1/:username/:reponame/lapses</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-<h2 id="get-a-specific-lapse">Get a Specific Lapse</h2>
-<pre class="highlight c"><code></code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">api_key</span><span class="p">(</span><span class="s1">'username'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">username</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">repo</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">lapses</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">If you are not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
-
-<h3 id="url-parameters">URL Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-
-          <h1 id="errors">Errors</h1>
-
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
-</tr>
-</tbody></table>
+        <p><html>
+<head>
+&lt;!&ndash; Always points to the latest &ndash;&gt;
+<meta http-equiv="refresh" content="0; url=https://www.gitlapse.com/docs/v1/" />
+</head>
+</html></p>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="c">Git</a>
-                <a href="#" data-language-name="ruby">Ruby</a>
-                <a href="#" data-language-name="shell">cURL</a>
-          </div>
       </div>
     </div>
   </body>
