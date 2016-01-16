@@ -70,7 +70,6 @@ Add a photo of the two base URLS & the Eight HTTP verbs
 
 
 
--v1/system ?status: Green for working, Red for system down, 
 
 Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.
 
@@ -279,20 +278,62 @@ Return Value | Description
 ## POST /v1/lapses/:username/:repo
 
 
-# Hosts
-##v1/hosts
-### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
-##v1/hosts/:id
-### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
-
 # Lapses
--v1/lapses
-### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
--v1/lapses/:id
-### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
+
+## v1/lapses
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+## v1/lapses/:id
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
 
 # Users
-##v1/users
-### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
-##v1/users/:id
-### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
+## v1/users
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+
+
+## v1/users/:id
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+
+# Hosts
+## v1/hosts
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+
+## v1/hosts/:id
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+# System
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+
