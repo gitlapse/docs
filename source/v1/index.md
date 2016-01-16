@@ -95,7 +95,7 @@ repo 	 | public    | provide a Gitlapse repo name, public is the default value.
 Parameter | Default | Description
 --------- | ------- | -----------
 SHA | false | returns a specific lapse via its SHA 
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include that have already been adopted.
 
 Return Value | Description
 --------- |  -----------
@@ -153,10 +153,10 @@ This endpoint retrieves all lapses.
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a happy is an authenticated !
 </aside>
 
 ## GET /v1/lapses/:username/:repo/:SHA 
@@ -164,7 +164,7 @@ Remember — a happy kitten is an authenticated kitten!
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://example.com/api//2"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -189,9 +189,9 @@ api.lapses.get(2)
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific .
 
-<aside class="warning">If you are not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+<aside class="warning">If you are not using an administrator API key, note that some will return 403 Forbidden if they are hidden for admins only.</aside>
 
 ### HTTP Request
 `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
@@ -200,13 +200,13 @@ This endpoint retrieves a specific kitten.
 Parameter | Default | Description
 --------- | ------- | -----------
 SHA | false | returns a specific lapse via its SHA 
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include that have already been adopted.
 
 ### Optional Query Parameters
 Parameter | Default | Description
 --------- | ------- | -----------
 SHA | false | returns a specific lapse via its SHA 
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include that have already been adopted.
 
 Return Value | Description
 --------- |  -----------
