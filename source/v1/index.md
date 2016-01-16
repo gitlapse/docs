@@ -74,7 +74,7 @@ Gitlapse data policy dictats that all unauthenticated lapses are automatically d
 ##Contribute 
 You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design</a>, We love to keep tweeking our next API version more & more to your liking!
 
-As much as we are yearning to support more Git hosts such as Github, Bitbucket, Codeplex, etc. We are currently hearting this for our next versions of the API.
+As much as we are yearning to support more Git hosts such as Github, Bitbucket, Codeplex, etc. We are currently hearting this to our next versions of the API.
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
