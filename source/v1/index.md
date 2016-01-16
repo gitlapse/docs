@@ -334,11 +334,6 @@ Return Value | Description
 
 
 
-
-
-
-
-
 ## POST v1/users
 ### Resource URL 
 ### Resource Information 
