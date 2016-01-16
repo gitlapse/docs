@@ -81,10 +81,12 @@ Join the crowd #gitlapse @freenode.
 
 
 # Lapses
-
+Lapses endpoint lets you submit, and retrieve lapses.
 ## GET v1/lapses
 ### Resource URL 
+`https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
+Lapses endpoint lets you submit, and retrieve a collection of lapses.
 ### Parameters 
 ### Example Request 
 ### Example Result
