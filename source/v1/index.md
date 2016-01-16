@@ -22,19 +22,16 @@ Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses
 ## Quickstart
 add this quickstart section to the main homepage of the beta and remove launching soon
 ### Installation 
+
 > first, run gem install gitlapse
 > if you are using rbenv, run rbenv rehash
 
 ```c
-
 git lapse path/to/your/git/file
-
 ```
 ```shell
-
 # With shell, you can just pass the correct header with each request
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' http://api.gitlapse.com/v1/git/full_lapse 
-
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' http://api.gitlapse.com/v1/lapses
 ```
 ```ruby
 gem install gitlapse
@@ -44,50 +41,34 @@ You can install gitlapse on your system either from curl or gem.
 `gem install gitlapse`
 ### copy\paste this oneline of code into your terminal
 
-curl "http://api.gitlapse.com/v1/lapses/git/anonymous/:repo/"
+curl "http://api.gitlapse.com/v1/lapses/:SHA"
 anonymous is the shared username
 repo is name of the git directory
 
 
-
 ## Philosophy 
 
-Gitlapse API resonate pragmatic RESTful design principles by remaining consistently natural, functionally layred, and more importantly least congitive,to insipre your confidence and freedom to explore and use. Gitlapse API design is based on the understanding of the necessity for APIs to appeal to developers` emotion of laziness.
+Gitlapse API design is based on the understanding of the necessity for APIs to appeal to developers` emotion of laziness while building API consumer applications. Gitlapse API aims to be intuitive, well-documented, and pragrmatically oinionated. Developers are encouraged to expect predictable, resource-oriented endpoints that uses standard HTTP response codes. Moreover Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web-based applications.
 
-Inorder to inspire ideas of putting together somthing great, Gitlapse API aims to be intuitive, well-documented, and pragrmatically oinionated. Thus as a Developer you can expect predictable, resource-oriented endpoints that uses HTTP response codes. Moreover Gitlapse API supports cross-origin resource sharing, allowing you to interact securely with it, from a client-side web application.
+Gitlapse API endpoints are reachable over HTTPS via git extensions, cURL, and SDKs.
 
+Gitlapse strives to achieve affordance via:
 
-JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects. Gitlapse API endpoints can be reached via Git itself (Gitlapse Git Extension), cURL(Standard Https), or through Gitlapse`s Ruby SDK (gem install gitlapse).
+- All Gitlapse API respones including errors are returned in the JSON format, that is easily digested by consumer applications. And to be stay functionally minimual and least cognitive, Gitlapses API adopts the standard of offering two base endpoints per resource, while  implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. For example for the `lapses` Resource, Develoeprs can set their expectations to find: 
 
-While posting, git consumers have the option to include a Software License title & url with each lapse.
-
-To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example for the lapses Resource: 
-
-- `GET http://api.gitlapse.com/v1/lapses/`
-- `GET http://api.gitlapse.com/v1/lapses/:SHA`
-
-Add a photo of the two base URLS & the Eight HTTP verbs
+-- `POST http://api.gitlapse.com/v1/lapses/`
+-- `POST http://api.gitlapse.com/v1/lapses/:SHA`
+-- `GET  http://api.gitlapse.com/v1/lapses/`
+-- `GET  http://api.gitlapse.com/v1/lapses/:SHA`
 
 
 Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.
 
-Gitlapse API implements high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends.
-
-Functional Minimalism - things as simple as possible but not simpler
-least Cognitive load -
-Functional Layering: designed advantage was given focused towards the 80percent of the usecases, while keeping complex usecases at a close approach.
-
-
 and achieveing affordance by suggests how the API can be used 
 
-affordance can be achieved by:
+
 or other interface elements e.g. underlined links or default button styles.
 in the physical properties of an object should suggest how it can be used. 
-
-
-COPY/PASTE URL, HIT THE ENTER BUTTON IN THE BRWOWERS, AND SOMTHING MEANINGFULL HAPPEN
-
-
 
 
 ## Data Policy
@@ -100,43 +81,6 @@ As much as we are yearning to include more Git Vendors such as Github, Bitbucket
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
-
-## Authentication
-
-> To authorize, use this code:
-
-```c
-some git
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```ruby
-require "gitlapse"
-Gitlapse.api_key = "username"
-```
-> For beta, makeup a username of your choice and use it as API key for debugging purposes. Your choosen username will be used as part of the slug to host your repo on server, i.e. "username/repo_name". Thus, please make sure to replace `username` with your API key.
-
-
-Gitlapse uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://gitlapse.com/developers).
-
-Gitlapse expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: apikey`
-
-<aside class="notice">...</aside>
-
-<aside class="success">...</aside>
-
-
-<aside class="notice">
-You must replace <code>username</code> with your personal API key.
-</aside>
-
 
 # Lapses 
 
