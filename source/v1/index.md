@@ -7,7 +7,7 @@ language_tabs:
   - shell: cURL 
 
 toc_footers:
-   - Gitlapse API v1 Status <div class="led-red"></div><div class="led-green"></div> 
+   - Gitlapse API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
    - <a href='http://gitlapse.com'> © gitlapse 2016 </a><a href='http://gitlapse.com/terms'> Terms </a>
   
 includes:
