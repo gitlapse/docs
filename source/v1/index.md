@@ -88,11 +88,9 @@ Lapses endpoint lets you submit, and retrieve lapses.
 ### Resource Information 
 Lapses endpoint lets you submit, and retrieve a collection of lapses.
 
- 
-------------------------------- | ------- 
-Response formats 		| B1 
-Requires authentication? 	| B2 
-Rate limited?                	| b2 
+Response formats 		| B1 | 
+Requires authentication? 	| B2 | 
+Rate limited?                	| b2 | 
 
 
 ### Parameters 
