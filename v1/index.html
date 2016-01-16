@@ -135,7 +135,51 @@ repo is name of the git directory</p>
 
 <p>Lapses endpoint lets you submit, and retrieve a collection of lapses.</p>
 
+<p>| Response formats      | B1 |
+| Requires authentication?  | B2 |
+| Rate limited?                 | b2 |</p>
+
 <h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>anonymous</td>
+<td>provide a Gitlapse username, anonymous is the default value.</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>public</td>
+<td>provide a Gitlapse repo name, public is the default value.</td>
+</tr>
+</tbody></table>
+
+<h3 id="optional-query-parameters">Optional Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SHA</td>
+<td>false</td>
+<td>returns a specific lapse via its SHA</td>
+</tr>
+<tr>
+<td>fileds</td>
+<td>true</td>
+<td>Choose which fileds of the JSON response to retrive back</td>
+</tr>
+</tbody></table>
 
 <h3 id="example-request">Example Request</h3>
 
