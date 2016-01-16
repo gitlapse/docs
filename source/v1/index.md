@@ -280,14 +280,28 @@ Return Value | Description
 
 # Lapses
 
-## v1/lapses
+## GET v1/lapses
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
 ### Example Request 
 ### Example Result
 
-## v1/lapses/:id
+## POST v1/lapses
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+## GET v1/lapses/:id
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+## DELETE v1/lapses/:id
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
@@ -296,33 +310,43 @@ Return Value | Description
 
 
 # Users
-## v1/users
+## GET v1/users
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
 ### Example Request 
 ### Example Result
 
-
-
-## v1/users/:id
+## POST v1/users
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
 ### Example Request 
 ### Example Result
 
+## GET v1/users/:id
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
+## DELETE v1/users/:id
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
 
 # Hosts
-## v1/hosts
+## GET v1/hosts
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
 ### Example Request 
 ### Example Result
 
-
-## v1/hosts/:id
+## GET v1/hosts/:id
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
@@ -330,10 +354,9 @@ Return Value | Description
 ### Example Result
 
 # System
+## GET v1/system
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
 ### Example Request 
 ### Example Result
-
-
