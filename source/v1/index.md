@@ -69,12 +69,12 @@ Gitlapse delivers affordance via:
 * All error responses return most relevant links to the documentation and keywords for IRC #channel help. 
 
 ## Data Policy
-Gitlapse data policy dictats that all anonymous lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you shared the lapse link with.
+Gitlapse data policy dictats that all unauthenticated lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you had shared the lapse link with.
 
 ##Contribute 
-You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design Process</a>, We will be happy to keep tweeking our next API version more & more to your liking!
+You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design</a>, We love to keep tweeking our next API version more & more to your liking!
 
-As much as we are yearning to include more Git Vendors such as Github, Bitbucket, Codeplex, etc. into our API; We are currently hearting this for our next versions of the API.
+As much as we are yearning to support more Git hosts such as Github, Bitbucket, Codeplex, etc. We are currently hearting this for our next versions of the API.
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
