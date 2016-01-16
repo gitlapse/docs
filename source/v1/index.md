@@ -55,7 +55,8 @@ Gitlapse API endpoints are reachable over HTTPS via git extensions, cURL, and SD
 
 Gitlapse strives to achieve affordance via:
 
-- All Gitlapse API respones including errors are returned in the JSON format, that is easily digested by consumer applications. And to be stay functionally minimual and least cognitive, Gitlapses API adopts the standard of offering two base endpoints per resource, while  implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. For example for the `lapses` Resource, Develoeprs can set their expectations to find: 
+* All API respones including errors are returned in the JSON format that is easily digested by consumer applications. 
+* Stay functionally minimual and least cognitive: Gitlapses API adopts the standard of offering two base endpoints per resource, while  implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. For example for the `lapses` Resource, Develoeprs can set their expectations to find: 
 
 ** `POST http://api.gitlapse.com/v1/lapses/`
 ** `POST http://api.gitlapse.com/v1/lapses/:SHA`
