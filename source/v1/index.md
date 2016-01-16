@@ -18,7 +18,7 @@ search: true
 
 
 # API v1 Reference 
-Gitlapse API v1 lets you build Consumer Web\Mobile apps that POST\GET git lapses. API v1 only supports anonymous opensource and public git lapses, thus no custom authentication required yet fair-usage apply. 
+Gitlapse API v1 lets you build Consumer apps that on top of Gitlapse. 
 
 ## Quickstart
 add this quickstart section to the main homepage of the beta and remove launching soon
