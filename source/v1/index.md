@@ -63,12 +63,10 @@ While posting, git consumers have the option to include a Software License title
 
 To keep the simple things simple, while the complex things possible, Gitlapses API offers you two base endpoints per resource, for example for the lapses Resource: 
 
-- `GET http://api.gitlapse.com/v1/lapses/:username/:repo`
-- `GET http://api.gitlapse.com/v1/lapses/:username/:repo/:SHA`
+- `GET http://api.gitlapse.com/v1/lapses/`
+- `GET http://api.gitlapse.com/v1/lapses/:SHA`
 
 Add a photo of the two base URLS & the Eight HTTP verbs
-
-
 
 
 Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.
@@ -312,10 +310,34 @@ Return Value | Description
 # Users
 ## GET v1/users
 ### Resource URL 
+
+
 ### Resource Information 
 ### Parameters 
+Parameter | Default | Description
+--------- | ------- | -----------
+username | anonymous | provide a Gitlapse username, anonymous is the default value.
+repo 	 | public    | provide a Gitlapse repo name, public is the default value.
+
+### Optional Query Parameters
+Parameter | Default | Description
+--------- | ------- | -----------
+SHA | false | returns a specific lapse via its SHA 
+fileds| true | Choose which fileds of the JSON response to retrive back
+
 ### Example Request 
+
 ### Example Result
+Return Value | Description
+--------- |  -----------
+{collection} | Returns a collection of lapses
+
+
+
+
+
+
+
 
 ## POST v1/users
 ### Resource URL 
