@@ -88,12 +88,13 @@ repo is name of the git directory</p>
 <p>Gitlapse strives to achieve affordance via:</p>
 
 <ul>
-<li><p>All Gitlapse API respones including errors are returned in the JSON format, that is easily digested by consumer applications. And to be stay functionally minimual and least cognitive, Gitlapses API adopts the standard of offering two base endpoints per resource, while  implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. For example for the <code class="prettyprint">lapses</code> Resource, Develoeprs can set their expectations to find: </p></li>
-<li><p><code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/</code></p></li>
-<li><p><code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/:SHA</code></p></li>
-<li><p><code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/</code></p></li>
-<li><p><code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/:SHA</code></p></li>
+<li>All Gitlapse API respones including errors are returned in the JSON format, that is easily digested by consumer applications. And to be stay functionally minimual and least cognitive, Gitlapses API adopts the standard of offering two base endpoints per resource, while  implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. For example for the <code class="prettyprint">lapses</code> Resource, Develoeprs can set their expectations to find: </li>
 </ul>
+
+<p>** <code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/</code>
+** <code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/:SHA</code>
+** <code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/</code>
+** <code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/:SHA</code></p>
 
 <p>Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.</p>
 
