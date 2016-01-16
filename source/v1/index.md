@@ -68,6 +68,10 @@ To keep the simple things simple, while the complex things possible, Gitlapses A
 
 Add a photo of the two base URLS & the Eight HTTP verbs
 
+
+
+-v1/system ?status: Green for working, Red for system down, 
+
 Errors return most relevant links to the documentation and IRC #channel for help. Gitlapse uses the STANDARD HTTP Status code aoviding the bitfall that most API providers do with custom Error messages that requires you to check it out.
 
 Gitlapse API implements high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends.
@@ -273,3 +277,22 @@ Return Value | Description
 
 
 ## POST /v1/lapses/:username/:repo
+
+
+# Hosts
+##v1/hosts
+### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
+##v1/hosts/:id
+### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
+
+# Lapses
+-v1/lapses
+### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
+-v1/lapses/:id
+### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
+
+# Users
+##v1/users
+### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
+##v1/users/:id
+### Resource URL ### Resource Information ###Parameters ###Example Request ###Example Result
