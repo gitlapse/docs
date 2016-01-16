@@ -18,7 +18,7 @@ search: true
 
 
 # API v1 Reference 
-Gitlapse API v1 lets you build Consumer apps on top of Gitlapse. 
+Gitlapse API v1 lets you build Consumer apps on top of Gitlapse. API v1 doesn`t require authentication required, yet fair usage apply. 
 
 ## Quickstart
 add this quickstart section to the main homepage of the beta and remove launching soon
