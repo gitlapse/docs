@@ -7,7 +7,7 @@ language_tabs:
   - shell: cURL 
 
 toc_footers:
-   - API v1 Status <span class="led-red" markdown="1"></span><span class="led-green" markdown="1"></span> 
+   - API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
    - <a href='http://gitlapse.com'> © gitlapse 2016 </a><a href='http://gitlapse.com/terms'> Terms </a>
   
 includes:
@@ -199,4 +199,5 @@ Return Value | Description
 ### Resource Information 
 ### Parameters 
 ### Example Request 
+
 ### Example Result
