@@ -87,6 +87,7 @@ Lapses endpoint lets you submit, and retrieve lapses.
 ### Resource Information 
 Lapses endpoint lets you submit, and retrieve a collection of lapses.
 
+| 
 --------- | ------- 
 Response formats| anonymous 	| provide a Gitlapse username, anonymous is the default value.
 Requires authentication?    	| public    
