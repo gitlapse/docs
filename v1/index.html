@@ -175,11 +175,29 @@ repo is name of the git directory</p>
 <p><code class="prettyprint">GET https://api.gitlapse.com/v1/lapses?SHAs=&quot;xxxx,xxxx,xxxx,xxxxx,xxxxxx&quot;</code></p>
 
 <h3 id="example-result">Example Result</h3>
-
-<p>JSON Result
-<code class="prettyprint">json
-{sss=&gt;sss}
-</code></p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"glossary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example glossary"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"GlossDiv"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"GlossList"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"GlossEntry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"SortAs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"GlossTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Generalized Markup Language"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"Acronym"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"Abbrev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISO 8879:1986"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"GlossDef"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"para"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A meta-markup language, used to create markup languages such as DocBook."</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"GlossSeeAlso"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GML"</span><span class="p">,</span><span class="w"> </span><span class="s2">"XML"</span><span class="p">]</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="nt">"GlossSee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"markup"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h2 id="post-v1-lapses">POST v1/lapses</h2>
 
