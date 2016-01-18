@@ -104,6 +104,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 JSON Result
 ```json
 {sss=>sss}
+```
 
 ## POST v1/lapses
 ### Resource URL 
