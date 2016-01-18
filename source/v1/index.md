@@ -80,8 +80,8 @@ Join the crowd #gitlapse @freenode.
 
 
 # Lapses
-Lapses endpoint lets you submit, and retrieve lapses.
 ## GET v1/lapses
+lets you submit, and retrieve lapses.
 ### Resource URL 
 `https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
@@ -93,16 +93,10 @@ Requires authentication?    	| No
 
 
 ### Parameters 
-Parameter | Default | Description
---------- | ------- | -----------
-username | anonymous | provide a Gitlapse username, anonymous is the default value.
-repo 	 | public    | provide a Gitlapse repo name, public is the default value.
-
-### Optional Query Parameters
-Parameter | Default | Description
---------- | ------- | -----------
-SHA | false | returns a specific lapse via its SHA 
-fileds| true | Choose which fileds of the JSON response to retrive back
+Parameter | Type	| Description
+--------- | ------- 	| -----------
+SHAs	  | required    | Specify a collection of SHAs 
+Fileds 	  | Optional    | Selects which fileds of the JSON response to retrive back
 
 ### Example Request 
 ### Example Result
