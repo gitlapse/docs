@@ -93,10 +93,10 @@ Requires authentication?    	| No
 
 
 ### Parameters 
-Parameter | Type	| Description
+Parameter |     Type	| Description
 --------- | ------- 	| -----------
-SHAs	  | Required     | Specify a collection of SHAs 
-Fileds 	  | Optional    | Selects which fileds of the JSON response to retrive back
+SHAs	  | Required    | Specify a collection of SHAs
+Fields	  | Optional    | Selects which fields of the JSON response to retrive back
 
 ### Example Request 
 ### Example Result
