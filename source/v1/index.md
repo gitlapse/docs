@@ -99,7 +99,7 @@ SHAs	  | Required    | Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
 
 ### Example Request 
-`GET https://api.gitlapse.com/v1/lapses?SHAs="xxxx,xxxx,xxxx,xxxxx,xxxxxx"`
+`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
 ### Example Result
 ```json
 {
