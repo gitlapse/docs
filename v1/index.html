@@ -123,9 +123,9 @@ repo is name of the git directory</p>
 
 <h1 id="lapses">Lapses</h1>
 
-<p>Lapses endpoint lets you submit, and retrieve lapses.</p>
-
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
+
+<p>lets you submit, and retrieve lapses.</p>
 
 <h3 id="resource-url">Resource URL</h3>
 
@@ -154,40 +154,19 @@ repo is name of the git directory</p>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>username</td>
-<td>anonymous</td>
-<td>provide a Gitlapse username, anonymous is the default value.</td>
+<td>SHAs</td>
+<td>required</td>
+<td>Specify a collection of SHAs</td>
 </tr>
 <tr>
-<td>repo</td>
-<td>public</td>
-<td>provide a Gitlapse repo name, public is the default value.</td>
-</tr>
-</tbody></table>
-
-<h3 id="optional-query-parameters">Optional Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>SHA</td>
-<td>false</td>
-<td>returns a specific lapse via its SHA</td>
-</tr>
-<tr>
-<td>fileds</td>
-<td>true</td>
-<td>Choose which fileds of the JSON response to retrive back</td>
+<td>Fileds</td>
+<td>Optional</td>
+<td>Selects which fileds of the JSON response to retrive back</td>
 </tr>
 </tbody></table>
 
