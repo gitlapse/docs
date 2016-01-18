@@ -85,10 +85,9 @@ Lapses endpoint lets you submit, and retrieve lapses.
 ### Resource URL 
 `https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
-Lapses endpoint lets you submit, and retrieve a collection of lapses.
 
-| 
---------- | ------- 
+Data 	  			| Value 
+--------- 			| ------- 
 Response formats| anonymous 	| provide a Gitlapse username, anonymous is the default value.
 Requires authentication?    	| public    
 Rate limited 			| public    
