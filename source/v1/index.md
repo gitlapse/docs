@@ -95,7 +95,7 @@ Requires authentication?    	| No
 ### Parameters 
 Parameter | Type	| Description
 --------- | ------- 	| -----------
-SHAs	  | required    | Specify a collection of SHAs 
+SHAs	  | Required     | Specify a collection of SHAs 
 Fileds 	  | Optional    | Selects which fileds of the JSON response to retrive back
 
 ### Example Request 
