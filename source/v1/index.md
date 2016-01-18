@@ -86,7 +86,7 @@ Lapses endpoint lets you submit, and retrieve lapses.
 `https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
 
-				|            	 
+Info				| Value           	 
 --------- 			| ------- 
 Response formats		| JSON 
 Requires authentication?    	| No
