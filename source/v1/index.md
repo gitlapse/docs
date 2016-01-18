@@ -101,9 +101,29 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 ### Example Request 
 `GET https://api.gitlapse.com/v1/lapses?SHAs="xxxx,xxxx,xxxx,xxxxx,xxxxxx"`
 ### Example Result
-JSON Result
 ```json
-{sss=>sss}
+{
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
 ```
 
 ## POST v1/lapses
