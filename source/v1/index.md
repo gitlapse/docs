@@ -16,7 +16,6 @@ includes:
 search: true
 ---
 
-
 # API v1 Reference 
 Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 
@@ -87,11 +86,13 @@ Lapses endpoint lets you submit, and retrieve lapses.
 `https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
 Lapses endpoint lets you submit, and retrieve a collection of lapses.
-| Tables 			|   d  		|
-|-------------------------------|---------------|
-|Response formats 		| B1 		| 
-|Requires authentication? 	| B2 		| 
-|Rate limited?                	| b2 		| 
+
+Parameter | Default 
+--------- | ------- 
+Response formats| anonymous 	| provide a Gitlapse username, anonymous is the default value.
+Requires authentication?    	| public    
+Rate limited 			| public    
+
 
 
 ### Parameters 
