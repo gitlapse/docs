@@ -81,6 +81,7 @@ Join the crowd #gitlapse @freenode.
 
 # Lapses
 
+## GET v1/lapses
 ```c
 git lapse path/to/your/git/file
 ```
@@ -119,7 +120,6 @@ gem install gitlapse
 }
 ```
 
-## GET v1/lapses
 lets you submit, and retrieve lapses.
 
 
