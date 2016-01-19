@@ -132,32 +132,29 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 
 <span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
 </code></pre>
-
-<p>Example Result
-<code class="prettyprint">json
-{
-    &quot;glossary&quot;: {
-        &quot;title&quot;: &quot;example glossary&quot;,
-        &quot;GlossDiv&quot;: {
-            &quot;title&quot;: &quot;S&quot;,
-            &quot;GlossList&quot;: {
-                &quot;GlossEntry&quot;: {
-                    &quot;ID&quot;: &quot;SGML&quot;,
-                    &quot;SortAs&quot;: &quot;SGML&quot;,
-                    &quot;GlossTerm&quot;: &quot;Standard Generalized Markup Language&quot;,
-                    &quot;Acronym&quot;: &quot;SGML&quot;,
-                    &quot;Abbrev&quot;: &quot;ISO 8879:1986&quot;,
-                    &quot;GlossDef&quot;: {
-                        &quot;para&quot;: &quot;A meta-markup language, used to create markup languages such as DocBook.&quot;,
-                        &quot;GlossSeeAlso&quot;: [&quot;GML&quot;, &quot;XML&quot;]
-                    },
-                    &quot;GlossSee&quot;: &quot;markup&quot;
-                }
-            }
-        }
-    }
-}
-</code></p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"glossary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example glossary"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"GlossDiv"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"GlossList"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"GlossEntry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"SortAs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"GlossTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Generalized Markup Language"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"Acronym"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"Abbrev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISO 8879:1986"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"GlossDef"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"para"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A meta-markup language, used to create markup languages such as DocBook."</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"GlossSeeAlso"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GML"</span><span class="p">,</span><span class="w"> </span><span class="s2">"XML"</span><span class="p">]</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="nt">"GlossSee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"markup"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
 
