@@ -146,6 +146,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 
 
 
+<!---
 ## POST v1/lapses
 ### Resource URL 
 ### Resource Information 
@@ -167,7 +168,6 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 ### Example Request 
 ### Example Result
 
-<!---
 # Users
 ## GET v1/users
 ### Resource URL 
@@ -230,7 +230,6 @@ Return Value | Description
 ### Parameters 
 ### Example Request 
 ### Example Result
--->
 
 # System
 ## GET v1/system
@@ -240,3 +239,4 @@ Return Value | Description
 ### Example Request 
 
 ### Example Result
+-->
