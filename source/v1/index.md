@@ -15,7 +15,7 @@ includes:
 
 search: true
 ---
-
+<!---
 # API v1 Reference 
 Crafting software is a crucial human endeavor, at its core its a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 
@@ -77,7 +77,7 @@ As much as we are yearning to support more Git hosts such as Github, Bitbucket, 
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
-
+-->
 
 # Lapses
 
