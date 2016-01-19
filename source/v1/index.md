@@ -17,9 +17,9 @@ search: true
 ---
 
 # API v1 Reference 
-Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
+Crafting software is a crucial human endeavor, at its core its a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 
-API v1 doesn`t require authentication, yet fair usage apply. 
+Note: API v1 doesn`t require authentication, yet fair usage apply. 
 
 ## Quickstart
 add this quickstart section to the main homepage of the beta and remove launching soon
