@@ -122,44 +122,54 @@ repo is name of the git directory</p>
 <p>Join the crowd #gitlapse @freenode. </p>
 
 <h1 id="lapses">Lapses</h1>
-<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">file</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X POST -d <span class="s1">'{:SHA =&gt; blob_sha_value, :content =&gt; blob_content_value}'</span> http://api.gitlapse.com/v1/lapses
-</code></pre>
-<pre class="highlight ruby"><code><span class="c1">### Example Request </span>
-<span class="sb">`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`</span>
-
-<span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
-</code></pre>
-<pre class="highlight json"><code><span class="err">###</span><span class="w"> </span><span class="err">Example</span><span class="w"> </span><span class="err">Result</span><span class="w">
-</span><span class="p">{</span><span class="w">
-    </span><span class="nt">"glossary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example glossary"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"GlossDiv"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"GlossList"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"GlossEntry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="nt">"ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"SortAs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"GlossTerm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Generalized Markup Language"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"Acronym"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGML"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"Abbrev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISO 8879:1986"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"GlossDef"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                        </span><span class="nt">"para"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A meta-markup language, used to create markup languages such as DocBook."</span><span class="p">,</span><span class="w">
-                        </span><span class="nt">"GlossSeeAlso"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GML"</span><span class="p">,</span><span class="w"> </span><span class="s2">"XML"</span><span class="p">]</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="nt">"GlossSee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"markup"</span><span class="w">
-                </span><span class="p">}</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
 
-<p>lets you submit, and retrieve lapses.</p>
+<p>lets you submit, and retrieve lapses.
+<code class="prettyprint">c
+git lapse path/to/your/git/file
+</code>
+&ldquo;`shell</p>
+
+<h1 id="with-shell-you-can-just-pass-the-correct-header-with-each-request">With shell, you can just pass the correct header with each request</h1>
+
+<p>curl -v -H &quot;Accept: application/json&rdquo; -H &ldquo;Content-type: application/json&rdquo; -X POST -d &rsquo;{:SHA =&gt; blob_sha_value, :content =&gt; blob_content_value}&rsquo; http://api.gitlapse.com/v1/lapses
+<code class="prettyprint">
+</code>ruby</p>
+
+<h3 id="example-request">Example Request</h3>
+
+<p><code class="prettyprint">GET https://api.gitlapse.com/v1/lapses?SHAs=&quot;d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4&quot;</code></p>
+
+<p>gem install gitlapse
+<code class="prettyprint">
+</code>json</p>
+
+<h3 id="example-result">Example Result</h3>
+
+<p>{
+    &ldquo;glossary&rdquo;: {
+        &ldquo;title&rdquo;: &ldquo;example glossary&rdquo;,
+        &ldquo;GlossDiv&rdquo;: {
+            &ldquo;title&rdquo;: &ldquo;S&rdquo;,
+            &ldquo;GlossList&rdquo;: {
+                &ldquo;GlossEntry&rdquo;: {
+                    &ldquo;ID&rdquo;: &ldquo;SGML&rdquo;,
+                    &ldquo;SortAs&rdquo;: &ldquo;SGML&rdquo;,
+                    &ldquo;GlossTerm&rdquo;: &ldquo;Standard Generalized Markup Language&rdquo;,
+                    &ldquo;Acronym&rdquo;: &ldquo;SGML&rdquo;,
+                    &ldquo;Abbrev&rdquo;: &ldquo;ISO 8879:1986&rdquo;,
+                    &ldquo;GlossDef&rdquo;: {
+                        &ldquo;para&rdquo;: &ldquo;A meta-markup language, used to create markup languages such as DocBook.&rdquo;,
+                        &ldquo;GlossSeeAlso&rdquo;: [&ldquo;GML&rdquo;, &ldquo;XML&rdquo;]
+                    },
+                    &ldquo;GlossSee&rdquo;: &ldquo;markup&rdquo;
+                }
+            }
+        }
+    }
+}
+&ldquo;`</p>
 
 <h3 id="resource-url">Resource URL</h3>
 
