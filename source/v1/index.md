@@ -82,6 +82,8 @@ Join the crowd #gitlapse @freenode.
 # Lapses
 
 ## GET v1/lapses
+This endpoint allows you to acquire lapses in bulk.
+
 ```c
 git lapse fileA, fileB, fileC 
 ```
@@ -120,7 +122,6 @@ gem install gitlapse
 }
 ```
 
-lets you submit, and retrieve lapses.
 
 
 ### Resource URL 
