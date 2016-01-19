@@ -83,11 +83,11 @@ Join the crowd #gitlapse @freenode.
 
 ## GET v1/lapses
 ```c
-git lapse path/to/your/git/file
+git lapse fileA, fileB, fileC 
 ```
 ```shell
-# With shell, you can just pass the correct header with each request
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' http://api.gitlapse.com/v1/lapses
+# Using cURL 
+`curl https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9f3333,d670460b4b4aece5915caf5c68d12f560a9f4444,d670460b4b4aece5915caf5c68d12f560a9f6666"`
 ```
 ```ruby
 # Example Request 
@@ -132,6 +132,7 @@ Info				| Value
 Response formats		| JSON 
 Requires authentication?    	| No
 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' https://api.gitlapse.com/v1/lapses
 
 ### Parameters 
 Parameter |     Type	| Description
