@@ -63,16 +63,14 @@ Gitlapse delivers affordance via:
 
 * Supporting cross-origin resource sharing, allowing you to interact securely with it, from a client-side web-based applications.
 * All API endpoints are conveniently reachable over HTTPS via git extensions, cURL, and SDKs through COPY\PASTE examples.
-* All API respones - including errors - are returned in the JSON format -along with standard HTTP Status codes - that is easily digested by consumer applications. 
+* All API respones including errors  are returned in the JSON format by default, along with standard HTTP Status codes that is easily digested by consumer applications. 
 * All error responses return most relevant links to the documentation and keywords for IRC #channel help. 
 
 ## Data Policy
 Gitlapse data policy dictats that all unauthenticated lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you had shared the lapse link with.
 
 ##Contribute 
-You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design</a>, We love to keep tweeking our next API version more & more to your liking!
-
-As much as we are yearning to support more Git hosts such as Github, Bitbucket, Codeplex, etc. We are currently hearting this to our next versions of the API.
+You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design</a>, We love to keep tweeking our next API version more & more to your liking! And as much as we are yearning to support more Git hosts such as Github, Bitbucket, Codeplex, etc. We are currently hearting this to our upcoming versions of the API.
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
