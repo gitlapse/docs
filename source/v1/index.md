@@ -81,10 +81,6 @@ Join the crowd #gitlapse @freenode.
 
 # Lapses
 
-
-## GET v1/lapses
-lets you submit, and retrieve lapses.
-
 ```c
 git lapse path/to/your/git/file
 ```
@@ -98,8 +94,9 @@ Example Request
 
 gem install gitlapse
 ```
+Example: 
 ```json
-Example Result
+//Example Result
 {
     "glossary": {
         "title": "example glossary",
@@ -123,6 +120,11 @@ Example Result
     }
 }
 ```
+
+## GET v1/lapses
+lets you submit, and retrieve lapses.
+
+
 ### Resource URL 
 `https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
