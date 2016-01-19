@@ -85,22 +85,6 @@ Join the crowd #gitlapse @freenode.
 ## GET v1/lapses
 lets you submit, and retrieve lapses.
 
-### Resource URL 
-`https://api.gitlapse.com/v1/lapses`
-### Resource Information 
-
-Info				| Value           	 
---------- 			| ------- 
-Response formats		| JSON 
-Requires authentication?    	| No
-
-
-### Parameters 
-Parameter |     Type	| Description
---------- | ------- 	| -----------
-SHAs	  | Required    | Specify a collection of SHAs
-Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
 ```c
 git lapse path/to/your/git/file
 ```
@@ -139,6 +123,22 @@ Example Result
     }
 }
 ```
+### Resource URL 
+`https://api.gitlapse.com/v1/lapses`
+### Resource Information 
+
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| No
+
+
+### Parameters 
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+SHAs	  | Required    | Specify a collection of SHAs
+Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+
 
 
 
