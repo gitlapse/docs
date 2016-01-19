@@ -80,27 +80,17 @@ Join the crowd #gitlapse @freenode.
 
 
 # Lapses
-## GET v1/lapses
-lets you submit, and retrieve lapses.
-### Resource URL 
-`https://api.gitlapse.com/v1/lapses`
-### Resource Information 
 
-Info				| Value           	 
---------- 			| ------- 
-Response formats		| JSON 
-Requires authentication?    	| No
-
-
-### Parameters 
-Parameter |     Type	| Description
---------- | ------- 	| -----------
-SHAs	  | Required    | Specify a collection of SHAs
-Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
-### Example Request 
-`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
-### Example Result
+```c
+git lapse path/to/your/git/file
+```
+```shell
+# With shell, you can just pass the correct header with each request
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' http://api.gitlapse.com/v1/lapses
+```
+```ruby
+gem install gitlapse
+```
 ```json
 {
     "glossary": {
@@ -125,6 +115,30 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
     }
 }
 ```
+
+
+## GET v1/lapses
+lets you submit, and retrieve lapses.
+### Resource URL 
+`https://api.gitlapse.com/v1/lapses`
+### Resource Information 
+
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| No
+
+
+### Parameters 
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+SHAs	  | Required    | Specify a collection of SHAs
+Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+
+
+### Example Request 
+`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
+### Example Result
 
 ## POST v1/lapses
 ### Resource URL 
