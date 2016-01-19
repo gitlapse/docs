@@ -127,15 +127,14 @@ repo is name of the git directory</p>
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X POST -d <span class="s1">'{:SHA =&gt; blob_sha_value, :content =&gt; blob_content_value}'</span> http://api.gitlapse.com/v1/lapses
 </code></pre>
-<pre class="highlight ruby"><code><span class="no">Example</span> <span class="no">Request</span> 
+<pre class="highlight ruby"><code><span class="c1"># Example Request </span>
 <span class="sb">`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`</span>
 
 <span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
 </code></pre>
 
-<p>Example: 
+<p>Example Result
 <code class="prettyprint">json
-//Example Result
 {
     &quot;glossary&quot;: {
         &quot;title&quot;: &quot;example glossary&quot;,
