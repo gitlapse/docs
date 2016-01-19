@@ -18,6 +18,7 @@ search: true
 
 # API v1 Reference 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```c
 git lapse path/to/your/git/file
 ```
@@ -32,6 +33,9 @@ gem install gitlapse
 ```
 
 Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode text files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
+=======
+Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
+>>>>>>> 71d1dc0... push push push
 =======
 Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 >>>>>>> 71d1dc0... push push push
