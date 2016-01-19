@@ -94,7 +94,6 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 
 gem install gitlapse
 ```
-Example Result
 ```json
 {
     "glossary": {
