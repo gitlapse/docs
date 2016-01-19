@@ -87,7 +87,7 @@ git lapse fileA, fileB, fileC
 ```
 ```shell
 # Using cURL 
-`curl https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9f3333,d670460b4b4aece5915caf5c68d12f560a9f4444,d670460b4b4aece5915caf5c68d12f560a9f6666"`
+curl https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9f3333, d670460b4b4aece5915caf5c68d12f560a9f4444, d670460b4b4aece5915caf5c68d12f560a9f6666"
 ```
 ```ruby
 # Example Request 
