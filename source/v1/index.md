@@ -77,7 +77,7 @@ As much as we are yearning to support more Git hosts such as Github, Bitbucket, 
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
--->
+--->
 
 # Lapses
 
