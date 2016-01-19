@@ -2,16 +2,16 @@
 title: GitLapse API Reference
 
 language_tabs:
-  - c: Git 
-  - ruby: Ruby
-  - shell: cURL 
+- c: Git 
+- ruby: Ruby
+- shell: cURL 
 
 toc_footers:
-   - API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
-   - <a href='http://gitlapse.com'> © gitlapse 2016 </a><a href='http://gitlapse.com/terms'> Terms </a>
-  
+- API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
+- <a href='http://gitlapse.com'> © gitlapse 2016 </a><a href='http://gitlapse.com/terms'> Terms </a>
+
 includes:
-  - errors
+- errors
 
 search: true
 ---
@@ -56,11 +56,11 @@ Gitlapse delivers affordance via:
 
 * Remaining functionally minimal and least cognitive. 
 * Implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. 
-	* Gitlapses API adopts the standard of offering two base endpoints per resource, For example for the `lapses` Resource, Develoeprs can set their expectations to find: 
-		* `POST http://api.gitlapse.com/v1/lapses/`
-		* `POST http://api.gitlapse.com/v1/lapses/:SHA`
-		* `GET  http://api.gitlapse.com/v1/lapses/`
-		* `GET  http://api.gitlapse.com/v1/lapses/:SHA`
+* Gitlapses API adopts the standard of offering two base endpoints per resource, For example for the `lapses` Resource, Develoeprs can set their expectations to find: 
+* `POST http://api.gitlapse.com/v1/lapses/`
+* `POST http://api.gitlapse.com/v1/lapses/:SHA`
+* `GET  http://api.gitlapse.com/v1/lapses/`
+* `GET  http://api.gitlapse.com/v1/lapses/:SHA`
 
 * Supporting cross-origin resource sharing, allowing you to interact securely with it, from a client-side web-based applications.
 * All API endpoints are conveniently reachable over HTTPS via git extensions, cURL, and SDKs through COPY\PASTE examples.
@@ -97,26 +97,26 @@ gem install gitlapse
 ```
 ```json
 {
-    "glossary": {
-        "title": "example glossary",
-		"GlossDiv": {
-            "title": "S",
-			"GlossList": {
-                "GlossEntry": {
-                    "ID": "SGML",
-					"SortAs": "SGML",
-					"GlossTerm": "Standard Generalized Markup Language",
-					"Acronym": "SGML",
-					"Abbrev": "ISO 8879:1986",
-					"GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-						"GlossSeeAlso": ["GML", "XML"]
-                    },
-					"GlossSee": "markup"
-                }
-            }
-        }
-    }
+  "glossary": {
+    "title": "example glossary",
+      "GlossDiv": {
+	"title": "S",
+	"GlossList": {
+	  "GlossEntry": {
+	    "ID": "SGML",
+	    "SortAs": "SGML",
+	    "GlossTerm": "Standard Generalized Markup Language",
+	    "Acronym": "SGML",
+	    "Abbrev": "ISO 8879:1986",
+	    "GlossDef": {
+	      "para": "A meta-markup language, used to create markup languages such as DocBook.",
+	      "GlossSeeAlso": ["GML", "XML"]
+	    },
+	    "GlossSee": "markup"
+	  }
+	}
+      }
+  }
 }
 ```
 
@@ -130,7 +130,7 @@ lets you submit, and retrieve lapses.
 Info				| Value           	 
 --------- 			| ------- 
 Response formats		| JSON 
-Requires authentication?    	| No
+Requires authentication?    	| False 
 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' https://api.gitlapse.com/v1/lapses
 
@@ -139,7 +139,6 @@ Parameter |     Type	| Description
 --------- | ------- 	| -----------
 SHAs	  | Required    | Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
 
 
 
@@ -167,7 +166,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 ### Example Request 
 ### Example Result
 
-
+<!---
 # Users
 ## GET v1/users
 ### Resource URL 
@@ -230,6 +229,7 @@ Return Value | Description
 ### Parameters 
 ### Example Request 
 ### Example Result
+-->
 
 # System
 ## GET v1/system
