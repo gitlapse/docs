@@ -81,7 +81,6 @@ Join the crowd #gitlapse @freenode.
 This endpoint allows you to acquire lapses in bulk.
 
 ```c
-git lapse fileA, fileB, fileC 
 ```
 ```shell
 # Using cURL 
@@ -145,7 +144,10 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 
 <!---
 ## POST v1/lapses
+
 ### Resource URL 
+
+git lapse fileA, fileB, fileC 
 ### Resource Information 
 ### Parameters 
 ### Example Request 
