@@ -134,10 +134,10 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 ### Parameters 
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
-SHAs	  | Required    | Specify a collection of SHAs
+Repo 	  | Required    | Specify a repo name 
+Branch 	  | Required    | Specify a branch in the repo 
+SHAs	  | Optional 	| Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
-
 
 
 
