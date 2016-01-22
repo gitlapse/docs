@@ -81,26 +81,30 @@ Join the crowd #gitlapse @freenode.
 This endpoint allows you to acquire lapses in bulk.
 
 ```c
-// To get lapses of specific collection of files
+// Sample Request using Git to get lapses of specific collection of files
 git show file1, file2, file3
 
-// To get lapses of all the repo
+// Sample Request using Git to get lapses of all the repo
 git show 
 ```
 
 ```shell
-# Using cURL 
+# Sample Request using cURL to retrive all the lapses of a repo 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+# Using cURL to retreive a collection of lapses from a specific repo 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 ```
 ```ruby
-# Example Request 
-`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
+#`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
 
 # gem install gitlapse or Add gitlapse to your Gemfile
+
+# Sample Request using Ruby SDK to reterive all the lapses from a repo 
 require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 ```json
+# Sample Response
 {
   "glossary": {
     "title": "example glossary",
