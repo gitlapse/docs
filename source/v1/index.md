@@ -104,27 +104,22 @@ require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 ```json
-# Sample Response
-{
-  "glossary": {
-    "title": "example glossary",
-      "GlossDiv": {
-	"title": "S",
-	"GlossList": {
-	  "GlossEntry": {
-	    "ID": "SGML",
-	    "SortAs": "SGML",
-	    "GlossTerm": "Standard Generalized Markup Language",
-	    "Acronym": "SGML",
-	    "Abbrev": "ISO 8879:1986",
-	    "GlossDef": {
-	      "para": "A meta-markup language, used to create markup languages such as DocBook.",
-	      "GlossSeeAlso": ["GML", "XML"]
-	    },
-	    "GlossSee": "markup"
-	  }
-	}
-      }
+// Sample Response
+{ "user_info": {},
+  "repo_info": {},
+  "lapses":{
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    }
   }
 }
 ```
