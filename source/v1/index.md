@@ -129,7 +129,7 @@ Info				| Value
 Response formats		| JSON 
 Requires authentication?    	| False 
 
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' https://api.gitlapse.com/v1/lapses
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 
 ### Parameters 
 Parameter |     Type	| Description
@@ -196,6 +196,7 @@ Return Value | Description
 ### Resource Information 
 ### Parameters 
 ### Example Request 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 ### Example Result
 
 ## GET v1/users/:id
