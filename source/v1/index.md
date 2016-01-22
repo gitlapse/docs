@@ -3,19 +3,18 @@ title: GitLapse API Reference
 
 language_tabs:
   - c: Git 
-  - shell: cURL 
   - ruby: Ruby
+  - shell: cURL 
 
 toc_footers:
-  - API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
-  - <a href='http://gitlapse.com'> © gitlapse 2016 </a><a href='http://gitlapse.com/terms'> Terms </a>
-
+   - API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
+   - <a href='http://gitlapse.com'> © gitlapse 2016 </a><a href='http://gitlapse.com/terms'> Terms </a>
+  
 includes:
   - errors
 
 search: true
 ---
-
 # API v1 Reference 
 Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode text files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 
