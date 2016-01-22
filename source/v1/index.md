@@ -81,7 +81,13 @@ Join the crowd #gitlapse @freenode.
 This endpoint allows you to acquire lapses in bulk.
 
 ```c
+// To get lapses of specific collection of files
+git show file1, file2, file3
+
+// To get lapses of all the repo
+git show 
 ```
+
 ```shell
 # Using cURL 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
