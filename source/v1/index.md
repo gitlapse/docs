@@ -92,7 +92,6 @@ git show file1, file2, file3
 // Sample Request using Git to get lapses of all the repo
 git show 
 ```
-
 ```shell
 # Sample Request using cURL to retrive all the lapses of a repo 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
@@ -108,27 +107,6 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
 ```
-```json
-// Sample Response
-{ "user_info": {},
-  "repo_info": {},
-  "lapses":{
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    }
-  }
-}
-```
-
 
 
 ### Resource URL 
@@ -153,6 +131,30 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 
 
 <!---
+
+```json
+// Sample Response
+{ "user_info": {},
+  "repo_info": {},
+  "lapses":{
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    }
+  }
+}
+```
+
+
+
 ## POST v1/lapses
 
 ### Resource URL 
