@@ -13,7 +13,7 @@
 
       <script>
         $(function() {
-          setupLanguages(["c","ruby","shell"]);
+          setupLanguages(["c","shell","ruby"]);
         });
       </script>
   </head>
@@ -30,8 +30,8 @@
 </a>
         <div class="lang-selector">
               <a href="#" data-language-name="c">Git</a>
-              <a href="#" data-language-name="ruby">Ruby</a>
               <a href="#" data-language-name="shell">cURL</a>
+              <a href="#" data-language-name="ruby">Ruby</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -118,25 +118,6 @@ repo is name of the git directory</p>
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
 
 <p>This endpoint allows you to acquire lapses in bulk.</p>
-<pre class="highlight c"><code><span class="c1">// Sample Request using Git to get lapses of specific collection of files
-</span><span class="n">git</span> <span class="n">show</span> <span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">,</span> <span class="n">file3</span>
-
-<span class="c1">// Sample Request using Git to get lapses of all the repo
-</span><span class="n">git</span> <span class="n">show</span> 
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># Sample Request using cURL to retrive all the lapses of a repo </span>
-curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
-<span class="c"># Using cURL to retreive a collection of lapses from a specific repo </span>
-curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
-</code></pre>
-<pre class="highlight ruby"><code><span class="c1">#`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`</span>
-
-<span class="c1"># gem install gitlapse or Add gitlapse to your Gemfile</span>
-
-<span class="c1"># Sample Request using Ruby SDK to reterive all the lapses from a repo </span>
-<span class="nb">require</span> <span class="s1">'gitlapse'</span>
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
-</code></pre>
 
 <h3 id="resource-url">Resource URL</h3>
 
@@ -192,6 +173,33 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </tbody></table>
 
 <!---
+
+
+```c
+// Sample Request using Git to get lapses of specific collection of files
+git show file1, file2, file3
+
+// Sample Request using Git to get lapses of all the repo
+git show 
+```
+```shell
+# Sample Request using cURL to retrive all the lapses of a repo 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+# Using cURL to retreive a collection of lapses from a specific repo 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+```
+```ruby
+#`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
+
+# gem install gitlapse or Add gitlapse to your Gemfile
+
+# Sample Request using Ruby SDK to reterive all the lapses from a repo 
+require 'gitlapse'
+Gitlapse.lapses(repo="myrepo",branch="master")
+```
+
+
+
 
 ```json
 // Sample Response
@@ -376,8 +384,8 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="c">Git</a>
-                <a href="#" data-language-name="ruby">Ruby</a>
                 <a href="#" data-language-name="shell">cURL</a>
+                <a href="#" data-language-name="ruby">Ruby</a>
           </div>
       </div>
     </div>
