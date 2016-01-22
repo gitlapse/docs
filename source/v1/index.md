@@ -3,8 +3,8 @@ title: GitLapse API Reference
 
 language_tabs:
   - c: Git 
-  - ruby: Ruby
   - shell: cURL 
+  - ruby: Ruby
 
 toc_footers:
    - API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
@@ -84,6 +84,30 @@ Join the crowd #gitlapse @freenode.
 ## GET v1/lapses
 This endpoint allows you to acquire lapses in bulk.
 
+### Resource URL 
+`https://api.gitlapse.com/v1/lapses`
+### Resource Information 
+
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| False 
+
+
+### Parameters 
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+Repo 	  | Required    | Specify a repo name 
+Branch 	  | Required    | Specify a branch in the repo 
+SHAs	  | Optional 	| Specify a collection of SHAs
+Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+
+
+
+
+<!---
+
+
 ```c
 // Sample Request using Git to get lapses of specific collection of files
 git show file1, file2, file3
@@ -108,28 +132,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 
-### Resource URL 
-`https://api.gitlapse.com/v1/lapses`
-### Resource Information 
 
-Info				| Value           	 
---------- 			| ------- 
-Response formats		| JSON 
-Requires authentication?    	| False 
-
-
-### Parameters 
-Parameter |     Type	| Description
---------- | ------- 	| -----------
-Repo 	  | Required    | Specify a repo name 
-Branch 	  | Required    | Specify a branch in the repo 
-SHAs	  | Optional 	| Specify a collection of SHAs
-Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
-
-
-
-<!---
 
 ```json
 // Sample Response
