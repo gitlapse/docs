@@ -85,13 +85,15 @@ git lapse fileA, fileB, fileC
 ```
 ```shell
 # Using cURL 
-curl https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9f3333, d670460b4b4aece5915caf5c68d12f560a9f4444, d670460b4b4aece5915caf5c68d12f560a9f6666"
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 ```
 ```ruby
 # Example Request 
 `GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
 
-gem install gitlapse
+# gem install gitlapse or Add gitlapse to your Gemfile
+require 'gitlapse'
+Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 ```json
 {
@@ -129,7 +131,6 @@ Info				| Value
 Response formats		| JSON 
 Requires authentication?    	| False 
 
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 
 ### Parameters 
 Parameter |     Type	| Description
