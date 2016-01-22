@@ -65,10 +65,10 @@ if you are using rbenv, run rbenv rehash</p>
 </blockquote>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">file</span>
 </code></pre>
+<pre class="highlight ruby"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
+</code></pre>
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X POST -d <span class="s1">'{:SHA =&gt; blob_sha_value, :content =&gt; blob_content_value}'</span> http://api.gitlapse.com/v1/lapses
-</code></pre>
-<pre class="highlight ruby"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
 </code></pre>
 
 <p>You can install gitlapse on your system either from curl or gem.</p>
