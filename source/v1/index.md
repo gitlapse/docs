@@ -3,8 +3,8 @@ title: GitLapse API Reference
 
 language_tabs:
 - c: Git 
-- ruby: Ruby
 - shell: cURL 
+- ruby: Ruby
 
 toc_footers:
 - API v1 Status <div class="led-red" markdown="1"></div><div class="led-green" markdown="1"></div> 
@@ -30,12 +30,14 @@ add this quickstart section to the main homepage of the beta and remove launchin
 ```c
 git lapse path/to/your/git/file
 ```
-```ruby
-gem install gitlapse
-```
+
 ```shell
 # With shell, you can just pass the correct header with each request
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' http://api.gitlapse.com/v1/lapses
+```
+
+```ruby
+gem install gitlapse
 ```
 
 
