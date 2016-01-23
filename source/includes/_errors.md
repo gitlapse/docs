@@ -19,11 +19,7 @@
 
 ### Resource Information 
 The Gitlapse API uses the following error codes:
-Parameter |     Type	| Description
---------- | ------- 	| -----------
-SHA 	  | Required    | Specify a SHA of a lapse 
-
-....
+...
 
 Error Code | Meaning
 ---------- | -------
@@ -57,5 +53,3 @@ Error Code | Meaning
 429 | Too Many Requests -- You're requesting too many resources! Slow down!
 500 | Internal Server Error -- We had a problem with our server. Try again later.
 503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
-
-
