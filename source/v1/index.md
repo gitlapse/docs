@@ -82,7 +82,9 @@ Join the crowd #gitlapse @freenode.
 # Lapses
 
 ## GET v1/lapses
-
+```
+// Sample Request 
+```
 ```c
 // Sample Request using Git to get lapses of specific collection of files
 git show file1, file2, file3
@@ -91,7 +93,7 @@ git show file1, file2, file3
 git show 
 ```
 ```shell
-# Sample Request using cURL to retrive all the lapses of a repo 
+// Sample Request using cURL to retrive all the lapses of a repo 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 # Using cURL to retreive a collection of lapses from a specific repo 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
@@ -111,6 +113,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 // Sample Response
 ```
+
 ```json
 { "user_info": {},
   "repo_info": {},
