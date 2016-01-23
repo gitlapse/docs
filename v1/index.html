@@ -113,64 +113,30 @@ repo is name of the git directory</p>
 
 <p>Join the crowd #gitlapse @freenode. </p>
 
-<h1 id="lapses">Lapses</h1>
+<!---
+# Lapses
 
-<h2 id="get-v1-lapses">GET v1/lapses</h2>
+## GET v1/lapses
+This endpoint allows you to acquire lapses in bulk.
 
-<p>This endpoint allows you to acquire lapses in bulk.</p>
+### Resource URL 
+`https://api.gitlapse.com/v1/lapses`
+### Resource Information 
 
-<h3 id="resource-url">Resource URL</h3>
+Info                | Value              
+---------           | ------- 
+Response formats        | JSON 
+Requires authentication?        | False 
 
-<p><code class="prettyprint">https://api.gitlapse.com/v1/lapses</code></p>
 
-<h3 id="resource-information">Resource Information</h3>
-
-<table><thead>
-<tr>
-<th>Info</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Response formats</td>
-<td>JSON</td>
-</tr>
-<tr>
-<td>Requires authentication?</td>
-<td>False</td>
-</tr>
-</tbody></table>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Repo</td>
-<td>Required</td>
-<td>Specify a repo name</td>
-</tr>
-<tr>
-<td>Branch</td>
-<td>Required</td>
-<td>Specify a branch in the repo</td>
-</tr>
-<tr>
-<td>SHAs</td>
-<td>Optional</td>
-<td>Specify a collection of SHAs</td>
-</tr>
-<tr>
-<td>Fields</td>
-<td>Optional</td>
-<td>Selects which fields of the JSON response to retrive back</td>
-</tr>
-</tbody></table>
+### Parameters 
+Parameter |     Type    | Description
+--------- | -------     | -----------
+Repo      | Required    | Specify a repo name 
+Branch    | Required    | Specify a branch in the repo 
+SHAs      | Optional    | Specify a collection of SHAs
+Fields    | Optional    | Selects which fields of the JSON response to retrive back
+--->
 
 <!---
 
@@ -320,7 +286,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 ### Example Request 
 
 ### Example Result
-&ndash;>
+&mdash;>
 
           <h1 id="errors">Errors</h1>
 
