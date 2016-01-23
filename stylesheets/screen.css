@@ -564,8 +564,7 @@ under the License.
 
 /* line 102, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_syntax.scss.erb */
 .highlight, .highlight .w {
-  background-color: black;
-  background-color: green; }
+  background-color: black; }
 
 @font-face {
   font-family: 'slate';
