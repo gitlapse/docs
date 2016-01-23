@@ -153,7 +153,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight plaintext"><code>// Sample Request using Git to get lapses of all the repo
+<pre class="highlight plaintext"><code>// Sample Request using Git to get all lapses of a repo at a specific branch
 git lapse post . 
 </code></pre>
 <pre class="highlight shell"><code><span class="c"># Using cURL to retreive a collection of lapses from a specific repo </span>
@@ -243,18 +243,71 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </tbody></table>
 
 <h2 id="get-v1-lapses-sha">GET v1/lapses/:SHA</h2>
+<pre class="highlight plaintext"><code>Example Request 
+</code></pre>
+<pre class="highlight plaintext"><code>Example Result
+</code></pre>
 
 <p>This endpoint allows you to a specific lapse via its SHA. </p>
+
+<h3 id="resource-url">Resource URL</h3>
+
+<p><code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
+
+<h3 id="resource-information">Resource Information</h3>
+
+<table><thead>
+<tr>
+<th>Info</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Response formats</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Requires authentication?</td>
+<td>False</td>
+</tr>
+</tbody></table>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SHA</td>
+<td>Required</td>
+<td>Specify a SHA of a lapse</td>
+</tr>
+<tr>
+<td>Repo</td>
+<td>Optional</td>
+<td>Specify a repo name</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Optional</td>
+<td>Specify a branch in the repo</td>
+</tr>
+<tr>
+<td>Fields</td>
+<td>Optional</td>
+<td>Selects which fields of the JSON response to retrive back</td>
+</tr>
+</tbody></table>
 
 <h3 id="resource-url">Resource URL</h3>
 
 <h3 id="resource-information">Resource Information</h3>
 
 <h3 id="parameters">Parameters</h3>
-
-<h3 id="example-request">Example Request</h3>
-
-<h3 id="example-result">Example Result</h3>
 
           <h1 id="errors">Errors</h1>
 
