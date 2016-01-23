@@ -104,7 +104,6 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 Sample Response of Getting Lapses of Specific Collection of Lapses 
 ```
-```
 
 ```json
 { "user_info": {},
