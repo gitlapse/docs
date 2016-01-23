@@ -143,7 +143,10 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 // Sample Response
 ```
 ```json
-{ "user_info": {},
+{ "user_info": {
+  "username":"zotherstupidguy",
+    "about":"someone who cares"
+	       },
   "repo_info": {},
   "lapses":{
     "lapse":{
@@ -162,11 +165,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 }
 ```
 
-
-
-
-
-This endpoint allows you to acquire lapses in bulk.
+This endpoint allows you to acquire lapses. 
 
 ### Resource URL 
 `https://api.gitlapse.com/v1/lapses`
