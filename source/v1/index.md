@@ -16,6 +16,7 @@ includes:
 search: true
 ---
 
+# API v1 Reference 
 ```c
 git lapse path/to/your/git/file
 ```
@@ -29,8 +30,6 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 gem install gitlapse
 ```
 
-
-# API v1 Reference 
 Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode text files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 
 Note: API v1 doesn`t require authentication, yet fair usage apply. 
