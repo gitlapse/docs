@@ -59,10 +59,10 @@ Gitlapse delivers affordance via:
 * Remaining functionally minimal and least cognitive. 
 * Implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. 
 * Gitlapses API adopts the standard of offering two base endpoints per resource, For example for the `lapses` Resource, Develoeprs can set their expectations to find: 
-* `POST http://api.gitlapse.com/v1/lapses/`
-* `POST http://api.gitlapse.com/v1/lapses/:SHA`
-* `GET  http://api.gitlapse.com/v1/lapses/`
-* `GET  http://api.gitlapse.com/v1/lapses/:SHA`
+	* `POST http://api.gitlapse.com/v1/lapses/`
+	* `POST http://api.gitlapse.com/v1/lapses/:SHA`
+	* `GET  http://api.gitlapse.com/v1/lapses/`
+	* `GET  http://api.gitlapse.com/v1/lapses/:SHA`
 
 * Supporting cross-origin resource sharing, allowing you to interact securely with it, from a client-side web-based applications.
 * All API endpoints are conveniently reachable over HTTPS via git extensions, cURL, and SDKs through COPY\PASTE examples.
