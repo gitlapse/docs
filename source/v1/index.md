@@ -186,10 +186,10 @@ SHAs	  | Optional 	| Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
 
 
-## GET v1/lapses/:id
+## GET v1/lapses/:SHA
+This endpoint allows you to a specific lapse via its SHA. 
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
 ### Example Request 
 ### Example Result
-
