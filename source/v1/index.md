@@ -186,4 +186,3 @@ Branch 	  | Required    | Specify a branch in the repo
 SHAs	  | Optional 	| Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
 
-
