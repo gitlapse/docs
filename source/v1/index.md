@@ -126,7 +126,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```
-// Sample Request using Git to get lapses of all the repo
+// Sample Request using Git to get all lapses of a repo at a specific branch
 git lapse post . 
 ```
 ```shell
@@ -187,9 +187,36 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 
 
 ## GET v1/lapses/:SHA
+
+```
+Example Request 
+```
+
+```
+Example Result
+```
+
 This endpoint allows you to a specific lapse via its SHA. 
+### Resource URL 
+`https://api.gitlapse.com/v1/lapses/:SHA`
+### Resource Information 
+
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| False 
+
+
+### Parameters 
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+SHA 	  | Required    | Specify a SHA of a lapse 
+Repo 	  | Optional    | Specify a repo name 
+Branch 	  | Optional    | Specify a branch in the repo 
+Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+
 ### Resource URL 
 ### Resource Information 
 ### Parameters 
-### Example Request 
-### Example Result
+
+
