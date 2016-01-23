@@ -428,7 +428,7 @@ under the License.
   font-size: 16px;
   line-height: 2; }
 
-/* line 125, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
+/* line 126, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/_variables.scss */
 .content pre, .content code {
   word-break: break-all;
   /* Non standard for webkit */
