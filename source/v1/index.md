@@ -20,12 +20,10 @@ search: true
 ```c
 git lapse path/to/your/git/file
 ```
-
 ```shell
  With shell, you can just pass the correct header with each request
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' http://api.gitlapse.com/v1/lapses
 ```
-
 ```ruby
 gem install gitlapse
 ```
