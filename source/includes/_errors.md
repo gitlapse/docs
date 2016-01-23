@@ -19,6 +19,12 @@
 
 ### Resource Information 
 The Gitlapse API uses the following error codes:
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+SHA 	  | Required    | Specify a SHA of a lapse 
+
+....
+
 Error Code | Meaning
 ---------- | -------
 200 | OK - Response to a successful GET, PUT, PATCH or DELETE. Can also be used for a POST that doesn't result in a creation.
