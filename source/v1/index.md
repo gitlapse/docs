@@ -125,9 +125,8 @@ Sample Response of Getting Lapses of Specific Collection of Lapses
   }
 }
 ```
-
-```
-git lapse post . 
+```c
+git lapse post  
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
@@ -190,7 +189,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 ```
 Sample Request using Git to get All Lapses of a Repo at a specific Branch
 ```
-```
+```c
 git lapse post   
 ```
 ```shell
@@ -227,7 +226,7 @@ Sample Response
 ```
 
 ```
-Example Result
+Sample Result
 ```
 
 This endpoint allows you to a specific lapse via its SHA. 
