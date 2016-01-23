@@ -90,11 +90,14 @@ repo is name of the git directory</p>
 <ul>
 <li>Remaining functionally minimal and least cognitive. </li>
 <li>Implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. </li>
-<li>Gitlapses API adopts the standard of offering two base endpoints per resource, For example for the <code class="prettyprint">lapses</code> Resource, Develoeprs can set their expectations to find: </li>
+<li><p>Gitlapses API adopts the standard of offering two base endpoints per resource, For example for the <code class="prettyprint">lapses</code> Resource, Develoeprs can set their expectations to find: </p>
+
+<ul>
 <li><code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/</code></li>
 <li><code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/:SHA</code></li>
 <li><code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/</code></li>
-<li><p><code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/:SHA</code></p></li>
+<li><code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/:SHA</code></li>
+</ul></li>
 <li><p>Supporting cross-origin resource sharing, allowing you to interact securely with it, from a client-side web-based applications.</p></li>
 <li><p>All API endpoints are conveniently reachable over HTTPS via git extensions, cURL, and SDKs through COPY\PASTE examples.</p></li>
 <li><p>All API respones including errors  are returned in the JSON format by default, along with standard HTTP Status codes that is easily digested by consumer applications. </p></li>
