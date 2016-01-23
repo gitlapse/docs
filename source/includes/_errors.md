@@ -12,7 +12,7 @@
   "error": {
     "code": "404",
       "message": "Not Found",
-      "documentation_url": "https://www.gitlapse.com/docs/v1/?ruby#get-v1-lapses"
+      "documentation_url": "https://www.gitlapse.com/docs/v1/?#get-v1-lapses"
   }
 }
 ```
