@@ -232,3 +232,27 @@ SHA 	  | Required    | Specify a SHA of a lapse
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+
+## POST v1/lapses
+### Resource URL 
+### Resource Information 
+git lapse fileA, fileB, fileC 
+### Parameters 
+### Sample Request 
+### Sample Result
+
+## POST v1/lapses/:SHA
+### Resource URL 
+### Resource Information 
+git lapse fileA, fileB, fileC 
+### Parameters 
+### Sample Request 
+### Sample Result
+
+# System
+## GET v1/system
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Sample Request 
+### Sample Result
