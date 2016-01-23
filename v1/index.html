@@ -47,74 +47,169 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="api-v1-reference">API v1 Reference</h1>
-<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">file</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X POST -d <span class="s1">'{:SHA =&gt; blob_sha_value, :content =&gt; blob_content_value}'</span> http://api.gitlapse.com/v1/lapses
-</code></pre>
-<pre class="highlight ruby"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">gitlapse</span>
-</code></pre>
+        <!---
+# API v1 Reference 
+```c
+git lapse path/to/your/git/file
+```
 
-<p>Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode text files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. </p>
+```shell
+# With shell, you can just pass the correct header with each request
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}&rsquo; http://api.gitlapse.com/v1/lapses
+&ldquo;`
 
-<p>Note: API v1 doesn`t require authentication, yet fair usage apply. </p>
+&rdquo;`ruby
+gem install gitlapse
+&ldquo;`
 
-<h2 id="quickstart">Quickstart</h2>
+Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode text files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 
-<p>add this quickstart section to the main homepage of the beta and remove launching soon</p>
+Note: API v1 doesn`t require authentication, yet fair usage apply. 
 
-<h3 id="installation">Installation</h3>
+## Quickstart
+add this quickstart section to the main homepage of the beta and remove launching soon
+### Installation 
 
-<blockquote>
-<p>first, run gem install gitlapse
-if you are using rbenv, run rbenv rehash</p>
-</blockquote>
+> first, run gem install gitlapse
+> if you are using rbenv, run rbenv rehash
 
-<p>You can install gitlapse on your system either from curl or gem.</p>
 
-<p><code class="prettyprint">gem install gitlapse</code></p>
+You can install gitlapse on your system either from curl or gem.
 
-<h3 id="copy-paste-this-oneline-of-code-into-your-terminal">copy\paste this oneline of code into your terminal</h3>
+`gem install gitlapse`
+### copy\paste this oneline of code into your terminal
 
-<p>curl &ldquo;http://api.gitlapse.com/v1/lapses/:SHA&rdquo;
+curl &quot;http://api.gitlapse.com/v1/lapses/:SHA&rdquo;
 anonymous is the shared username
-repo is name of the git directory</p>
+repo is name of the git directory
 
-<h2 id="philosophy">Philosophy</h2>
+## Philosophy 
 
-<p>Gitlapse API design is based on the understanding of the necessity for APIs to appeal to developers` emotion of laziness while building API consumer applications. Developers are encouraged to expect predictable, resource-oriented endpoints. </p>
+Gitlapse API design is based on the understanding of the necessity for APIs to appeal to developers` emotion of laziness while building API consumer applications. Developers are encouraged to expect predictable, resource-oriented endpoints. 
 
-<p>Gitlapse delivers affordance via:</p>
+Gitlapse delivers affordance via:
 
-<ul>
-<li>Remaining functionally minimal and least cognitive. </li>
-<li>Implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. </li>
-<li><p>Gitlapses API adopts the standard of offering two base endpoints per resource, For example for the <code class="prettyprint">lapses</code> Resource, Develoeprs can set their expectations to find: </p>
+* Remaining functionally minimal and least cognitive. 
+* Implementing a high scope mandatory versioning with whole numbers, v1, v2, v3, etc. to interface with the Gitlapse backends. 
+* Gitlapses API adopts the standard of offering two base endpoints per resource, For example for the `lapses` Resource, Develoeprs can set their expectations to find: 
+    * `POST http://api.gitlapse.com/v1/lapses/`
+    * `POST http://api.gitlapse.com/v1/lapses/:SHA`
+    * `GET  http://api.gitlapse.com/v1/lapses/`
+    * `GET  http://api.gitlapse.com/v1/lapses/:SHA`
 
-<ul>
-<li><code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/</code></li>
-<li><code class="prettyprint">POST http://api.gitlapse.com/v1/lapses/:SHA</code></li>
-<li><code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/</code></li>
-<li><code class="prettyprint">GET  http://api.gitlapse.com/v1/lapses/:SHA</code></li>
-</ul></li>
-<li><p>Supporting cross-origin resource sharing, allowing you to interact securely with it, from a client-side web-based applications.</p></li>
-<li><p>All API endpoints are conveniently reachable over HTTPS via git extensions, cURL, and SDKs through COPY\PASTE examples.</p></li>
-<li><p>All API respones including errors  are returned in the JSON format by default, along with standard HTTP Status codes that is easily digested by consumer applications. </p></li>
-<li><p>All error responses return most relevant links to the documentation and keywords for IRC #channel help. </p></li>
-</ul>
+* Supporting cross-origin resource sharing, allowing you to interact securely with it, from a client-side web-based applications.
+* All API endpoints are conveniently reachable over HTTPS via git extensions, cURL, and SDKs through COPY\PASTE examples.
+* All API respones including errors  are returned in the JSON format by default, along with standard HTTP Status codes that is easily digested by consumer applications. 
+* All error responses return most relevant links to the documentation and keywords for IRC #channel help. 
 
-<h2 id="data-policy">Data Policy</h2>
+## Data Policy
+Gitlapse data policy dictats that all unauthenticated lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you had shared the lapse link with.
 
-<p>Gitlapse data policy dictats that all unauthenticated lapses are automatically deleted within a max duration of 84hours from their upload, and before that they are only available through their generated SHA links, making them private to you and to those whom you had shared the lapse link with.</p>
+##Contribute 
+You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design</a>, We love to keep tweeking our next API version more & more to your liking! And as much as we are yearning to support more Git hosts such as Github, Bitbucket, Codeplex, etc. We are currently hearting this to our upcoming versions of the API.
 
-<h2 id="contribute">Contribute</h2>
+## IRC 
+Join the crowd #gitlapse @freenode. 
+&mdash;>
 
-<p>You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse API Interface Design</a>, We love to keep tweeking our next API version more &amp; more to your liking! And as much as we are yearning to support more Git hosts such as Github, Bitbucket, Codeplex, etc. We are currently hearting this to our upcoming versions of the API.</p>
+<h1 id="lapses">Lapses</h1>
 
-<h2 id="irc">IRC</h2>
+<h2 id="get-v1-lapses">GET v1/lapses</h2>
 
-<p>Join the crowd #gitlapse @freenode. </p>
+<p>This endpoint allows you to acquire lapses in bulk.</p>
+
+<h3 id="resource-url">Resource URL</h3>
+
+<p><code class="prettyprint">https://api.gitlapse.com/v1/lapses</code></p>
+
+<h3 id="resource-information">Resource Information</h3>
+
+<table><thead>
+<tr>
+<th>Info</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Response formats</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Requires authentication?</td>
+<td>False</td>
+</tr>
+</tbody></table>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Repo</td>
+<td>Required</td>
+<td>Specify a repo name</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Required</td>
+<td>Specify a branch in the repo</td>
+</tr>
+<tr>
+<td>SHAs</td>
+<td>Optional</td>
+<td>Specify a collection of SHAs</td>
+</tr>
+<tr>
+<td>Fields</td>
+<td>Optional</td>
+<td>Selects which fields of the JSON response to retrive back</td>
+</tr>
+</tbody></table>
+
+<p>&lt;!&mdash;</p>
+<pre class="highlight c"><code><span class="c1">// Sample Request using Git to get lapses of specific collection of files
+</span><span class="n">git</span> <span class="n">show</span> <span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">,</span> <span class="n">file3</span>
+
+<span class="c1">// Sample Request using Git to get lapses of all the repo
+</span><span class="n">git</span> <span class="n">show</span> 
+</code></pre>
+<pre class="highlight shell"><code><span class="c"># Sample Request using cURL to retrive all the lapses of a repo </span>
+curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
+<span class="c"># Using cURL to retreive a collection of lapses from a specific repo </span>
+curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`</span>
+
+<span class="c1"># gem install gitlapse or Add gitlapse to your Gemfile</span>
+
+<span class="c1"># Sample Request using Ruby SDK to reterive all the lapses from a repo </span>
+<span class="nb">require</span> <span class="s1">'gitlapse'</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight json"><code><span class="err">//</span><span class="w"> </span><span class="err">Sample</span><span class="w"> </span><span class="err">Response</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapses"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
           <h1 id="errors">Errors</h1>
 
