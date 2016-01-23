@@ -83,19 +83,13 @@ Join the crowd #gitlapse @freenode.
 
 ## GET v1/lapses
 ```
-// Sample Request 
+// Sample Request to get lapses of specific collection of lapses 
 ```
 ```c
-// Sample Request using Git to get lapses of specific collection of files
-git show file1, file2, file3
-
-// Sample Request using Git to get lapses of all the repo
-git show 
+git lapse get file1, file2, file3
 ```
 ```shell
 // Sample Request using cURL to retrive all the lapses of a repo 
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
-# Using cURL to retreive a collection of lapses from a specific repo 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 ```
 ```ruby
@@ -103,12 +97,9 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 
 # gem install gitlapse or Add gitlapse to your Gemfile
 
-# Sample Request using Ruby SDK to reterive all the lapses from a repo 
 require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
 ```
-
-
 
 ```
 // Sample Response
@@ -133,6 +124,46 @@ Gitlapse.lapses(repo="myrepo",branch="master")
   }
 }
 ```
+
+```
+// Sample Request using Git to get lapses of all the repo
+git lapse post . 
+```
+```shell
+# Using cURL to retreive a collection of lapses from a specific repo 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+```
+```ruby
+require 'gitlapse'
+Gitlapse.lapses(repo="myrepo",branch="master")
+`
+```
+
+```
+// Sample Response
+```
+```json
+{ "user_info": {},
+  "repo_info": {},
+  "lapses":{
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    }
+  }
+}
+```
+
+
+
 
 
 This endpoint allows you to acquire lapses in bulk.
