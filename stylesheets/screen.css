@@ -802,7 +802,7 @@ html, body {
   /* line 276, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .page-wrapper .dark-box {
     width: 45%;
-    background-color: black;
+    background-color: white;
     position: absolute;
     right: 0;
     top: 0;
@@ -811,7 +811,7 @@ html, body {
   .page-wrapper .lang-selector {
     position: fixed;
     z-index: 50;
-    border-bottom: 5px solid black; }
+    border-bottom: 5px solid white; }
 
 /* line 292, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
 .lang-selector {
@@ -833,7 +833,7 @@ html, body {
       color: #fff; }
     /* line 310, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
     .lang-selector a.active {
-      background-color: black;
+      background-color: white;
       color: #fff; }
   /* line 316, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .lang-selector:after {
@@ -901,7 +901,7 @@ html, body {
   /* line 406, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .content hr {
     margin: 2em 0;
-    border-top: 2px solid black;
+    border-top: 2px solid white;
     border-bottom: 2px solid white; }
   /* line 412, /home/zotherstupidguy/gitlapse.com/docs/source/stylesheets/screen.css.scss */
   .content table {
