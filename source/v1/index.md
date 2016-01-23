@@ -15,6 +15,8 @@ includes:
 
 search: true
 ---
+
+<!---
 # API v1 Reference 
 ```c
 git lapse path/to/your/git/file
@@ -77,5 +79,82 @@ You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
+--->
+
+# Lapses
+
+## GET v1/lapses
+This endpoint allows you to acquire lapses in bulk.
+
+### Resource URL 
+`https://api.gitlapse.com/v1/lapses`
+### Resource Information 
+
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| False 
+
+
+### Parameters 
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+Repo 	  | Required    | Specify a repo name 
+Branch 	  | Required    | Specify a branch in the repo 
+SHAs	  | Optional 	| Specify a collection of SHAs
+Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+
+
+
+
+<!---
+
+
+```c
+// Sample Request using Git to get lapses of specific collection of files
+git show file1, file2, file3
+
+// Sample Request using Git to get lapses of all the repo
+git show 
+```
+```shell
+# Sample Request using cURL to retrive all the lapses of a repo 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+# Using cURL to retreive a collection of lapses from a specific repo 
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+```
+```ruby
+#`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
+
+# gem install gitlapse or Add gitlapse to your Gemfile
+
+# Sample Request using Ruby SDK to reterive all the lapses from a repo 
+require 'gitlapse'
+Gitlapse.lapses(repo="myrepo",branch="master")
+```
+
+
+
+
+```json
+// Sample Response
+{ "user_info": {},
+  "repo_info": {},
+  "lapses":{
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    }
+  }
+}
+```
 
 
