@@ -83,7 +83,7 @@ Join the crowd #gitlapse @freenode.
 
 ## GET v1/lapses
 ```
-// Sample Request to get lapses of specific collection of lapses 
+Sample Request To Get Lapses of Specific Collection of Lapses 
 ```
 ```c
 git lapse get file1, file2, file3
@@ -102,7 +102,8 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```
-// Sample Response
+Sample Response of Getting Lapses of Specific Collection of Lapses 
+```
 ```
 
 ```json
@@ -126,11 +127,9 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```
-// Sample Request using Git to get all lapses of a repo at a specific branch
 git lapse post . 
 ```
 ```shell
-# Using cURL to retreive a collection of lapses from a specific repo 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 ```
 ```ruby
@@ -140,7 +139,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```
-// Sample Response
+Sample Response
 ```
 ```json
 { "user_info": {
@@ -189,7 +188,42 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 ## GET v1/lapses/:SHA
 
 ```
-Example Request 
+Sample Request using Git to get All Lapses of a Repo at a specific Branch
+```
+```
+git lapse post   
+```
+```shell
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+```
+```ruby
+require 'gitlapse'
+Gitlapse.lapses(repo="myrepo",branch="master")
+```
+```
+Sample Response
+```
+```json
+{ "user_info": {
+  "username":"zotherstupidguy",
+    "about":"someone who cares"
+	       },
+  "repo_info": {},
+  "lapses":{
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    },
+    "lapse":{
+      "SHA": "big sha",
+      "content": "content"
+    }
+  }
+}
 ```
 
 ```
@@ -214,9 +248,3 @@ SHA 	  | Required    | Specify a SHA of a lapse
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
-### Resource URL 
-### Resource Information 
-### Parameters 
-
-
