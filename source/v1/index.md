@@ -185,3 +185,11 @@ Branch 	  | Required    | Specify a branch in the repo
 SHAs	  | Optional 	| Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
 
+
+## GET v1/lapses/:id
+### Resource URL 
+### Resource Information 
+### Parameters 
+### Example Request 
+### Example Result
+
