@@ -187,19 +187,19 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 ## GET v1/lapses/:SHA
 
 ```
-Sample Request using Git to get All Lapses of a Repo at a specific Branch
+Sample Request using get a Lapse via its SHA 
 ```
 ```c
-git lapse post   
+git lapse sample.rb
 ```
 ```shell
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses/:SHA
 ```
 ```ruby
 require 'gitlapse'
-Gitlapse.lapses(repo="myrepo",branch="master")
-```
-```
+mylapse = Gitlapse.get(SHA)
+  ```
+  ```
 Sample Response
 ```
 ```json
@@ -223,10 +223,6 @@ Sample Response
     }
   }
 }
-```
-
-```
-Sample Result
 ```
 
 This endpoint allows you to a specific lapse via its SHA. 
