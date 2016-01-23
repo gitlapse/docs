@@ -380,21 +380,71 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <h3 id="resource-information">Resource Information</h3>
 
 <p>The Gitlapse API uses the following error codes:
-Error Code | Meaning
-&mdash;&mdash;&mdash;- | &mdash;&mdash;-
-200 | OK - Response to a successful GET, PUT, PATCH or DELETE. Can also be used for a POST that doesn&rsquo;t result in a creation.
-201 | Created - Response to a POST that results in a creation. Should be combined with a Location header pointing to the location of the new resource
-204 | No Content - Response to a successful request that won&rsquo;t be returning a body (like a DELETE request)
-304 | Not Modified - Used when HTTP caching headers are in play
-400 | Bad Request - The request is malformed, such as if the body does not parse
-401 | Unauthorized - When no or invalid authentication details are provided. Also useful to trigger an auth popup if the API is used from a browser
-403 | Forbidden - When authentication succeeded but authenticated user doesn&rsquo;t have access to the resource
-404 | Not Found - When a non-existent resource is requested
-405 | Method Not Allowed - When an HTTP method is being requested that isn&rsquo;t allowed for the authenticated user
-410 | Gone - Indicates that the resource at this end point is no longer available. Useful as a blanket response for old API versions
-415 | Unsupported Media Type - If incorrect content type was provided as part of the request
-422 | Unprocessable Entity - Used for validation errors
-429 | Too Many Requests - When a request is rejected due to rate limiting</p>
+Parameter |     Type    | Description
+&mdash;&mdash;&mdash; | &mdash;&mdash;-     | &mdash;&mdash;&mdash;&ndash;
+SHA       | Required    | Specify a SHA of a lapse </p>
+
+<p>&hellip;.</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK - Response to a successful GET, PUT, PATCH or DELETE. Can also be used for a POST that doesn&rsquo;t result in a creation.</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created - Response to a POST that results in a creation. Should be combined with a Location header pointing to the location of the new resource</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content - Response to a successful request that won&rsquo;t be returning a body (like a DELETE request)</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified - Used when HTTP caching headers are in play</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request - The request is malformed, such as if the body does not parse</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - When no or invalid authentication details are provided. Also useful to trigger an auth popup if the API is used from a browser</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - When authentication succeeded but authenticated user doesn&rsquo;t have access to the resource</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found - When a non-existent resource is requested</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed - When an HTTP method is being requested that isn&rsquo;t allowed for the authenticated user</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone - Indicates that the resource at this end point is no longer available. Useful as a blanket response for old API versions</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type - If incorrect content type was provided as part of the request</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Unprocessable Entity - Used for validation errors</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests - When a request is rejected due to rate limiting</td>
+</tr>
+</tbody></table>
 
 <h3 id="resource-information">Resource Information</h3>
 
