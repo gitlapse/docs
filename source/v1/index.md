@@ -208,33 +208,22 @@ Sample Response
     "about":"someone who cares"
 	       },
   "repo_info": {},
-  "lapses":{
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    }
+  "lapse":{
+    "SHA": "bigsha",
+    "content": "content"
   }
 }
 ```
 
-This endpoint allows you to a specific lapse via its SHA. 
+This endpoint allows you to retreive a specific lapse via its SHA. 
 ### Resource URL 
 `https://api.gitlapse.com/v1/lapses/:SHA`
-### Resource Information 
 
+### Resource Information 
 Info				| Value           	 
 --------- 			| ------- 
 Response formats		| JSON 
 Requires authentication?    	| False 
-
 
 ### Parameters 
 Parameter |     Type	| Description
