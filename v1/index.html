@@ -135,26 +135,24 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </code></pre>
 <pre class="highlight plaintext"><code>Sample Response of Getting Lapses of Specific Collection of Lapses 
 </code></pre>
-<pre class="highlight plaintext"><code>
-```json
-{ "user_info": {},
-  "repo_info": {},
-  "lapses":{
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    }
-  }
-}
-</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapses"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">post</span>  
 </code></pre>
 <pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
