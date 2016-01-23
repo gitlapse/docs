@@ -165,7 +165,10 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </span></code></pre>
 <pre class="highlight plaintext"><code>// Sample Response
 </code></pre>
-<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"username"</span><span class="p">:</span><span class="s2">"zotherstupidguy"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"about"</span><span class="p">:</span><span class="s2">"someone who cares"</span><span class="w">
+           </span><span class="p">},</span><span class="w">
   </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="nt">"lapses"</span><span class="p">:{</span><span class="w">
     </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
@@ -184,7 +187,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint allows you to acquire lapses in bulk.</p>
+<p>This endpoint allows you to acquire lapses. </p>
 
 <h3 id="resource-url">Resource URL</h3>
 
