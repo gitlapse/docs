@@ -119,13 +119,15 @@ repo is name of the git directory</p>
 <h1 id="lapses">Lapses</h1>
 
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
+<pre class="highlight plaintext"><code>// Sample Request 
+</code></pre>
 <pre class="highlight c"><code><span class="c1">// Sample Request using Git to get lapses of specific collection of files
 </span><span class="n">git</span> <span class="n">show</span> <span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">,</span> <span class="n">file3</span>
 
 <span class="c1">// Sample Request using Git to get lapses of all the repo
 </span><span class="n">git</span> <span class="n">show</span> 
 </code></pre>
-<pre class="highlight shell"><code><span class="c"># Sample Request using cURL to retrive all the lapses of a repo </span>
+<pre class="highlight shell"><code>// Sample Request using cURL to retrive all the lapses of a repo 
 curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
 <span class="c"># Using cURL to retreive a collection of lapses from a specific repo </span>
 curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
