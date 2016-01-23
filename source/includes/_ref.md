@@ -1,7 +1,7 @@
 # API v1 Reference 
 
 ```c
-git lapse path/to/your/git/file
+git lapse path/to/your/git/file.rb
 ```
 
 ```shell
