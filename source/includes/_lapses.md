@@ -2,13 +2,12 @@
 
 ## GET v1/lapses
 ```
-Sample Request To Get Lapses of Specific Collection of Lapses 
+Sample Request for Getting a Specific Collection of Lapses 
 ```
 ```c
 git lapse get file1, file2, file3
 ```
 ```shell
-// Sample Request using cURL to retrive all the lapses of a repo 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 ```
 ```ruby
@@ -43,6 +42,7 @@ Sample Response of Getting Lapses of Specific Collection of Lapses
   }
 }
 ```
+
 ```c
 git lapse post  
 ```
