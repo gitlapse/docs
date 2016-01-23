@@ -82,28 +82,6 @@ Join the crowd #gitlapse @freenode.
 # Lapses
 
 ## GET v1/lapses
-This endpoint allows you to acquire lapses in bulk.
-
-### Resource URL 
-`https://api.gitlapse.com/v1/lapses`
-### Resource Information 
-
-Info				| Value           	 
---------- 			| ------- 
-Response formats		| JSON 
-Requires authentication?    	| False 
-
-
-### Parameters 
-Parameter |     Type	| Description
---------- | ------- 	| -----------
-Repo 	  | Required    | Specify a repo name 
-Branch 	  | Required    | Specify a branch in the repo 
-SHAs	  | Optional 	| Specify a collection of SHAs
-Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
-
-
 
 ```c
 // Sample Request using Git to get lapses of specific collection of files
@@ -151,3 +129,26 @@ Gitlapse.lapses(repo="myrepo",branch="master")
   }
 }
 ```
+
+
+This endpoint allows you to acquire lapses in bulk.
+
+### Resource URL 
+`https://api.gitlapse.com/v1/lapses`
+### Resource Information 
+
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| False 
+
+
+### Parameters 
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+Repo 	  | Required    | Specify a repo name 
+Branch 	  | Required    | Specify a branch in the repo 
+SHAs	  | Optional 	| Specify a collection of SHAs
+Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+
+
