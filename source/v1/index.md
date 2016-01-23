@@ -79,6 +79,7 @@ You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse
 ## IRC 
 Join the crowd #gitlapse @freenode. 
 
+<!---
 # Lapses
 
 ## GET v1/lapses
@@ -101,7 +102,7 @@ Repo 	  | Required    | Specify a repo name
 Branch 	  | Required    | Specify a branch in the repo 
 SHAs	  | Optional 	| Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to retrive back
-
+--->
 
 
 
@@ -253,4 +254,4 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POS
 ### Example Request 
 
 ### Example Result
--->
+--->
