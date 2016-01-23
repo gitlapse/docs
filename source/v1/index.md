@@ -248,10 +248,4 @@ git lapse fileA, fileB, fileC
 ### Sample Request 
 ### Sample Result
 
-# System
-## GET v1/system
-### Resource URL 
-### Resource Information 
-### Parameters 
-### Sample Request 
-### Sample Result
+
