@@ -20,6 +20,7 @@ Crafting software is a crucial human endeavor, at its core it is a synthesis of 
 
 Note: API v1 doesn`t require authentication, yet fair usage apply. 
 
+<!---
 ## Quickstart
 add this quickstart section to the main homepage of the beta and remove launching soon
 ### Installation 
@@ -79,7 +80,6 @@ You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse
 ## IRC 
 Join the crowd #gitlapse @freenode. 
 
-<!---
 # Lapses
 
 ## GET v1/lapses
