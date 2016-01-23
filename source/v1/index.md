@@ -15,6 +15,21 @@ includes:
 
 search: true
 ---
+
+```c
+git lapse path/to/your/git/file
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{:SHA => blob_sha_value, :content => blob_content_value}' http://api.gitlapse.com/v1/lapses
+```
+
+```ruby
+gem install gitlapse
+```
+
+
 # API v1 Reference 
 Crafting software is a crucial human endeavor, at its core it is a synthesis of writing and reading sourcecode. Gitlapse improves the software reading experiance by converting sourcecode text files into watchable videos. Gitlapse API v1 lets you build exciting Consumer Apps on top of Gitlapse. 
 
@@ -107,7 +122,6 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 
 
 <!---
-
 
 ```c
 // Sample Request using Git to get lapses of specific collection of files
