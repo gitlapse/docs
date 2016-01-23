@@ -16,7 +16,6 @@ includes:
 search: true
 ---
 
-<!---
 # API v1 Reference 
 ```c
 git lapse path/to/your/git/file
@@ -79,7 +78,6 @@ You can always <a href='https://github.com/gitlapse/docs'>Contribute to Gitlapse
 
 ## IRC 
 Join the crowd #gitlapse @freenode. 
--->
 
 # Lapses
 
