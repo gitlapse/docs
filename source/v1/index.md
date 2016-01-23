@@ -108,9 +108,10 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 
 
 
-
-```json
+```
 // Sample Response
+```
+```json
 { "user_info": {},
   "repo_info": {},
   "lapses":{
