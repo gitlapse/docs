@@ -107,9 +107,6 @@ Fields	  | Optional    | Selects which fields of the JSON response to retrive ba
 
 
 
-<!---
-
-
 ```c
 // Sample Request using Git to get lapses of specific collection of files
 git show file1, file2, file3
@@ -156,5 +153,3 @@ Gitlapse.lapses(repo="myrepo",branch="master")
   }
 }
 ```
-
-
