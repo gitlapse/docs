@@ -241,8 +241,8 @@ curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POS
 ```ruby
 require 'gitlapse'
 
-lapse 		= {"SHA", "blobcontent"}
-mylapse_url 	= Gitlapse.del(lapse: lapse)
+SHA		= "bigsha"
+mylapse_url 	= Gitlapse.del(SHA: SHA)
 
 # Optionally you can include various repo & user information such as reponame, host, username, api-key, etc. 
 repo	 	= "hackspree"
@@ -250,7 +250,7 @@ host  		= "github"
 username 	= "zotherstupidguy"
 key	 	= "ageneratedrandomsomeapikey"
 
-Gitlapse.del(api_key: key, repo_info: repo, user_info: username, lapse: lapse)
+Gitlapse.del(api_key: key, repo_info: repo, user_info: username, SHA: SHA)
 ```
 ```perl
 # Sample Response
