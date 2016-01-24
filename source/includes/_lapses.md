@@ -1,9 +1,8 @@
 # Lapses
 
 ## GET v1/lapses
-```
-Sample Request for Getting a Specific Collection of Lapses 
-```
+
+> Sample Request for Getting a Specific Collection of Lapses 
 ```c
 git lapse get file1, file2, file3
 ```
@@ -20,7 +19,6 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 > Sample Response of Getting a Specific Collection of Lapses 
-
 ```json
 { "user_info": {},
   "repo_info": {},
@@ -50,7 +48,6 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 ```ruby
 require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
-`
 ```
 
 > Sample Response
@@ -80,7 +77,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 This endpoint allows you to acquire lapses. 
 
 ### Resource URL 
-`https://api.gitlapse.com/v1/lapses`
+GET `https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
 
 Info				| Value           	 
@@ -100,9 +97,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to acquire ba
 
 ## GET v1/lapses/:SHA
 
-```
 > Sample Request using get a Lapse via its SHA 
-```
 ```c
 git lapse sample.rb
 ```
@@ -113,9 +108,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 require 'gitlapse'
 mylapse = Gitlapse.get(SHA)
 ```
-```
 > Sample Response
-```
 ```json
 { "user_info": {
   "username":"zotherstupidguy",
