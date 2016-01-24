@@ -168,7 +168,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to acquire ba
 ## POST v1/lapses
 
 ```perl
-# Sample Request for Storing a collection of Lapses via their SHAs
+# Sample Request for Creating a collection of Lapses 
 ```
 ```c
 git lapse fileA, fileB, fileC 
@@ -203,7 +203,7 @@ mylapse_url 	= Gitlapse.post(lapses)
 }
 ```
 
-This endpoint allows you to store a collection of lapses  via their SHAs
+This endpoint allows you to create a collection of lapses
 ### Resource URL 
 POST `https://api.gitlapse.com/v1/lapses`
 
@@ -216,7 +216,7 @@ Requires authentication?    	| False
 ### Parameters 
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
-Lapses    | Required    | Specify a lapse SHA & content 
+Lapses    | Required    | Specify a collection of lapses(SHA & blob content)
 Host      | Optional    | Specify a git host i.e. github, bitbucket, private, etc.
 Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
