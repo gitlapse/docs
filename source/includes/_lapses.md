@@ -229,6 +229,47 @@ Branch 	  | Optional    | Specify a branch in the repo
 
 ## DELETE v1/lapses/:SHA
 
+```perl
+# Sample Request for Deleting a Lapse
+```
+```c
+git lapse fileA
+```
+```shell
+curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{ "host":"host", "username":"zotherstupidguy" ,"lapse": {"SHA":"bigsha","content":"blobcontent"}' https://api.gitlapse.com/v1/lapses
+```
+```ruby
+require 'gitlapse'
+
+lapse 		= {"SHA", "blobcontent"}
+mylapse_url 	= Gitlapse.del(lapse: lapse)
+
+# Optionally you can include various repo & user information such as reponame, host, username, api-key, etc. 
+repo	 	= "hackspree"
+host  		= "github"
+username 	= "zotherstupidguy"
+key	 	= "ageneratedrandomsomeapikey"
+
+Gitlapse.del(api_key: key, repo_info: repo, user_info: username, lapse: lapse)
+```
+```perl
+# Sample Response
+```
+```json
+{ "user_info": {
+  "username":"zotherstupidguy",
+    "about":"someone who cares"
+	       },
+  "repo_info": {},
+  "lapse":{
+    "SHA": "bigsha",
+    "content": "lapse_content",
+    "url": "https://gitlapse.com?SHA='bigsha'"
+  }
+}
+```
+
+This endpoint allows you to delete a lapse via its SHA 
 ### Resource URL 
 DELETE `https://api.gitlapse.com/v1/lapses/:SHA`
 
