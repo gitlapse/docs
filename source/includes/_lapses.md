@@ -7,12 +7,9 @@
 ```c
 git lapse path/fileA, path/fileB, path/fileC
 
-git lapse master, ["path/fileA", "path/fileB"]
-
 git lapse SHA_A, SHA_B, SHA_C
 ```
 ```shell
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
 ```
@@ -21,8 +18,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 # Make sure you run `gem install gitlapse` or Add gitlapse to your Bundler Gemfile before executing this code!
 
 require 'gitlapse'
-Gitlapse.lapses(repo="path/myrepo",branch="master", lapses=["path/fileA", "path/fileB"])
-Gitlapse.lapses(repo="path/myrepo",branch="master")
+Gitlapse.lapses(blobs=["path/fileA", "path/fileB"])
 ```
 
 ```perl
@@ -45,16 +41,20 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
 }
 ```
 
+```perl
+# Sample Request for Acquiring Lapses URLs of a whole Git Repo branch
+```
 ```c
-git lapse post  
+git lapse master, ["path/fileA", "path/fileB"]
+
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
 ```
 ```ruby
+# Make sure you run `gem install gitlapse` or Add gitlapse to your Bundler Gemfile before executing this code!
 require 'gitlapse'
-Gitlapse.lapses(repo="myrepo",branch="master")
-`
+Gitlapse.lapses(repo="path/myrepo",branch="master")
 ```
 
 ```perl
