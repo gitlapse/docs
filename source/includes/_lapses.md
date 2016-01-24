@@ -224,11 +224,28 @@ Host      | Optional    | Specify a git host i.e. github, bitbucket, private, et
 Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
-Fields	  | Optional    | Selects which fields of the JSON response to acquire back
 
 
 ## POST v1/lapses/:SHA
+
 ### Resource URL 
+POST 	`https://api.gitlapse.com/v1/lapses/:SHA`
+PUT  	`https://api.gitlapse.com/v1/lapses/:SHA`
+DELETE 	`https://api.gitlapse.com/v1/lapses/:SHA`
+
+
 ### Resource Information 
-git lapse fileA, fileB, fileC 
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| False 
+
 ### Parameters 
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+SHA       | Required    | Specify a SHA of a lapse 
+Content   | Required    | Specify a Content of a lapse 
+Host      | Optional    | Specify a git host i.e. github, bitbucket, private, etc.
+Username  | Optional    | Specify a username 
+Repo 	  | Optional    | Specify a repo name 
+Branch 	  | Optional    | Specify a branch in the repo 
