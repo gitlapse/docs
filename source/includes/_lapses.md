@@ -5,10 +5,9 @@
 # Sample Request for Acquiring a Specific Collection of Lapses 
 ```
 ```c
-// To make lapses of a specific set of files
-git lapse file1, file2, file3
-// To make lapses of all the files in the repo
-git lapse 
+git lapse path/file1, path/file2, path/file3
+
+git lapse master, ["path/file1", "path/file2"]
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
@@ -20,7 +19,8 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 # Make sure you run `gem install gitlapse` or Add gitlapse to your Gemfile
 
 require 'gitlapse'
-Gitlapse.lapses(repo="myrepo",branch="master")
+Gitlapse.lapses(repo="path/myrepo",branch="master", lapses=["path/file1", "path/file2"])
+Gitlapse.lapses(repo="path/myrepo",branch="master")
 ```
 
 ```perl
@@ -100,6 +100,8 @@ Requires authentication?    	| False
 ### Parameters 
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
+Host      | Optional    | Specify a git host i.e. github, bitbucket, etc.
+Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
 SHAs	  | Optional 	| Specify a collection of SHAs
