@@ -20,7 +20,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```
-Sample Response of Getting a Specific Collection of Lapses 
+> Sample Response of Getting a Specific Collection of Lapses 
 ```
 
 ```json
@@ -56,7 +56,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```
-Sample Response
+> Sample Response
 ```
 ```json
 { "user_info": {
@@ -105,7 +105,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to acquire ba
 ## GET v1/lapses/:SHA
 
 ```
-// Sample Request using get a Lapse via its SHA 
+> Sample Request using get a Lapse via its SHA 
 ```
 ```c
 git lapse sample.rb
@@ -118,7 +118,7 @@ require 'gitlapse'
 mylapse = Gitlapse.get(SHA)
 ```
 ```
-// Sample Response
+> Sample Response
 ```
 ```json
 { "user_info": {
