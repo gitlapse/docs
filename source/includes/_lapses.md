@@ -20,7 +20,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```
-Sample Response of Getting Lapses of Specific Collection of Lapses 
+Sample Response of Getting a Specific Collection of Lapses 
 ```
 
 ```json
