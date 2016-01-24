@@ -9,11 +9,12 @@ git lapse get file1, file2, file3
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
-```
-```ruby
-#`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
 
-# gem install gitlapse or Add gitlapse to your Gemfile
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
+```
+
+```ruby
+# Make sure you run `gem install gitlapse` or Add gitlapse to your Gemfile
 
 require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
