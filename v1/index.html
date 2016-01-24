@@ -444,9 +444,16 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 
 <h3 id="resource-url">Resource URL</h3>
 
-<p>* POST      <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code>
-    * PUT       <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code>
-    * DELETE    <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
+<p>POST    <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
+
+<ul>
+<li>Also it works as an alternative endpoint of PUT &amp; DELETE to be able to support all clients
+
+<ul>
+<li>PUT       <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></li>
+<li>DELETE    <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></li>
+</ul></li>
+</ul>
 
 <h3 id="resource-information">Resource Information</h3>
 
