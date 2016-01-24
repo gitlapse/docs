@@ -19,9 +19,7 @@ require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
-```
 > Sample Response of Getting a Specific Collection of Lapses 
-```
 
 ```json
 { "user_info": {},
@@ -55,9 +53,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 `
 ```
 
-```
 > Sample Response
-```
 ```json
 { "user_info": {
   "username":"zotherstupidguy",
