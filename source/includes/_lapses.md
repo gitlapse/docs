@@ -229,7 +229,9 @@ Branch 	  | Optional    | Specify a branch in the repo
 ## POST v1/lapses/:SHA
 
 ### Resource URL 
-	* POST 		`https://api.gitlapse.com/v1/lapses/:SHA`
+POST 	`https://api.gitlapse.com/v1/lapses/:SHA`
+
+* Also it works as an alternative endpoint of PUT & DELETE to be able to support all clients
 	* PUT  		`https://api.gitlapse.com/v1/lapses/:SHA`
 	* DELETE 	`https://api.gitlapse.com/v1/lapses/:SHA`
 
