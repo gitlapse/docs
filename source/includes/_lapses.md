@@ -2,7 +2,7 @@
 
 ## GET v1/lapses
 ```perl
-# Sample Request for Getting a Specific Collection of Lapses 
+# Sample Request for Acquiring a Specific Collection of Lapses 
 ```
 ```c
 git lapse get file1, file2, file3
@@ -21,7 +21,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```perl
-# Sample Response of Getting a Specific Collection of Lapses 
+# Sample Response of Acquiring a Specific Collection of Lapses 
 ```
 
 ```json
