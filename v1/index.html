@@ -227,7 +227,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <tr>
 <td>Host</td>
 <td>Optional</td>
-<td>Specify a git host i.e. github, bitbucket, etc.</td>
+<td>Specify a git host i.e. github, bitbucket, private, etc.</td>
 </tr>
 <tr>
 <td>Username</td>
@@ -347,10 +347,37 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </tbody></table>
 
 <h2 id="post-v1-lapses">POST v1/lapses</h2>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Storing a collection of Lapses via their SHAs</span>
+</code></pre>
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">fileA</span><span class="p">,</span> <span class="n">fileB</span><span class="p">,</span> <span class="n">fileC</span> 
+</code></pre>
+<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST -d <span class="s1">'{ "host":"host", "username":"zotherstupidguy" ,"lapses": {"SHA":"bigsha","content":"blobcontent"}, {"SHA":"bigsha", "content":"blobcontent"}'</span> https://api.gitlapse.com/v1/lapses
+</code></pre>
+<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
+<span class="n">repo_info</span>   <span class="o">=</span> <span class="p">{</span><span class="s2">"host"</span><span class="ss">:"hostname"</span><span class="p">,</span> <span class="s2">"repo_info"</span><span class="p">:</span> <span class="s2">"repo_info"</span><span class="p">}</span>
+<span class="n">user_info</span>   <span class="o">=</span> <span class="p">{</span><span class="s2">"username"</span><span class="ss">:"hostname"</span><span class="p">,</span> <span class="s2">"api_key"</span><span class="ss">:"ageneratedrandomsomeapikey"</span><span class="p">}</span>   
+<span class="n">lapses</span>      <span class="o">=</span> <span class="p">{{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">}}</span> 
 
-<p>git lapse fileA, fileB, fileC </p>
+<span class="c1"># Optional</span>
+<span class="c1"># Gitlapse.post(repo_info, user_info, lapses)</span>
+<span class="n">mylapse_url</span>     <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">lapses</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight perl"><code><span class="c1"># Sample Response</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"username"</span><span class="p">:</span><span class="s2">"zotherstupidguy"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"about"</span><span class="p">:</span><span class="s2">"someone who cares"</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bigsha"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lapse_content"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlapse.com?SHA='bigsha'"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
-<p>This endpoint allows you to store a collection of lapses </p>
+<p>This endpoint allows you to store a collection of lapses  via their SHAs</p>
 
 <h3 id="resource-url">Resource URL</h3>
 
@@ -384,14 +411,14 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </tr>
 </thead><tbody>
 <tr>
-<td>SHA</td>
+<td>Lapses</td>
 <td>Required</td>
-<td>Specify a SHA of a lapse</td>
+<td>Specify a lapse SHA &amp; content</td>
 </tr>
 <tr>
 <td>Host</td>
 <td>Optional</td>
-<td>Specify a git host i.e. github, bitbucket, etc.</td>
+<td>Specify a git host i.e. github, bitbucket, private, etc.</td>
 </tr>
 <tr>
 <td>Username</td>
