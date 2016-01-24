@@ -120,7 +120,7 @@ repo is name of the git directory</p>
           <h1 id="lapses">Lapses</h1>
 
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
-<pre class="highlight perl"><code><span class="c1"># Sample Request for Acquiring a Specific Collection of Lapses URLs</span>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Listing a Specific Collection of Lapses URLs</span>
 </code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">fileA</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="n">fileB</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="n">fileC</span>
 
@@ -134,7 +134,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <span class="nb">require</span> <span class="s1">'gitlapse'</span>
 <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">blobs</span><span class="o">=</span><span class="p">[</span><span class="s2">"path/fileA"</span><span class="p">,</span> <span class="s2">"path/fileB"</span><span class="p">])</span>
 </code></pre>
-<pre class="highlight perl"><code><span class="c1"># Sample Response of Acquiring a Specific Collection of Lapses URLs</span>
+<pre class="highlight perl"><code><span class="c1"># Sample Response of Listing a Specific Collection of Lapses URLs</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
@@ -153,7 +153,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight perl"><code><span class="c1"># Sample Request for Acquiring Lapses URLs of a whole Git Repo branch</span>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Listing Lapses URLs of a whole Git Repo branch</span>
 </code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">master</span><span class="p">,</span> <span class="p">[</span><span class="s">"path/fileA"</span><span class="p">,</span> <span class="s">"path/fileB"</span><span class="p">]</span>
 
@@ -191,7 +191,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint allows you to acquire lapses. </p>
+<p>This endpoint allows you to list lapses. </p>
 
 <h3 id="resource-url">Resource URL</h3>
 
@@ -252,12 +252,12 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <tr>
 <td>Fields</td>
 <td>Optional</td>
-<td>Selects which fields of the JSON response to acquire back</td>
+<td>Selects which fields of the JSON response to list back</td>
 </tr>
 </tbody></table>
 
 <h2 id="get-v1-lapses-sha">GET v1/lapses/:SHA</h2>
-<pre class="highlight perl"><code><span class="c1"># Sample Request for Acquiring a Specific Lapse URL via its SHA</span>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Listing a Specific Lapse URL via its SHA</span>
 </code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">sample</span><span class="p">.</span><span class="n">rb</span>
 </code></pre>
@@ -281,7 +281,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint allows you to acquire a specific lapse URL via its SHA. </p>
+<p>This endpoint allows you to show a specific lapse URL via its SHA. </p>
 
 <h3 id="resource-url">Resource URL</h3>
 
@@ -342,27 +342,27 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <tr>
 <td>Fields</td>
 <td>Optional</td>
-<td>Selects which fields of the JSON response to acquire back</td>
+<td>Selects which fields of the JSON response to list back</td>
 </tr>
 </tbody></table>
 
 <h2 id="post-v1-lapses">POST v1/lapses</h2>
-<pre class="highlight perl"><code><span class="c1"># Sample Request for Creating a collection of Lapses </span>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Creating a New Lapse</span>
 </code></pre>
-<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">fileA</span><span class="p">,</span> <span class="n">fileB</span><span class="p">,</span> <span class="n">fileC</span> 
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">fileA</span>
 </code></pre>
-<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST -d <span class="s1">'{ "host":"host", "username":"zotherstupidguy" ,"lapses": {"SHA":"bigsha","content":"blobcontent"}, {"SHA":"bigsha", "content":"blobcontent"}'</span> https://api.gitlapse.com/v1/lapses
+<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST -d <span class="s1">'{ "host":"host", "username":"zotherstupidguy" ,"lapse": {"SHA":"bigsha","content":"blobcontent"}'</span> https://api.gitlapse.com/v1/lapses
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
 
-<span class="n">lapses</span>      <span class="o">=</span> <span class="p">{{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">}}</span> 
-<span class="n">mylapse_url</span>     <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="ss">lapses: </span><span class="n">lapses</span><span class="p">)</span>
+<span class="n">lapse</span>       <span class="o">=</span> <span class="p">{{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">}}</span>
+<span class="n">mylapse_url</span>     <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="ss">lapse: </span><span class="n">lapse</span><span class="p">)</span>
 
 <span class="c1"># Optionally you can include repo &amp; user information </span>
 <span class="n">repo_info</span>   <span class="o">=</span> <span class="p">{</span><span class="s2">"host"</span><span class="ss">:"hostname"</span><span class="p">,</span> <span class="s2">"repo_info"</span><span class="p">:</span> <span class="s2">"repo_info"</span><span class="p">}</span>
 <span class="n">user_info</span>   <span class="o">=</span> <span class="p">{</span><span class="s2">"username"</span><span class="ss">:"hostname"</span><span class="p">,</span> <span class="s2">"api_key"</span><span class="ss">:"ageneratedrandomsomeapikey"</span><span class="p">}</span>   
 
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="ss">repo_info: </span><span class="n">repo_info</span><span class="p">,</span> <span class="ss">user_info: </span><span class="n">user_info</span><span class="p">,</span> <span class="ss">lapses: </span><span class="n">lapses</span><span class="p">)</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="ss">repo_info: </span><span class="n">repo_info</span><span class="p">,</span> <span class="ss">user_info: </span><span class="n">user_info</span><span class="p">,</span> <span class="ss">lapse: </span><span class="n">lapse</span><span class="p">)</span>
 
 </code></pre>
 <pre class="highlight perl"><code><span class="c1"># Sample Response</span>
@@ -380,7 +380,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint allows you to create a collection of lapses</p>
+<p>This endpoint allows you to create a new lapse</p>
 
 <h3 id="resource-url">Resource URL</h3>
 
@@ -414,9 +414,9 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </tr>
 </thead><tbody>
 <tr>
-<td>Lapses</td>
+<td>Lapse</td>
 <td>Required</td>
-<td>Specify a collection of lapses(SHA &amp; blob content)</td>
+<td>Specify a new lapses(SHA &amp; blob content)</td>
 </tr>
 <tr>
 <td>Host</td>
@@ -440,20 +440,11 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </tr>
 </tbody></table>
 
-<h2 id="post-v1-lapses-sha">POST v1/lapses/:SHA</h2>
+<h2 id="delete-v1-lapses-sha">DELETE v1/lapses/:SHA</h2>
 
 <h3 id="resource-url">Resource URL</h3>
 
-<p>POST    <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
-
-<ul>
-<li>Also it works as an alternative endpoint of PUT &amp; DELETE to be able to support all clients
-
-<ul>
-<li>PUT       <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></li>
-<li>DELETE    <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></li>
-</ul></li>
-</ul>
+<p>DELETE <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
 
 <h3 id="resource-information">Resource Information</h3>
 
@@ -486,11 +477,6 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <td>SHA</td>
 <td>Required</td>
 <td>Specify a SHA of a lapse</td>
-</tr>
-<tr>
-<td>Content</td>
-<td>Required</td>
-<td>Specify a Content of a lapse</td>
 </tr>
 <tr>
 <td>Host</td>
