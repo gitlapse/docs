@@ -151,9 +151,12 @@ Requires authentication?    	| False
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
 SHA 	  | Required    | Specify a SHA of a lapse 
+Host      | Optional    | Specify a git host i.e. github, bitbucket, etc.
+Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
-Fields	  | Optional    | Selects which fields of the JSON response to acquire 
+Fields	  | Optional    | Selects which fields of the JSON response to acquire back
+
 
 ## POST v1/lapses
 ### Resource URL 
