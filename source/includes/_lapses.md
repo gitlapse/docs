@@ -5,7 +5,10 @@
 # Sample Request for Acquiring a Specific Collection of Lapses 
 ```
 ```c
-git lapse get file1, file2, file3
+// To make lapses of a specific set of files
+git lapse file1, file2, file3
+// To make lapses of all the files in the repo
+git lapse 
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
