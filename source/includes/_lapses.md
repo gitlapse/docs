@@ -8,6 +8,8 @@
 git lapse path/fileA, path/fileB, path/fileC
 
 git lapse master, ["path/fileA", "path/fileB"]
+
+git lapse SHA_A, SHA_B, SHA_C
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
