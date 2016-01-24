@@ -539,12 +539,27 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
           <h1 id="system">System</h1>
 
 <h2 id="get-v1-system">GET v1/system</h2>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Checking Gitlapse API v1 System </span>
+</code></pre>
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">system</span>
+</code></pre>
+<pre class="highlight shell"><code></code></pre>
+<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
+
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">system</span>
+</code></pre>
+<pre class="highlight perl"><code><span class="c1"># Sample Response of Checking Gitlapse API v1 System </span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> 
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="s2">"Ok"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <p>This endpoint is used to list info about Gitlapse API v1</p>
 
 <h3 id="resource-url">Resource URL</h3>
 
-<p>GET <code class="prettyprint">v1/system</code></p>
+<p>GET <code class="prettyprint">https://gitlapse.com/v1/system</code></p>
 
 <h3 id="resource-information">Resource Information</h3>
 
