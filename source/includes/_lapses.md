@@ -2,7 +2,8 @@
 
 ## GET v1/lapses
 ```
-Sample Request for Getting a Specific Collection of Lapses 
+# Sample Request for Getting a Specific Collection of Lapses 
+// Sample Request for Getting a Specific Collection of Lapses 
 ```
 ```c
 git lapse get file1, file2, file3
