@@ -195,7 +195,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 
 <h3 id="resource-url">Resource URL</h3>
 
-<p><code class="prettyprint">https://api.gitlapse.com/v1/lapses</code></p>
+<p>GET <code class="prettyprint">https://api.gitlapse.com/v1/lapses</code></p>
 
 <h3 id="resource-information">Resource Information</h3>
 
@@ -285,7 +285,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 
 <h3 id="resource-url">Resource URL</h3>
 
-<p><code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
+<p>GET <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
 
 <h3 id="resource-information">Resource Information</h3>
 
@@ -348,17 +348,72 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 
 <h2 id="post-v1-lapses">POST v1/lapses</h2>
 
+<p>git lapse fileA, fileB, fileC </p>
+
+<p>This endpoint allows you to store a collection of lapses </p>
+
 <h3 id="resource-url">Resource URL</h3>
+
+<p>POST <code class="prettyprint">https://api.gitlapse.com/v1/lapses/:SHA</code></p>
 
 <h3 id="resource-information">Resource Information</h3>
 
-<p>git lapse fileA, fileB, fileC </p>
+<table><thead>
+<tr>
+<th>Info</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Response formats</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Requires authentication?</td>
+<td>False</td>
+</tr>
+</tbody></table>
 
 <h3 id="parameters">Parameters</h3>
 
-<h3 id="sample-request">Sample Request</h3>
-
-<h3 id="sample-result">Sample Result</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SHA</td>
+<td>Required</td>
+<td>Specify a SHA of a lapse</td>
+</tr>
+<tr>
+<td>Host</td>
+<td>Optional</td>
+<td>Specify a git host i.e. github, bitbucket, etc.</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>Optional</td>
+<td>Specify a username</td>
+</tr>
+<tr>
+<td>Repo</td>
+<td>Optional</td>
+<td>Specify a repo name</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Optional</td>
+<td>Specify a branch in the repo</td>
+</tr>
+<tr>
+<td>Fields</td>
+<td>Optional</td>
+<td>Selects which fields of the JSON response to acquire back</td>
+</tr>
+</tbody></table>
 
 <h2 id="post-v1-lapses-sha">POST v1/lapses/:SHA</h2>
 
