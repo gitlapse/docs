@@ -104,7 +104,7 @@ Requires authentication?    	| False
 ### Parameters 
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
-Host      | Optional    | Specify a git host i.e. github, bitbucket, etc.
+Host      | Optional    | Specify a git host i.e. github, bitbucket, private, etc.
 Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
@@ -167,9 +167,43 @@ Fields	  | Optional    | Selects which fields of the JSON response to acquire ba
 
 ## POST v1/lapses
 
+```perl
+# Sample Request for Storing a collection of Lapses via their SHAs
+```
+```c
 git lapse fileA, fileB, fileC 
+```
+```shell
+curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{ "host":"host", "username":"zotherstupidguy" ,"lapses": {"SHA":"bigsha","content":"blobcontent"}, {"SHA":"bigsha", "content":"blobcontent"}' https://api.gitlapse.com/v1/lapses
+```
+```ruby
+require 'gitlapse'
+repo_info 	= {"host":"hostname", "repo_info": "repo_info"}
+user_info 	= {"username":"hostname", "api_key":"ageneratedrandomsomeapikey"}	
+lapses 		= {{"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}} 
 
-This endpoint allows you to store a collection of lapses 
+# Optional
+# Gitlapse.post(repo_info, user_info, lapses)
+mylapse_url 	= Gitlapse.post(lapses)
+```
+```perl
+# Sample Response
+```
+```json
+{ "user_info": {
+  "username":"zotherstupidguy",
+    "about":"someone who cares"
+	       },
+  "repo_info": {},
+  "lapse":{
+    "SHA": "bigsha",
+    "content": "lapse_content",
+    "url": "https://gitlapse.com?SHA='bigsha'"
+  }
+}
+```
+
+This endpoint allows you to store a collection of lapses  via their SHAs
 ### Resource URL 
 POST `https://api.gitlapse.com/v1/lapses`
 
@@ -182,8 +216,8 @@ Requires authentication?    	| False
 ### Parameters 
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
-SHA 	  | Required    | Specify a SHA of a lapse 
-Host      | Optional    | Specify a git host i.e. github, bitbucket, etc.
+Lapses    | Required    | Specify a lapse SHA & content 
+Host      | Optional    | Specify a git host i.e. github, bitbucket, private, etc.
 Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
