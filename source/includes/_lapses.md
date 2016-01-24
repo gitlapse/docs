@@ -2,7 +2,7 @@
 
 ## GET v1/lapses
 ```perl
-# Sample Request for Acquiring a Specific Collection of Lapses 
+# Sample Request for Acquiring a Specific Collection of Lapses URLs
 ```
 ```c
 git lapse path/file1, path/file2, path/file3
@@ -16,7 +16,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 ```
 
 ```ruby
-# Make sure you run `gem install gitlapse` or Add gitlapse to your Gemfile
+# Make sure you run `gem install gitlapse` or Add gitlapse to your Bundler Gemfile before executing this code!
 
 require 'gitlapse'
 Gitlapse.lapses(repo="path/myrepo",branch="master", lapses=["path/file1", "path/file2"])
@@ -24,7 +24,7 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
 ```
 
 ```perl
-# Sample Response of Acquiring a Specific Collection of Lapses 
+# Sample Response of Acquiring a Specific Collection of Lapses URLs
 ```
 
 ```json
@@ -33,10 +33,10 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
   "lapses":{
     "lapse":{
       "SHA": "big sha",
-      "content": "content"
+      "URL": 'https://gitlapse.com/SHA?repo="reponame",username="username",host"hostname",SHA="SHA"'
     },
     "lapse":{
-      "SHA": "big sha",
+      "SHA": "bigSHAstring",
       "content": "content"
     },
     "lapse":{
