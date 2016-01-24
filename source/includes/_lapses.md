@@ -5,9 +5,9 @@
 # Sample Request for Acquiring a Specific Collection of Lapses URLs
 ```
 ```c
-git lapse path/file1, path/file2, path/file3
+git lapse path/fileA, path/fileB, path/fileC
 
-git lapse master, ["path/file1", "path/file2"]
+git lapse master, ["path/fileA", "path/fileB"]
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
@@ -19,7 +19,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 # Make sure you run `gem install gitlapse` or Add gitlapse to your Bundler Gemfile before executing this code!
 
 require 'gitlapse'
-Gitlapse.lapses(repo="path/myrepo",branch="master", lapses=["path/file1", "path/file2"])
+Gitlapse.lapses(repo="path/myrepo",branch="master", lapses=["path/fileA", "path/fileB"])
 Gitlapse.lapses(repo="path/myrepo",branch="master")
 ```
 
@@ -32,16 +32,12 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
   "repo_info": {},
   "lapses":{
     "lapse":{
-      "SHA": "big sha",
-      "URL": 'https://gitlapse.com/SHA?repo="reponame",username="username",host"hostname",SHA="SHA"'
+      "SHA": "d670460b4b4aece5915caf5c68d12f560a9fe3e4",
+      "URL": "https://gitlapse.com/SHA?d670460b4b4aece5915caf5c68d12f560a9fe3e4"
     },
     "lapse":{
-      "SHA": "bigSHAstring",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
+      "SHA": "cd670460b4b4aece5915caf5c68d12f560a9fe3e4",
+      "URL": "https://gitlapse.com/SHA?cd670460b4b4aece5915caf5c68d12f560a9fe3e4
     }
   }
 }
