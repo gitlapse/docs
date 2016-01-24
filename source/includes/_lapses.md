@@ -171,7 +171,7 @@ git lapse fileA, fileB, fileC
 
 This endpoint allows you to store a collection of lapses 
 ### Resource URL 
-POST `https://api.gitlapse.com/v1/lapses/:SHA`
+POST `https://api.gitlapse.com/v1/lapses`
 
 ### Resource Information 
 Info				| Value           	 
