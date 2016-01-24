@@ -32,12 +32,12 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
   "repo_info": {},
   "lapses":{
     "lapse":{
-      "SHA": "d670460b4b4aece5915caf5c68d12f560a9fe3e4",
-      "URL": "https://gitlapse.com/SHA?d670460b4b4aece5915caf5c68d12f560a9fe3e4"
+      "SHA": "zSHA",
+      "URL": "https://gitlapse.com/SHA?zSHA"
     },
     "lapse":{
-      "SHA": "cd670460b4b4aece5915caf5c68d12f560a9fe3e4",
-      "URL": "https://gitlapse.com/SHA?cd670460b4b4aece5915caf5c68d12f560a9fe3e4
+      "SHA": "zSHA",
+      "URL": "https://gitlapse.com/SHA?zSHA"
     }
   }
 }
