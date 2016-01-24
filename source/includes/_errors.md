@@ -1,12 +1,5 @@
 # Errors
 
-```
-### Sample Request 
-```
-
-```
-### Sample Result
-```
 ```json
 {
   "error": {
