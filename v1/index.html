@@ -120,87 +120,76 @@ repo is name of the git directory</p>
           <h1 id="lapses">Lapses</h1>
 
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
+<pre class="highlight plaintext"><code>Sample Request for Getting a Specific Collection of Lapses 
+</code></pre>
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">get</span> <span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">,</span> <span class="n">file3</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#`GET https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`</span>
 
-<blockquote>
-<p>Sample Request for Getting a Specific Collection of Lapses 
-<code class="prettyprint">c
-git lapse get file1, file2, file3
-</code>
-<code class="prettyprint">shell
-curl -v -H &quot;Accept: application/json&quot; -H &quot;Content-type: application/json&quot; -X  https://api.gitlapse.com/v1/lapses?repo=&quot;myrepo&quot;,branch=&quot;master&quot;
-</code>
-&ldquo;`ruby</p>
+<span class="c1"># gem install gitlapse or Add gitlapse to your Gemfile</span>
 
-<h1 id="get-https-api-gitlapse-com-v1-lapses-shas-quot-d670460b4b4aece5915caf5c68d12f560a9fe3e4-d670460b4b4aece5915caf5c68d12f560a9fe3e4-d670460b4b4aece5915caf5c68d12f560a9fe3e4-quot"><code class="prettyprint">GET https://api.gitlapse.com/v1/lapses?SHAs=&quot;d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4&quot;</code></h1>
-</blockquote>
-
-<h1 id="gem-install-gitlapse-or-add-gitlapse-to-your-gemfile">gem install gitlapse or Add gitlapse to your Gemfile</h1>
-
-<p>require &lsquo;gitlapse&rsquo;
-Gitlapse.lapses(repo=&quot;myrepo&rdquo;,branch=&ldquo;master&rdquo;)
-&ldquo;`</p>
-
-<blockquote>
-<p>Sample Response of Getting a Specific Collection of Lapses 
-<code class="prettyprint">json
-{ &quot;user_info&quot;: {},
-  &quot;repo_info&quot;: {},
-  &quot;lapses&quot;:{
-    &quot;lapse&quot;:{
-      &quot;SHA&quot;: &quot;big sha&quot;,
-      &quot;content&quot;: &quot;content&quot;
-    },
-    &quot;lapse&quot;:{
-      &quot;SHA&quot;: &quot;big sha&quot;,
-      &quot;content&quot;: &quot;content&quot;
-    },
-    &quot;lapse&quot;:{
-      &quot;SHA&quot;: &quot;big sha&quot;,
-      &quot;content&quot;: &quot;content&quot;
-    }
-  }
-}
-</code></p>
-</blockquote>
+<span class="nb">require</span> <span class="s1">'gitlapse'</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>Sample Response of Getting a Specific Collection of Lapses 
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapses"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">post</span>  
 </code></pre>
 <pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
 <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+<span class="sb">`
+</span></code></pre>
+<pre class="highlight plaintext"><code>Sample Response
 </code></pre>
-
-<blockquote>
-<p>Sample Response
-<code class="prettyprint">json
-{ &quot;user_info&quot;: {
-  &quot;username&quot;:&quot;zotherstupidguy&quot;,
-    &quot;about&quot;:&quot;someone who cares&quot;
-           },
-  &quot;repo_info&quot;: {},
-  &quot;lapses&quot;:{
-    &quot;lapse&quot;:{
-      &quot;SHA&quot;: &quot;big sha&quot;,
-      &quot;content&quot;: &quot;content&quot;
-    },
-    &quot;lapse&quot;:{
-      &quot;SHA&quot;: &quot;big sha&quot;,
-      &quot;content&quot;: &quot;content&quot;
-    },
-    &quot;lapse&quot;:{
-      &quot;SHA&quot;: &quot;big sha&quot;,
-      &quot;content&quot;: &quot;content&quot;
-    }
-  }
-}
-</code></p>
-</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"username"</span><span class="p">:</span><span class="s2">"zotherstupidguy"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"about"</span><span class="p">:</span><span class="s2">"someone who cares"</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapses"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <p>This endpoint allows you to acquire lapses. </p>
 
 <h3 id="resource-url">Resource URL</h3>
 
-<p>GET <code class="prettyprint">https://api.gitlapse.com/v1/lapses</code></p>
+<p><code class="prettyprint">https://api.gitlapse.com/v1/lapses</code></p>
 
 <h3 id="resource-information">Resource Information</h3>
 
@@ -252,33 +241,28 @@ Gitlapse.lapses(repo=&quot;myrepo&rdquo;,branch=&ldquo;master&rdquo;)
 </tbody></table>
 
 <h2 id="get-v1-lapses-sha">GET v1/lapses/:SHA</h2>
-
-<blockquote>
-<p>Sample Request using get a Lapse via its SHA 
-<code class="prettyprint">c
-git lapse sample.rb
-</code>
-<code class="prettyprint">shell
-curl -v -H &quot;Accept: application/json&quot; -H &quot;Content-type: application/json&quot; -X  https://api.gitlapse.com/v1/lapses/:SHA
-</code>
-<code class="prettyprint">ruby
-require &#39;gitlapse&#39;
-mylapse = Gitlapse.get(SHA)
-</code>
-Sample Response
-<code class="prettyprint">json
-{ &quot;user_info&quot;: {
-  &quot;username&quot;:&quot;zotherstupidguy&quot;,
-    &quot;about&quot;:&quot;someone who cares&quot;
-           },
-  &quot;repo_info&quot;: {},
-  &quot;lapse&quot;:{
-    &quot;SHA&quot;: &quot;bigsha&quot;,
-    &quot;content&quot;: &quot;content&quot;
-  }
-}
-</code></p>
-</blockquote>
+<pre class="highlight plaintext"><code>&gt; Sample Request using get a Lapse via its SHA 
+</code></pre>
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">sample</span><span class="p">.</span><span class="n">rb</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses/:SHA
+</code></pre>
+<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
+<span class="n">mylapse</span> <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="no">SHA</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>// Sample Response
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"username"</span><span class="p">:</span><span class="s2">"zotherstupidguy"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"about"</span><span class="p">:</span><span class="s2">"someone who cares"</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bigsha"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <p>This endpoint allows you to acquire a specific lapse via its SHA. </p>
 
