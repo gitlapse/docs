@@ -124,19 +124,15 @@ repo is name of the git directory</p>
 </code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">fileA</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="n">fileB</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="n">fileC</span>
 
-<span class="n">git</span> <span class="n">lapse</span> <span class="n">master</span><span class="p">,</span> <span class="p">[</span><span class="s">"path/fileA"</span><span class="p">,</span> <span class="s">"path/fileB"</span><span class="p">]</span>
-
 <span class="n">git</span> <span class="n">lapse</span> <span class="n">SHA_A</span><span class="p">,</span> <span class="n">SHA_B</span><span class="p">,</span> <span class="n">SHA_C</span>
 </code></pre>
-<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
-
+<pre class="highlight shell"><code>
 curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?SHAs<span class="o">=</span><span class="s2">"d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"</span><span class="sb">`</span>
 </code></pre>
 <pre class="highlight ruby"><code><span class="c1"># Make sure you run `gem install gitlapse` or Add gitlapse to your Bundler Gemfile before executing this code!</span>
 
 <span class="nb">require</span> <span class="s1">'gitlapse'</span>
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"path/myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">,</span> <span class="n">lapses</span><span class="o">=</span><span class="p">[</span><span class="s2">"path/fileA"</span><span class="p">,</span> <span class="s2">"path/fileB"</span><span class="p">])</span>
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"path/myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">blobs</span><span class="o">=</span><span class="p">[</span><span class="s2">"path/fileA"</span><span class="p">,</span> <span class="s2">"path/fileB"</span><span class="p">])</span>
 </code></pre>
 <pre class="highlight perl"><code><span class="c1"># Sample Response of Acquiring a Specific Collection of Lapses URLs</span>
 </code></pre>
@@ -154,14 +150,17 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">post</span>  
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Acquiring Lapses URLs of a whole Git Repo branch</span>
+</code></pre>
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">master</span><span class="p">,</span> <span class="p">[</span><span class="s">"path/fileA"</span><span class="p">,</span> <span class="s">"path/fileB"</span><span class="p">]</span>
+
 </code></pre>
 <pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
 </code></pre>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
-<span class="sb">`
-</span></code></pre>
+<pre class="highlight ruby"><code><span class="c1"># Make sure you run `gem install gitlapse` or Add gitlapse to your Bundler Gemfile before executing this code!</span>
+<span class="nb">require</span> <span class="s1">'gitlapse'</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"path/myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+</code></pre>
 <pre class="highlight perl"><code><span class="c1"># Sample Response</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
