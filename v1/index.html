@@ -355,15 +355,16 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
 
-<span class="n">lapse</span>       <span class="o">=</span> <span class="p">{{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">}}</span>
+<span class="n">lapse</span>       <span class="o">=</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">}</span>
 <span class="n">mylapse_url</span>     <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="ss">lapse: </span><span class="n">lapse</span><span class="p">)</span>
 
-<span class="c1"># Optionally you can include repo &amp; user information </span>
-<span class="n">repo_info</span>   <span class="o">=</span> <span class="p">{</span><span class="s2">"host"</span><span class="ss">:"hostname"</span><span class="p">,</span> <span class="s2">"repo_info"</span><span class="p">:</span> <span class="s2">"repo_info"</span><span class="p">}</span>
-<span class="n">user_info</span>   <span class="o">=</span> <span class="p">{</span><span class="s2">"username"</span><span class="ss">:"hostname"</span><span class="p">,</span> <span class="s2">"api_key"</span><span class="ss">:"ageneratedrandomsomeapikey"</span><span class="p">}</span>   
+<span class="c1"># Optionally you can include various repo &amp; user information such as reponame, host, username, api-key, etc. </span>
+<span class="n">repo</span>        <span class="o">=</span> <span class="s2">"hackspree"</span>
+<span class="n">host</span>        <span class="o">=</span> <span class="s2">"github"</span>
+<span class="n">username</span>    <span class="o">=</span> <span class="s2">"zotherstupidguy"</span>
+<span class="n">key</span>     <span class="o">=</span> <span class="s2">"ageneratedrandomsomeapikey"</span>
 
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="ss">repo_info: </span><span class="n">repo_info</span><span class="p">,</span> <span class="ss">user_info: </span><span class="n">user_info</span><span class="p">,</span> <span class="ss">lapse: </span><span class="n">lapse</span><span class="p">)</span>
-
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="ss">api_key: </span><span class="n">key</span><span class="p">,</span> <span class="ss">repo_info: </span><span class="n">repo</span><span class="p">,</span> <span class="ss">user_info: </span><span class="n">username</span><span class="p">,</span> <span class="ss">lapse: </span><span class="n">lapse</span><span class="p">)</span>
 </code></pre>
 <pre class="highlight perl"><code><span class="c1"># Sample Response</span>
 </code></pre>
