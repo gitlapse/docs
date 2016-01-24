@@ -450,8 +450,8 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
 
-<span class="n">lapse</span>       <span class="o">=</span> <span class="p">{</span><span class="s2">"SHA"</span><span class="p">,</span> <span class="s2">"blobcontent"</span><span class="p">}</span>
-<span class="n">mylapse_url</span>     <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">del</span><span class="p">(</span><span class="ss">lapse: </span><span class="n">lapse</span><span class="p">)</span>
+<span class="no">SHA</span>     <span class="o">=</span> <span class="s2">"bigsha"</span>
+<span class="n">mylapse_url</span>     <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">del</span><span class="p">(</span><span class="no">SHA</span><span class="p">:</span> <span class="no">SHA</span><span class="p">)</span>
 
 <span class="c1"># Optionally you can include various repo &amp; user information such as reponame, host, username, api-key, etc. </span>
 <span class="n">repo</span>        <span class="o">=</span> <span class="s2">"hackspree"</span>
@@ -459,7 +459,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <span class="n">username</span>    <span class="o">=</span> <span class="s2">"zotherstupidguy"</span>
 <span class="n">key</span>     <span class="o">=</span> <span class="s2">"ageneratedrandomsomeapikey"</span>
 
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">del</span><span class="p">(</span><span class="ss">api_key: </span><span class="n">key</span><span class="p">,</span> <span class="ss">repo_info: </span><span class="n">repo</span><span class="p">,</span> <span class="ss">user_info: </span><span class="n">username</span><span class="p">,</span> <span class="ss">lapse: </span><span class="n">lapse</span><span class="p">)</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">del</span><span class="p">(</span><span class="ss">api_key: </span><span class="n">key</span><span class="p">,</span> <span class="ss">repo_info: </span><span class="n">repo</span><span class="p">,</span> <span class="ss">user_info: </span><span class="n">username</span><span class="p">,</span> <span class="no">SHA</span><span class="p">:</span> <span class="no">SHA</span><span class="p">)</span>
 </code></pre>
 <pre class="highlight perl"><code><span class="c1"># Sample Response</span>
 </code></pre>
@@ -540,17 +540,42 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 
 <h2 id="get-v1-system">GET v1/system</h2>
 
-<p>This endpoint is used to retreive info about Gitlapse</p>
+<p>This endpoint is used to list info about Gitlapse API v1</p>
 
 <h3 id="resource-url">Resource URL</h3>
 
+<p>GET <code class="prettyprint">v1/system</code></p>
+
 <h3 id="resource-information">Resource Information</h3>
+
+<table><thead>
+<tr>
+<th>Info</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Response formats</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Requires authentication?</td>
+<td>False</td>
+</tr>
+</tbody></table>
 
 <h3 id="parameters">Parameters</h3>
 
-<h3 id="sample-request">Sample Request</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
 
-<h3 id="sample-result">Sample Result</h3>
+<p>N\A</p>
 
           <h1 id="errors">Errors</h1>
 <pre class="highlight plaintext"><code>### Sample Request 
