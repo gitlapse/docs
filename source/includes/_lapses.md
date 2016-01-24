@@ -1,5 +1,5 @@
 # Lapses
-
+<!--
 ## GET v1/lapses
 ```perl
 # Sample Request for Acquiring a Specific Collection of Lapses 
@@ -101,7 +101,7 @@ Repo 	  | Required    | Specify a repo name
 Branch 	  | Required    | Specify a branch in the repo 
 SHAs	  | Optional 	| Specify a collection of SHAs
 Fields	  | Optional    | Selects which fields of the JSON response to acquire back
-
+-->
 
 ## GET v1/lapses/:SHA
 
