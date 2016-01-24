@@ -119,109 +119,126 @@ repo is name of the git directory</p>
 
           <h1 id="lapses">Lapses</h1>
 
-<!--
-## GET v1/lapses
-```perl
-# Sample Request for Acquiring a Specific Collection of Lapses 
-```
-```c
-git lapse get file1, file2, file3
-```
-```shell
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
+<h2 id="get-v1-lapses">GET v1/lapses</h2>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Acquiring a Specific Collection of Lapses </span>
+</code></pre>
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">get</span> <span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">,</span> <span class="n">file3</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
 
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?SHAs="d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"`
-```
+curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?SHAs<span class="o">=</span><span class="s2">"d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4,d670460b4b4aece5915caf5c68d12f560a9fe3e4"</span><span class="sb">`</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1"># Make sure you run `gem install gitlapse` or Add gitlapse to your Gemfile</span>
 
-```ruby
-# Make sure you run `gem install gitlapse` or Add gitlapse to your Gemfile
+<span class="nb">require</span> <span class="s1">'gitlapse'</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight perl"><code><span class="c1"># Sample Response of Acquiring a Specific Collection of Lapses </span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapses"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">post</span>  
+</code></pre>
+<pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+<span class="sb">`
+</span></code></pre>
+<pre class="highlight perl"><code><span class="c1"># Sample Response</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"username"</span><span class="p">:</span><span class="s2">"zotherstupidguy"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"about"</span><span class="p">:</span><span class="s2">"someone who cares"</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="nt">"lapses"</span><span class="p">:{</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"lapse"</span><span class="p">:{</span><span class="w">
+      </span><span class="nt">"SHA"</span><span class="p">:</span><span class="w"> </span><span class="s2">"big sha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
-require 'gitlapse'
-Gitlapse.lapses(repo="myrepo",branch="master")
-```
+<p>This endpoint allows you to acquire lapses. </p>
 
-```perl
-# Sample Response of Acquiring a Specific Collection of Lapses 
-```
+<h3 id="resource-url">Resource URL</h3>
 
-```json
-{ "user_info": {},
-  "repo_info": {},
-  "lapses":{
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    }
-  }
-}
-```
+<p><code class="prettyprint">https://api.gitlapse.com/v1/lapses</code></p>
 
-```c
-git lapse post  
-```
-```shell
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses?repo="myrepo",branch="master"
-```
-```ruby
-require 'gitlapse'
-Gitlapse.lapses(repo="myrepo",branch="master")
-`
-```
+<h3 id="resource-information">Resource Information</h3>
 
-```perl
-# Sample Response
-```
-```json
-{ "user_info": {
-  "username":"zotherstupidguy",
-    "about":"someone who cares"
-           },
-  "repo_info": {},
-  "lapses":{
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    },
-    "lapse":{
-      "SHA": "big sha",
-      "content": "content"
-    }
-  }
-}
-```
+<table><thead>
+<tr>
+<th>Info</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Response formats</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Requires authentication?</td>
+<td>False</td>
+</tr>
+</tbody></table>
 
-This endpoint allows you to acquire lapses. 
+<h3 id="parameters">Parameters</h3>
 
-### Resource URL 
-`https://api.gitlapse.com/v1/lapses`
-### Resource Information 
-
-Info                | Value              
----------           | ------- 
-Response formats        | JSON 
-Requires authentication?        | False 
-
-
-### Parameters 
-Parameter |     Type    | Description
---------- | -------     | -----------
-Repo      | Required    | Specify a repo name 
-Branch    | Required    | Specify a branch in the repo 
-SHAs      | Optional    | Specify a collection of SHAs
-Fields    | Optional    | Selects which fields of the JSON response to acquire back
--->
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Repo</td>
+<td>Optional</td>
+<td>Specify a repo name</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Optional</td>
+<td>Specify a branch in the repo</td>
+</tr>
+<tr>
+<td>SHAs</td>
+<td>Optional</td>
+<td>Specify a collection of SHAs</td>
+</tr>
+<tr>
+<td>Fields</td>
+<td>Optional</td>
+<td>Selects which fields of the JSON response to acquire back</td>
+</tr>
+</tbody></table>
 
 <h2 id="get-v1-lapses-sha">GET v1/lapses/:SHA</h2>
 <pre class="highlight perl"><code><span class="c1"># Sample Request using get a Lapse via its SHA </span>
