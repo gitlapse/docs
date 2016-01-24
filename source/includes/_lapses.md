@@ -3,7 +3,6 @@
 ## GET v1/lapses
 ```perl
 # Sample Request for Getting a Specific Collection of Lapses 
-// Sample Request for Getting a Specific Collection of Lapses 
 ```
 ```c
 git lapse get file1, file2, file3
@@ -22,7 +21,7 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
 ```perl
-// Sample Response of Getting a Specific Collection of Lapses 
+# Sample Response of Getting a Specific Collection of Lapses 
 ```
 
 ```json
@@ -57,8 +56,8 @@ Gitlapse.lapses(repo="myrepo",branch="master")
 `
 ```
 
-```
-Sample Response
+```perl
+# Sample Response
 ```
 ```json
 { "user_info": {
@@ -106,8 +105,8 @@ Fields	  | Optional    | Selects which fields of the JSON response to acquire ba
 
 ## GET v1/lapses/:SHA
 
-```
-> Sample Request using get a Lapse via its SHA 
+```perl
+# Sample Request using get a Lapse via its SHA 
 ```
 ```c
 git lapse sample.rb
@@ -119,8 +118,8 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 require 'gitlapse'
 mylapse = Gitlapse.get(SHA)
 ```
-```
-// Sample Response
+```perl
+# Sample Response
 ```
 ```json
 { "user_info": {
