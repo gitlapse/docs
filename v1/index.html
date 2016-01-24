@@ -122,10 +122,9 @@ repo is name of the git directory</p>
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
 <pre class="highlight perl"><code><span class="c1"># Sample Request for Acquiring a Specific Collection of Lapses </span>
 </code></pre>
-<pre class="highlight c"><code><span class="c1">// To make lapses of a specific set of files
-</span><span class="n">git</span> <span class="n">lapse</span> <span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">,</span> <span class="n">file3</span>
-<span class="c1">// To make lapses of all the files in the repo
-</span><span class="n">git</span> <span class="n">lapse</span> 
+<pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">path</span><span class="o">/</span><span class="n">file1</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="n">file2</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="n">file3</span>
+
+<span class="n">git</span> <span class="n">lapse</span> <span class="n">master</span><span class="p">,</span> <span class="p">[</span><span class="s">"path/file1"</span><span class="p">,</span> <span class="s">"path/file2"</span><span class="p">]</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2">"Content-type: application/json"</span> -X  https://api.gitlapse.com/v1/lapses?repo<span class="o">=</span><span class="s2">"myrepo"</span>,branch<span class="o">=</span><span class="s2">"master"</span>
 
@@ -134,7 +133,8 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <pre class="highlight ruby"><code><span class="c1"># Make sure you run `gem install gitlapse` or Add gitlapse to your Gemfile</span>
 
 <span class="nb">require</span> <span class="s1">'gitlapse'</span>
-<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"path/myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">,</span> <span class="n">lapses</span><span class="o">=</span><span class="p">[</span><span class="s2">"path/file1"</span><span class="p">,</span> <span class="s2">"path/file2"</span><span class="p">])</span>
+<span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"path/myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
 </code></pre>
 <pre class="highlight perl"><code><span class="c1"># Sample Response of Acquiring a Specific Collection of Lapses </span>
 </code></pre>
@@ -221,6 +221,16 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <th>Description</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>Host</td>
+<td>Optional</td>
+<td>Specify a git host i.e. github, bitbucket, etc.</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>Optional</td>
+<td>Specify a username</td>
+</tr>
 <tr>
 <td>Repo</td>
 <td>Optional</td>
