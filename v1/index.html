@@ -120,7 +120,7 @@ repo is name of the git directory</p>
           <h1 id="lapses">Lapses</h1>
 
 <h2 id="get-v1-lapses">GET v1/lapses</h2>
-<pre class="highlight perl"><code><span class="c1"># Sample Request for Getting a Specific Collection of Lapses </span>
+<pre class="highlight perl"><code><span class="c1"># Sample Request for Acquiring a Specific Collection of Lapses </span>
 </code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">get</span> <span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">,</span> <span class="n">file3</span>
 </code></pre>
@@ -133,7 +133,7 @@ curl -v -H <span class="s2">"Accept: application/json"</span> -H <span class="s2
 <span class="nb">require</span> <span class="s1">'gitlapse'</span>
 <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight perl"><code><span class="c1"># Sample Response of Getting a Specific Collection of Lapses </span>
+<pre class="highlight perl"><code><span class="c1"># Sample Response of Acquiring a Specific Collection of Lapses </span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
