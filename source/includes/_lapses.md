@@ -92,7 +92,7 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
 This endpoint allows you to acquire lapses. 
 
 ### Resource URL 
-`https://api.gitlapse.com/v1/lapses`
+GET `https://api.gitlapse.com/v1/lapses`
 ### Resource Information 
 
 Info				| Value           	 
@@ -146,7 +146,7 @@ mylapse_url = Gitlapse.get(SHA)
 
 This endpoint allows you to acquire a specific lapse URL via its SHA. 
 ### Resource URL 
-`https://api.gitlapse.com/v1/lapses/:SHA`
+GET `https://api.gitlapse.com/v1/lapses/:SHA`
 
 ### Resource Information 
 Info				| Value           	 
@@ -166,12 +166,29 @@ Fields	  | Optional    | Selects which fields of the JSON response to acquire ba
 
 
 ## POST v1/lapses
-### Resource URL 
-### Resource Information 
+
 git lapse fileA, fileB, fileC 
+
+This endpoint allows you to store a collection of lapses 
+### Resource URL 
+POST `https://api.gitlapse.com/v1/lapses/:SHA`
+
+### Resource Information 
+Info				| Value           	 
+--------- 			| ------- 
+Response formats		| JSON 
+Requires authentication?    	| False 
+
 ### Parameters 
-### Sample Request 
-### Sample Result
+Parameter |     Type	| Description
+--------- | ------- 	| -----------
+SHA 	  | Required    | Specify a SHA of a lapse 
+Host      | Optional    | Specify a git host i.e. github, bitbucket, etc.
+Username  | Optional    | Specify a username 
+Repo 	  | Optional    | Specify a repo name 
+Branch 	  | Optional    | Specify a branch in the repo 
+Fields	  | Optional    | Selects which fields of the JSON response to acquire back
+
 
 ## POST v1/lapses/:SHA
 ### Resource URL 
