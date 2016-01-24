@@ -178,13 +178,15 @@ curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POS
 ```
 ```ruby
 require 'gitlapse'
-repo_info 	= {"host":"hostname", "repo_info": "repo_info"}
-user_info 	= {"username":"hostname", "api_key":"ageneratedrandomsomeapikey"}	
-lapses 		= {{"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}} 
 
-# Optional
-# Gitlapse.post(repo_info, user_info, lapses)
-mylapse_url 	= Gitlapse.post(lapses)
+lapses 		= {{"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}} 
+mylapse_url 	= Gitlapse.post(lapses: lapses)
+
+# Optionally you can include repo information and
+# repo_info 	= {"host":"hostname", "repo_info": "repo_info"}
+# user_info 	= {"username":"hostname", "api_key":"ageneratedrandomsomeapikey"}	
+# Gitlapse.post(repo_info: repo_info, user_info: user_info, lapses: lapses)
+
 ```
 ```perl
 # Sample Response
