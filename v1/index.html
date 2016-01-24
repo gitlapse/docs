@@ -133,7 +133,7 @@ repo is name of the git directory</p>
 <span class="nb">require</span> <span class="s1">'gitlapse'</span>
 <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight plaintext"><code>Sample Response of Getting a Specific Collection of Lapses 
+<pre class="highlight plaintext"><code>&gt; Sample Response of Getting a Specific Collection of Lapses 
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="nt">"repo_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
@@ -161,7 +161,7 @@ repo is name of the git directory</p>
 <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">lapses</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="s2">"myrepo"</span><span class="p">,</span><span class="n">branch</span><span class="o">=</span><span class="s2">"master"</span><span class="p">)</span>
 <span class="sb">`
 </span></code></pre>
-<pre class="highlight plaintext"><code>Sample Response
+<pre class="highlight plaintext"><code>&gt; Sample Response
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nt">"username"</span><span class="p">:</span><span class="s2">"zotherstupidguy"</span><span class="p">,</span><span class="w">
@@ -241,7 +241,7 @@ repo is name of the git directory</p>
 </tbody></table>
 
 <h2 id="get-v1-lapses-sha">GET v1/lapses/:SHA</h2>
-<pre class="highlight plaintext"><code>// Sample Request using get a Lapse via its SHA 
+<pre class="highlight plaintext"><code>&gt; Sample Request using get a Lapse via its SHA 
 </code></pre>
 <pre class="highlight c"><code><span class="n">git</span> <span class="n">lapse</span> <span class="n">sample</span><span class="p">.</span><span class="n">rb</span>
 </code></pre>
@@ -250,7 +250,7 @@ repo is name of the git directory</p>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'gitlapse'</span>
 <span class="n">mylapse</span> <span class="o">=</span> <span class="no">Gitlapse</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="no">SHA</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight plaintext"><code>// Sample Response
+<pre class="highlight plaintext"><code>&gt; Sample Response
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"user_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nt">"username"</span><span class="p">:</span><span class="s2">"zotherstupidguy"</span><span class="p">,</span><span class="w">
