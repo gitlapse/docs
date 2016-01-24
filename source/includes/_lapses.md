@@ -31,11 +31,14 @@ Gitlapse.lapses(blobs=["path/fileA", "path/fileB"])
   "lapses":{
     "lapse":{
       "SHA": "zSHA",
+      "content": "lapse_content",
       "URL": "https://gitlapse.com/SHA?zSHA"
     },
     "lapse":{
       "SHA": "zSHA",
+      "content": "lapse_content",
       "URL": "https://gitlapse.com/SHA?zSHA"
+
     }
   }
 }
@@ -69,15 +72,18 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
   "lapses":{
     "lapse":{
       "SHA": "big sha",
-      "content": "content"
+      "content": "lapse_content",
+      "url": "url"
     },
     "lapse":{
       "SHA": "big sha",
-      "content": "content"
+      "content": "lapse_content",
+      "url": "url"
     },
     "lapse":{
       "SHA": "big sha",
-      "content": "content"
+      "content": "lapse_content",
+      "url": "url"
     }
   }
 }
@@ -109,7 +115,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to acquire ba
 ## GET v1/lapses/:SHA
 
 ```perl
-# Sample Request using get a Lapse via its SHA 
+# Sample Request for Acquiring a Specific Lapse URL via its SHA
 ```
 ```c
 git lapse sample.rb
@@ -119,7 +125,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 ```
 ```ruby
 require 'gitlapse'
-mylapse = Gitlapse.get(SHA)
+mylapse_url = Gitlapse.get(SHA)
 ```
 ```perl
 # Sample Response
@@ -132,12 +138,13 @@ mylapse = Gitlapse.get(SHA)
   "repo_info": {},
   "lapse":{
     "SHA": "bigsha",
-    "content": "content"
+    "content": "lapse_content",
+    "url": "https://gitlapse.com?SHA='bigsha'"
   }
 }
 ```
 
-This endpoint allows you to acquire a specific lapse via its SHA. 
+This endpoint allows you to acquire a specific lapse URL via its SHA. 
 ### Resource URL 
 `https://api.gitlapse.com/v1/lapses/:SHA`
 
