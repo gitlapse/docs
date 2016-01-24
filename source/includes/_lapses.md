@@ -2,7 +2,7 @@
 
 ## GET v1/lapses
 ```perl
-# Sample Request for Acquiring a Specific Collection of Lapses URLs
+# Sample Request for Listing a Specific Collection of Lapses URLs
 ```
 ```c
 git lapse path/fileA, path/fileB, path/fileC
@@ -22,7 +22,7 @@ Gitlapse.lapses(blobs=["path/fileA", "path/fileB"])
 ```
 
 ```perl
-# Sample Response of Acquiring a Specific Collection of Lapses URLs
+# Sample Response of Listing a Specific Collection of Lapses URLs
 ```
 
 ```json
@@ -45,7 +45,7 @@ Gitlapse.lapses(blobs=["path/fileA", "path/fileB"])
 ```
 
 ```perl
-# Sample Request for Acquiring Lapses URLs of a whole Git Repo branch
+# Sample Request for Listing Lapses URLs of a whole Git Repo branch
 ```
 ```c
 git lapse master, ["path/fileA", "path/fileB"]
@@ -89,7 +89,7 @@ Gitlapse.lapses(repo="path/myrepo",branch="master")
 }
 ```
 
-This endpoint allows you to acquire lapses. 
+This endpoint allows you to list lapses. 
 
 ### Resource URL 
 GET `https://api.gitlapse.com/v1/lapses`
@@ -109,13 +109,13 @@ Username  | Optional    | Specify a username
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
 SHAs	  | Optional 	| Specify a collection of SHAs
-Fields	  | Optional    | Selects which fields of the JSON response to acquire back
+Fields	  | Optional    | Selects which fields of the JSON response to list back
 
 
 ## GET v1/lapses/:SHA
 
 ```perl
-# Sample Request for Acquiring a Specific Lapse URL via its SHA
+# Sample Request for Listing a Specific Lapse URL via its SHA
 ```
 ```c
 git lapse sample.rb
@@ -144,7 +144,7 @@ mylapse_url = Gitlapse.get(SHA)
 }
 ```
 
-This endpoint allows you to acquire a specific lapse URL via its SHA. 
+This endpoint allows you to show a specific lapse URL via its SHA. 
 ### Resource URL 
 GET `https://api.gitlapse.com/v1/lapses/:SHA`
 
@@ -162,31 +162,31 @@ Host      | Optional    | Specify a git host i.e. github, bitbucket, etc.
 Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
-Fields	  | Optional    | Selects which fields of the JSON response to acquire back
+Fields	  | Optional    | Selects which fields of the JSON response to list back
 
 
 ## POST v1/lapses
 
 ```perl
-# Sample Request for Creating a collection of Lapses 
+# Sample Request for Creating a New Lapse
 ```
 ```c
-git lapse fileA, fileB, fileC 
+git lapse fileA
 ```
 ```shell
-curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{ "host":"host", "username":"zotherstupidguy" ,"lapses": {"SHA":"bigsha","content":"blobcontent"}, {"SHA":"bigsha", "content":"blobcontent"}' https://api.gitlapse.com/v1/lapses
+curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{ "host":"host", "username":"zotherstupidguy" ,"lapse": {"SHA":"bigsha","content":"blobcontent"}' https://api.gitlapse.com/v1/lapses
 ```
 ```ruby
 require 'gitlapse'
 
-lapses 		= {{"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}, {"SHA", "blobcontent"}} 
-mylapse_url 	= Gitlapse.post(lapses: lapses)
+lapse 		= {{"SHA", "blobcontent"}}
+mylapse_url 	= Gitlapse.post(lapse: lapse)
 
 # Optionally you can include repo & user information 
 repo_info 	= {"host":"hostname", "repo_info": "repo_info"}
 user_info 	= {"username":"hostname", "api_key":"ageneratedrandomsomeapikey"}	
 
-Gitlapse.post(repo_info: repo_info, user_info: user_info, lapses: lapses)
+Gitlapse.post(repo_info: repo_info, user_info: user_info, lapse: lapse)
 
 ```
 ```perl
@@ -206,7 +206,7 @@ Gitlapse.post(repo_info: repo_info, user_info: user_info, lapses: lapses)
 }
 ```
 
-This endpoint allows you to create a collection of lapses
+This endpoint allows you to create a new lapse
 ### Resource URL 
 POST `https://api.gitlapse.com/v1/lapses`
 
@@ -219,22 +219,17 @@ Requires authentication?    	| False
 ### Parameters 
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
-Lapses    | Required    | Specify a collection of lapses(SHA & blob content)
+Lapse     | Required    | Specify a new lapses(SHA & blob content)
 Host      | Optional    | Specify a git host i.e. github, bitbucket, private, etc.
 Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
 
 
-## POST v1/lapses/:SHA
+## DELETE v1/lapses/:SHA
 
 ### Resource URL 
-POST 	`https://api.gitlapse.com/v1/lapses/:SHA`
-
-- Also it works as an alternative endpoint of PUT & DELETE to be able to support all clients
-	- PUT  		`https://api.gitlapse.com/v1/lapses/:SHA`
-	- DELETE 	`https://api.gitlapse.com/v1/lapses/:SHA`
-
+DELETE `https://api.gitlapse.com/v1/lapses/:SHA`
 
 ### Resource Information 
 Info				| Value           	 
@@ -246,7 +241,6 @@ Requires authentication?    	| False
 Parameter |     Type	| Description
 --------- | ------- 	| -----------
 SHA       | Required    | Specify a SHA of a lapse 
-Content   | Required    | Specify a Content of a lapse 
 Host      | Optional    | Specify a git host i.e. github, bitbucket, private, etc.
 Username  | Optional    | Specify a username 
 Repo 	  | Optional    | Specify a repo name 
