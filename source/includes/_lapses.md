@@ -1,7 +1,7 @@
 # Lapses
 
 ## GET v1/lapses
-```
+```perl
 # Sample Request for Getting a Specific Collection of Lapses 
 // Sample Request for Getting a Specific Collection of Lapses 
 ```
@@ -21,8 +21,8 @@ require 'gitlapse'
 Gitlapse.lapses(repo="myrepo",branch="master")
 ```
 
-```
-Sample Response of Getting a Specific Collection of Lapses 
+```perl
+// Sample Response of Getting a Specific Collection of Lapses 
 ```
 
 ```json
