@@ -99,13 +99,13 @@ Parameter |     Type	| Description
 Repo 	  | Required    | Specify a repo name 
 Branch 	  | Required    | Specify a branch in the repo 
 SHAs	  | Optional 	| Specify a collection of SHAs
-Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+Fields	  | Optional    | Selects which fields of the JSON response to acquire back
 
 
 ## GET v1/lapses/:SHA
 
 ```
-Sample Request using get a Lapse via its SHA 
+// Sample Request using get a Lapse via its SHA 
 ```
 ```c
 git lapse sample.rb
@@ -116,9 +116,9 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 ```ruby
 require 'gitlapse'
 mylapse = Gitlapse.get(SHA)
-  ```
-  ```
-Sample Response
+```
+```
+// Sample Response
 ```
 ```json
 { "user_info": {
@@ -133,7 +133,7 @@ Sample Response
 }
 ```
 
-This endpoint allows you to retreive a specific lapse via its SHA. 
+This endpoint allows you to acquire a specific lapse via its SHA. 
 ### Resource URL 
 `https://api.gitlapse.com/v1/lapses/:SHA`
 
@@ -149,7 +149,7 @@ Parameter |     Type	| Description
 SHA 	  | Required    | Specify a SHA of a lapse 
 Repo 	  | Optional    | Specify a repo name 
 Branch 	  | Optional    | Specify a branch in the repo 
-Fields	  | Optional    | Selects which fields of the JSON response to retrive back
+Fields	  | Optional    | Selects which fields of the JSON response to acquire 
 
 ## POST v1/lapses
 ### Resource URL 
@@ -164,6 +164,3 @@ git lapse fileA, fileB, fileC
 ### Resource Information 
 git lapse fileA, fileB, fileC 
 ### Parameters 
-### Sample Request 
-### Sample Result
-
