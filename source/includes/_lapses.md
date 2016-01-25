@@ -18,7 +18,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  ht
 # Make sure you run `gem install gitlapse` or Add gitlapse to your Bundler Gemfile before executing this code!
 
 require 'gitlapse'
-Gitlapse.lapses(blobs=["path/fileA", "path/fileB"])
+Gitlapse.lapses(blobs: ["path/fileA", "path/fileB"])
 ```
 
 ```perl
