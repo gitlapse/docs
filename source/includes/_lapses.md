@@ -48,7 +48,7 @@ Gitlapse.lapses(blobs=["path/fileA", "path/fileB"])
 # Sample Request for Listing Lapses URLs of a whole Git Repo branch
 ```
 ```c
-git lapse pull "path/fileA", "path/fileB"
+git lapse pull path/fileA, path/fileB
 
 ```
 ```shell
