@@ -5,9 +5,9 @@
 # Sample Request for Listing a Specific Collection of Lapses URLs
 ```
 ```c
-git lapse path/fileA, path/fileB, path/fileC
+git lapse pull path/fileA, path/fileB, path/fileC
 
-git lapse SHA_A, SHA_B, SHA_C
+git lapse pull SHA_A, SHA_B, SHA_C
 ```
 ```shell
 
@@ -48,7 +48,7 @@ Gitlapse.lapses(blobs=["path/fileA", "path/fileB"])
 # Sample Request for Listing Lapses URLs of a whole Git Repo branch
 ```
 ```c
-git lapse master, ["path/fileA", "path/fileB"]
+git lapse pull "path/fileA", "path/fileB"
 
 ```
 ```shell
@@ -118,7 +118,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to list back
 # Sample Request for Listing a Specific Lapse URL via its SHA
 ```
 ```c
-git lapse sample.rb
+git lapse pull sample.rb
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X  https://api.gitlapse.com/v1/lapses/:SHA
@@ -171,7 +171,7 @@ Fields	  | Optional    | Selects which fields of the JSON response to list back
 # Sample Request for Creating a New Lapse
 ```
 ```c
-git lapse fileA
+git lapse push fileA
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{ "host":"host", "username":"zotherstupidguy" ,"lapse": {"SHA":"bigsha","content":"blobcontent"}' https://api.gitlapse.com/v1/lapses
@@ -233,7 +233,7 @@ Branch 	  | Optional    | Specify a branch in the repo
 # Sample Request for Deleting a Lapse
 ```
 ```c
-git lapse fileA
+git lapse rm fileA
 ```
 ```shell
 curl -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{ "host":"host", "username":"zotherstupidguy" ,"lapse": {"SHA":"bigsha","content":"blobcontent"}' https://api.gitlapse.com/v1/lapses
