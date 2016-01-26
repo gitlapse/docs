@@ -1,7 +1,8 @@
 # System
+
 ## GET v1/system
 ```perl
-# Sample Request for Checking Gitlapse API v1 System 
+# Sample Request for Checking Gitlapse API v1 endpoints 
 ```
 ```c
 git lapse system
@@ -21,9 +22,7 @@ Gitlapse.system
   "status":"Ok"
 }
 ```
-
-
-This endpoint is used to list info about Gitlapse API v1
+This endpoint allows you to list info about All Gitlapse API v1 endpoints 
 ### Resource URL 
 GET `https://gitlapse.com/v1/system`
 
